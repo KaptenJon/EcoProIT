@@ -1,0 +1,1893 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+The contents of this file are subject to the EcoSpold Public License Version 1.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.ecoinvent.ch.
+Software distributed under the License is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language governing rights and limitations under the License.
+The Original Code consists of the EcoSpold data format and EcoSpold Access.
+The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre for Life Cycle Inventories) and ifu Hamburg GmbH, Germany. Portions created by the ecoinvent Centre and ifu Hamburg GmbH are Copyright (C) ecoinvent Centre. All Rights Reserved.
+-->
+<validProperties majorRelease="3" minorRelease="0" majorRevision="0" minorRevision="1327" contextId="de659012-50c4-4e96-b54a-fc781bf987ab" xmlns="http://www.EcoInvent.org/EcoSpold02">
+  <contextName xml:lang="en">ecoinvent</contextName>
+  <property id="9f2ce7cd-fc18-492c-ba71-c63c237e3698">
+    <name xml:lang="en">EcoSpold01Allocation_physical_7</name>
+    <comment xml:lang="en">physical allocation 7 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="3a09cd24-bbfd-4d01-92e8-827b2773787a">
+    <name xml:lang="en">EcoSpold01Allocation_other_63</name>
+    <comment xml:lang="en">other allocation 63 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="2d23d1bb-e137-4ade-83fc-fbd0421e6cd5" defaultVariableName="H_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">hydrogen content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">hydrogen content on a dry matter basis</comment>
+  </property>
+  <property id="0ba7c468-731e-4251-96b5-d3f7cd2db260">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_24</name>
+    <comment xml:lang="en">undefined allocation 24 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="38f94dd1-d5aa-41b8-b182-c0c42985d9dc" defaultVariableName="price_EUR2005" unitId="7b75baf0-cbee-45e6-bf66-af119da06553">
+    <name xml:lang="en">price</name>
+    <unitName xml:lang="en">EUR2005</unitName>
+    <comment xml:lang="en">price</comment>
+  </property>
+  <property id="4e2f4e10-6d62-464c-8142-cf5d8778480a">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_128</name>
+    <comment xml:lang="en">undefined allocation 128 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="95b6afca-3c52-4db9-a5ec-194322f44408" defaultVariableName="work" unitId="e32b56ef-fa80-4487-9796-f3c1476c27b3">
+    <name xml:lang="en">working time</name>
+    <unitName xml:lang="en">hour</unitName>
+  </property>
+  <property id="a4607feb-b8df-4a6e-9a0f-e70088695bc4">
+    <name xml:lang="en">EcoSpold01Allocation_other_54</name>
+    <comment xml:lang="en">other allocation 54 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="66664710-3b63-4c63-993a-31a4b858ba1e">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_135</name>
+    <comment xml:lang="en">undefined allocation 135 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="ff25f3c3-5f43-4ac0-bb13-d8ecc6fc7b75" defaultVariableName="Tb_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">terbium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">terbium content on a dry matter basis</comment>
+  </property>
+  <property id="2586abb3-0f88-4e4d-9673-4ae55dc3b6ab">
+    <name xml:lang="en">EcoSpold01Allocation_other_40</name>
+    <comment xml:lang="en">other allocation 40 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="dbf41b1b-c7b8-4d5e-b39c-f858eb868df5" defaultVariableName="O_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">oxygen content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">oxygen content on a dry matter basis</comment>
+  </property>
+  <property id="259dce5e-3697-47d3-ad0c-760256f31c13">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_85</name>
+    <comment xml:lang="en">undefined allocation 85 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="e0226a6a-2ba6-47df-8aa6-07f42ffa087d">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_131</name>
+    <comment xml:lang="en">undefined allocation 131 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="91a6ec9a-f0ae-4972-aaa0-0a96c6a7e718">
+    <name xml:lang="en">EcoSpold01Allocation_other_103</name>
+    <comment xml:lang="en">other allocation 103 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="e31fd33a-ada5-43fb-8c23-94d48cccb29d">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_167</name>
+    <comment xml:lang="en">undefined allocation 167 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="28567adf-1d64-4588-a318-3c873280edb1">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_136</name>
+    <comment xml:lang="en">undefined allocation 136 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="9b950fc7-7379-4bdd-a53e-55806d601125">
+    <name xml:lang="en">EcoSpold01Allocation_other_128</name>
+    <comment xml:lang="en">other allocation 128 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="15c2d120-0e15-4c4d-af91-1c25d1661764">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_83</name>
+    <comment xml:lang="en">undefined allocation 83 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="b7876aa9-8d3d-41e0-9f87-6f483c6c5cb7">
+    <name xml:lang="en">EcoSpold01Allocation_other_111</name>
+    <comment xml:lang="en">other allocation 111 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="2452d3a4-7e76-4505-a62e-eeb514630ead">
+    <name xml:lang="en">EcoSpold01Allocation_other_35</name>
+    <comment xml:lang="en">other allocation 35 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="4583f86d-51fa-4fda-9c75-7fba827532f5" defaultVariableName="Cs_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">caesium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">caesium content on a dry matter basis</comment>
+  </property>
+  <property id="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" defaultVariableName="DM" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">dry mass</name>
+    <unitName xml:lang="en">kg</unitName>
+  </property>
+  <property id="d0a2c761-50ab-4c1d-a37b-525409640a76" defaultVariableName="In_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">indium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">indium content on a dry matter basis</comment>
+  </property>
+  <property id="3cf40fcd-c607-4193-934c-5c181a3ab514">
+    <name xml:lang="en">EcoSpold01Allocation_other_19</name>
+    <comment xml:lang="en">other allocation 19 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="5ca5b0e5-f412-41ad-b61f-7cd72103ecd1">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_78</name>
+    <comment xml:lang="en">undefined allocation 78 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="82728b89-48ab-4da6-9bad-faeb8ce02d1a" defaultVariableName="Sm_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">samarium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">samarium content on a dry matter basis</comment>
+  </property>
+  <property id="81209399-cd11-422e-aa4d-d66acb4fa344">
+    <name xml:lang="en">EcoSpold01Allocation_other_130</name>
+    <comment xml:lang="en">other allocation 130 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="63169b0e-3ae8-40f0-a0a9-0418bff24943">
+    <name xml:lang="en">EcoSpold01Allocation_other_116</name>
+    <comment xml:lang="en">other allocation 116 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="bdbf6a5a-e5e2-43ae-9ed6-2e550518516a">
+    <name xml:lang="en">EcoSpold01Allocation_other_122</name>
+    <comment xml:lang="en">other allocation 122 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="56a4a73c-8f3c-4cf3-aaec-07be01672ec1">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_118</name>
+    <comment xml:lang="en">undefined allocation 118 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="6d7b06d2-b4f1-498b-b64a-2ae98bb3ac9c">
+    <name xml:lang="en">EcoSpold01Allocation_other_58</name>
+    <comment xml:lang="en">other allocation 58 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="4e6ff13b-7bfb-4e66-8255-6b0b7dcc6de8" defaultVariableName="capacity_MW" unitId="9dbdef14-e661-41e7-a878-e1f380b24d5a">
+    <name xml:lang="en">capacity [MW]</name>
+    <unitName xml:lang="en">MW</unitName>
+  </property>
+  <property id="4e5c60f3-b721-4f77-844a-c93d018c3172">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_1</name>
+    <comment xml:lang="en">undefined allocation 1 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="8aedc313-f49b-42cd-8d54-fc877ec03017" defaultVariableName="Mg_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">magnesium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">magnesium content on a dry matter basis</comment>
+  </property>
+  <property id="83c8941a-5d08-467a-a7d3-cdad847e1229">
+    <name xml:lang="en">EcoSpold01Allocation_other_72</name>
+    <comment xml:lang="en">other allocation 72 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="e5235f58-2e90-4393-8a9f-5cdfd8bfaa06">
+    <name xml:lang="en">EcoSpold01Allocation_other_94</name>
+    <comment xml:lang="en">other allocation 94 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="d8135201-fa30-4332-a051-7eddb3f8f8ed" defaultVariableName="Nb_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">niobium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">niobium content on a dry matter basis</comment>
+  </property>
+  <property id="aaedfd5e-a9ce-4257-a015-93ef483fed8c" defaultVariableName="Kr_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">krypton content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">krypton content on a dry matter basis</comment>
+  </property>
+  <property id="c092b78a-b16f-42e7-b27f-202a1059d47e">
+    <name xml:lang="en">EcoSpold01Allocation_other_14</name>
+    <comment xml:lang="en">other allocation 14 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="21fe24bc-edf6-4bb6-a71a-30e643781253">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_87</name>
+    <comment xml:lang="en">undefined allocation 87 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="f1521c85-6126-40e4-9860-1f80a7a8568f">
+    <name xml:lang="en">EcoSpold01Allocation_other_129</name>
+    <comment xml:lang="en">other allocation 129 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="ed10c0cd-2920-4ace-bc7c-ba53ad7ddf84">
+    <name xml:lang="en">EcoSpold01Allocation_other_22</name>
+    <comment xml:lang="en">other allocation 22 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="b8c88fc1-eed6-48d2-9737-e9dd8e212eb4">
+    <name xml:lang="en">EcoSpold01Allocation_physical_5</name>
+    <comment xml:lang="en">physical allocation 5 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="7177ac92-75b5-423e-a5b4-71351af3b7c3">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_145</name>
+    <comment xml:lang="en">undefined allocation 145 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="d7e67353-7adc-4e68-9c68-8a5bee2233f7">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_42</name>
+    <comment xml:lang="en">undefined allocation 42 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="db33417a-c3a6-4098-867c-eafeb8f8c72a" defaultVariableName="capacity_kg_per_s" unitId="3ce424af-a3eb-4c16-9bc8-aa4443c94f50">
+    <name xml:lang="en">capacity [kg/s]</name>
+    <unitName xml:lang="en">kg/s</unitName>
+  </property>
+  <property id="434365cb-7be0-4674-b17b-ee4a9188b697">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_138</name>
+    <comment xml:lang="en">undefined allocation 138 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="13706ab5-1a8c-42fd-8329-c93266943c87">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_16</name>
+    <comment xml:lang="en">undefined allocation 16 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="66d4c921-658a-4ba0-b190-c6e09e57d74a" defaultVariableName="Cl_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">chlorine content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">chlorine content on a dry matter basis</comment>
+  </property>
+  <property id="a5e4ea62-2953-4633-9572-f8a2cd5c4616">
+    <name xml:lang="en">EcoSpold01Allocation_other_101</name>
+    <comment xml:lang="en">other allocation 101 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="1a6c78a7-26c7-4ab2-a37d-2263b61ec22b">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_165</name>
+    <comment xml:lang="en">undefined allocation 165 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="832bb926-0c7d-4b16-bf36-fc69665afe8b" defaultVariableName="Pt_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">platinum content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">platinum content on a dry matter basis</comment>
+  </property>
+  <property id="24a8bbce-eab8-4ae2-9b58-b642dee66c0b">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_92</name>
+    <comment xml:lang="en">undefined allocation 92 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="7a555ebd-d9f6-467d-8753-edb2f6a98fe8">
+    <name xml:lang="en">EcoSpold01Allocation_other_113</name>
+    <comment xml:lang="en">other allocation 113 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="406ac421-4b23-4bd0-acfe-22a44578e532">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_86</name>
+    <comment xml:lang="en">undefined allocation 86 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="84e59b0f-ecb6-4dac-b8d6-be1cf2b1d184">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_91</name>
+    <comment xml:lang="en">undefined allocation 91 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="f863a012-aa6f-4d46-a954-97683346175f">
+    <name xml:lang="en">EcoSpold01Allocation_other_84</name>
+    <comment xml:lang="en">other allocation 84 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="1100f7b2-6d35-4ece-9f17-5fbea7282cd5">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_70</name>
+    <comment xml:lang="en">undefined allocation 70 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="d9e61a10-6a71-4771-9585-e30a943a7826" defaultVariableName="Hf_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">hafnium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">hafnium content on a dry matter basis</comment>
+  </property>
+  <property id="6879600d-dc07-4c03-babf-7183432bcf54">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_137</name>
+    <comment xml:lang="en">undefined allocation 137 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="42a081fd-d0d5-4832-a237-a7b94c1f9849">
+    <name xml:lang="en">EcoSpold01Allocation_physical_17</name>
+    <comment xml:lang="en">physical allocation 17 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="6eb1f2f9-7e5b-46e3-a253-57b980994f9d">
+    <name xml:lang="en">EcoSpold01Allocation_other_138</name>
+    <comment xml:lang="en">other allocation 138 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="7ce01fe9-39dd-42a8-b344-e752c1496469">
+    <name xml:lang="en">EcoSpold01Allocation_other_108</name>
+    <comment xml:lang="en">other allocation 108 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="a91695f7-22e8-4b39-bd05-56aacab09a87" defaultVariableName="Nd_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">neodymium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">neodymium content on a dry matter basis</comment>
+  </property>
+  <property id="811ae1c4-da2e-481d-859a-4c3965e1c408">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_63</name>
+    <comment xml:lang="en">undefined allocation 63 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="303a1005-707a-45b4-b187-2f70145f2d9b">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_33</name>
+    <comment xml:lang="en">undefined allocation 33 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="725ed395-49f1-49c7-8f70-ce49a6fed4a2">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_107</name>
+    <comment xml:lang="en">undefined allocation 107 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="65d960dc-084b-46d8-bf42-4a430a653840">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_168</name>
+    <comment xml:lang="en">undefined allocation 168 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="837d4c36-313c-4a5b-9953-bc1a6bd83d9c">
+    <name xml:lang="en">EcoSpold01Allocation_other_139</name>
+    <comment xml:lang="en">other allocation 139 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="50f1fc5b-3cab-432f-933c-341f91f6fe00">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_117</name>
+    <comment xml:lang="en">undefined allocation 117 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="d8364dfc-5753-4585-bf50-4d42b126f72d" defaultVariableName="Fe_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">iron content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">iron content on a dry matter basis</comment>
+  </property>
+  <property id="40ca2c51-2da6-4351-bd4c-d6f181fc7d55">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_2</name>
+    <comment xml:lang="en">undefined allocation 2 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="da65cd51-f4e5-4f89-90ea-5c6e9779f6bc">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_47</name>
+    <comment xml:lang="en">undefined allocation 47 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="b1e23c16-0199-4fd2-9c09-d89e1e0ef6c3">
+    <name xml:lang="en">EcoSpold01Allocation_other_82</name>
+    <comment xml:lang="en">other allocation 82 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="953c9d29-3204-42f1-9822-2974b2dfd5a3">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_27</name>
+    <comment xml:lang="en">undefined allocation 27 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="da9aed81-4e0a-4a15-9d5e-27020d826a01" defaultVariableName="Zr_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">zirconium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">zirconium content on a dry matter basis</comment>
+  </property>
+  <property id="f83aadf7-fcba-4734-82c2-3e2bd9b1dfdb">
+    <name xml:lang="en">EcoSpold01Allocation_other_33</name>
+    <comment xml:lang="en">other allocation 33 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="d09fc0a7-9dc8-40fd-937e-f1ab15be47be">
+    <name xml:lang="en">EcoSpold01Allocation_other_123</name>
+    <comment xml:lang="en">other allocation 123 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="95dc31b3-6bfb-421c-a502-a1a35d8ddee7">
+    <name xml:lang="en">EcoSpold01Allocation_other_5</name>
+    <comment xml:lang="en">other allocation 5 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="e1d2c19b-3a97-4f52-a83f-fe88400452c2" defaultVariableName="Cr_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">chromium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">chromium content on a dry matter basis</comment>
+  </property>
+  <property id="db0e2ab7-1a5a-43b6-8ded-96ae36c7a49f">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_154</name>
+    <comment xml:lang="en">undefined allocation 154 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="8c3af736-c05e-49cf-b223-2d347054da3c">
+    <name xml:lang="en">EcoSpold01Allocation_other_133</name>
+    <comment xml:lang="en">other allocation 133 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="2f258629-7e10-4856-ba63-3012eb7cf084">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_59</name>
+    <comment xml:lang="en">undefined allocation 59 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="0f9f07be-6c03-4d94-86eb-e220d361b3b3">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_111</name>
+    <comment xml:lang="en">undefined allocation 111 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="e2bffe98-8294-411e-9620-8be8ce95b65d">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_48</name>
+    <comment xml:lang="en">undefined allocation 48 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="f8bff3e1-a9ee-4165-a4ab-82e783a1c3fc">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_123</name>
+    <comment xml:lang="en">undefined allocation 123 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="c87bbc61-0fb1-4d7d-83e0-b5a44c6531ec">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_97</name>
+    <comment xml:lang="en">undefined allocation 97 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="22ca28a0-51e6-4f82-9ae7-b6c22a59abb9" defaultVariableName="He_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">helium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">helium content on a dry matter basis</comment>
+  </property>
+  <property id="96b698b6-c826-4e63-96b0-d1d76033a220">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_17</name>
+    <comment xml:lang="en">undefined allocation 17 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="fb2ccf7c-73c6-4d43-a3c7-26fda1423f18" defaultVariableName="Ne_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">neon content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">neon content on a dry matter basis</comment>
+  </property>
+  <property id="67f102e2-9cb6-4d20-aa16-bf74d8a03326" defaultVariableName="WM" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">wet mass</name>
+    <unitName xml:lang="en">kg</unitName>
+  </property>
+  <property id="9b811dd0-7ba9-49a5-b70e-b28f7220dfe4">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_105</name>
+    <comment xml:lang="en">undefined allocation 105 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="c74c3729-e577-4081-b572-a283d2561a75" defaultVariableName="C_content_fossil" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">carbon content, fossil</name>
+    <unitName xml:lang="en">kg</unitName>
+    <comment xml:lang="en">fossil carbon content on a dry matter basis</comment>
+  </property>
+  <property id="05576542-5285-4fdf-9fcd-9d5f944b32f2">
+    <name xml:lang="en">EcoSpold01Allocation_other_8</name>
+    <comment xml:lang="en">other allocation 8 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="6225e729-27b9-488d-a5e9-85d853321433">
+    <name xml:lang="en">EcoSpold01Allocation_physical_3</name>
+    <comment xml:lang="en">physical allocation 3 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="e07a2fd9-0416-4c56-b9ea-45a3348f7494">
+    <name xml:lang="en">EcoSpold01Allocation_other_131</name>
+    <comment xml:lang="en">other allocation 131 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="eefd9359-1594-45a8-be13-c581b6fee728">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_101</name>
+    <comment xml:lang="en">undefined allocation 101 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="c8bd609b-f039-4f12-b181-84db2bbcfd2c">
+    <name xml:lang="en">EcoSpold01Allocation_other_29</name>
+    <comment xml:lang="en">other allocation 29 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="9146a06e-098c-4d95-9271-fa8010af8fd5">
+    <name xml:lang="en">EcoSpold01Allocation_other_107</name>
+    <comment xml:lang="en">other allocation 107 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="1ca889cd-9595-40cf-bf82-1872ff37af54">
+    <name xml:lang="en">EcoSpold01Allocation_other_61</name>
+    <comment xml:lang="en">other allocation 61 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="608190bf-8f74-4f8e-8544-f25377accf4d" defaultVariableName="Tl_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">thallium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">thallium content on a dry matter basis</comment>
+  </property>
+  <property id="a2253bbc-db70-4027-a460-2c56b53e0018">
+    <name xml:lang="en">EcoSpold01Allocation_other_38</name>
+    <comment xml:lang="en">other allocation 38 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="d7ba3e4c-6cb7-4186-aabf-857f533b194a">
+    <name xml:lang="en">EcoSpold01Allocation_other_136</name>
+    <comment xml:lang="en">other allocation 136 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="b838627a-7ccc-469e-9954-a126ca812316">
+    <name xml:lang="en">EcoSpold01Allocation_other_86</name>
+    <comment xml:lang="en">other allocation 86 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="b3026066-b632-4c47-a27e-c13f4a3489fb" defaultVariableName="I_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">iodine content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">iodine content on a dry matter basis</comment>
+  </property>
+  <property id="0ccb96ff-84a4-4523-b559-dc6e98e59765">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_53</name>
+    <comment xml:lang="en">undefined allocation 53 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="dcc3ffa8-8231-47b0-a652-e5829c72b995">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_102</name>
+    <comment xml:lang="en">undefined allocation 102 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="b89a34ce-476c-40b0-8f53-ddd40ab8dafe">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_34</name>
+    <comment xml:lang="en">undefined allocation 34 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="081906a6-216f-464d-ab5f-a767a2b536bc">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_139</name>
+    <comment xml:lang="en">undefined allocation 139 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="0c9b0570-27f4-4781-9924-85a7740a1bd2">
+    <name xml:lang="en">EcoSpold01Allocation_other_4</name>
+    <comment xml:lang="en">other allocation 4 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="65c24baa-9097-4a84-a0fc-794923c31676">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_156</name>
+    <comment xml:lang="en">undefined allocation 156 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="d833299f-a606-4dad-80eb-9fac17dd0859">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_35</name>
+    <comment xml:lang="en">undefined allocation 35 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="7d3c701a-e10d-4d29-87b8-267dd8d41927">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_9</name>
+    <comment xml:lang="en">undefined allocation 9 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="02927350-e86c-4e02-864d-eab353d94fa6">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_50</name>
+    <comment xml:lang="en">undefined allocation 50 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="395566da-d6f8-4f41-a799-f95234b3eb38">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_57</name>
+    <comment xml:lang="en">undefined allocation 57 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="48c987bb-3144-4872-b5c7-b1389c40be25" defaultVariableName="Net_Heat_Value" unitId="980b811e-3905-4797-82a5-173f5568bc7e">
+    <name xml:lang="en">heating value, net</name>
+    <unitName xml:lang="en">MJ</unitName>
+    <comment xml:lang="en">net (lower) heating (calorific) value</comment>
+  </property>
+  <property id="f661d089-6356-485a-bff5-834415dc83ae">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_142</name>
+    <comment xml:lang="en">undefined allocation 142 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="20a573bd-dd63-4957-951c-e32f73e487ff">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_147</name>
+    <comment xml:lang="en">undefined allocation 147 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="e0f51918-7d89-491e-b736-37d7f6bc1cea">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_58</name>
+    <comment xml:lang="en">undefined allocation 58 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="23135e1c-92ca-4879-83f9-71bcf95dea7f">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_99</name>
+    <comment xml:lang="en">undefined allocation 99 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="2f38f10d-a26d-436c-8984-7549d556e8b5">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_96</name>
+    <comment xml:lang="en">undefined allocation 96 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="32e869d7-4713-4f6a-ac6d-0c36bca0835e">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_69</name>
+    <comment xml:lang="en">undefined allocation 69 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="4fb17587-2c03-4b4e-b38b-867cfd4bfae8" defaultVariableName="Pr_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">praseodymium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">praseodymium content on a dry matter basis</comment>
+  </property>
+  <property id="72e34840-3564-4883-aaa8-3f9f3038547a">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_29</name>
+    <comment xml:lang="en">undefined allocation 29 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="de1bb1fa-ab42-4f56-881e-f10e5222cf63">
+    <name xml:lang="en">EcoSpold01Allocation_other_13</name>
+    <comment xml:lang="en">other allocation 13 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="4304cee2-2cb3-4bb0-8482-de81b2434861">
+    <name xml:lang="en">EcoSpold01Allocation_physical_6</name>
+    <comment xml:lang="en">physical allocation 6 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="fbc58d8d-0a4c-4eb0-a14a-fafef222bafc" defaultVariableName="Lu_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">lutetium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">lutetium content on a dry matter basis</comment>
+  </property>
+  <property id="e70c55d1-b081-484b-9e7b-0e4743d6f8d4">
+    <name xml:lang="en">EcoSpold01Allocation_other_16</name>
+    <comment xml:lang="en">other allocation 16 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="7d0f119e-cbf4-451f-acc8-c14a4b9e72f9">
+    <name xml:lang="en">EcoSpold01Allocation_other_114</name>
+    <comment xml:lang="en">other allocation 114 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="0d873051-437e-4394-b5b8-cd82d5980873">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_82</name>
+    <comment xml:lang="en">undefined allocation 82 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="b86d456d-a1dc-4468-a20e-b6a3f4701e32" defaultVariableName="B_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">boron content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">boron content on a dry matter basis</comment>
+  </property>
+  <property id="593e94f2-8374-48ea-9f19-0feb93b8aeac">
+    <name xml:lang="en">EcoSpold01Allocation_other_41</name>
+    <comment xml:lang="en">other allocation 41 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="e4f645c2-c697-4d47-8736-f0b41a80c65e">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_88</name>
+    <comment xml:lang="en">undefined allocation 88 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="48b2521b-63f6-4121-9c3f-8edef7b31fc5" defaultVariableName="Re_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">rhenium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">rhenium content on a dry matter basis</comment>
+  </property>
+  <property id="97f3bbfe-fa3a-4d05-9cb6-bb4b6379c5ef" defaultVariableName="P_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">phosphorus content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">phosphorus content on a dry matter basis</comment>
+  </property>
+  <property id="30f0aa15-2d50-4f09-af94-683b6dd68adc" defaultVariableName="As_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">arsenic content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">arsenic content on a dry matter basis</comment>
+  </property>
+  <property id="3b2fd7f9-ae48-4c20-8d0f-47bcf927fcb3">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_65</name>
+    <comment xml:lang="en">undefined allocation 65 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="c9d84209-913c-4902-bffe-798448407898">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_84</name>
+    <comment xml:lang="en">undefined allocation 84 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="83f67a9e-bf78-4e0d-b1f0-5051a1fda9fe" defaultVariableName="Mo_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">molybdenum content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">molybdenum content on a dry matter basis</comment>
+  </property>
+  <property id="83d7ec8e-268c-4b90-b0d5-24d42c802e68">
+    <name xml:lang="en">EcoSpold01Allocation_other_78</name>
+    <comment xml:lang="en">other allocation 78 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="d4c9277c-c6fb-432a-8fd5-f2defbe4b86f">
+    <name xml:lang="en">EcoSpold01Allocation_other_93</name>
+    <comment xml:lang="en">other allocation 93 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="0850c7ed-99f8-4135-bfac-12371154b0e3">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_39</name>
+    <comment xml:lang="en">undefined allocation 39 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="cd5814c6-01ff-4fe8-b4bc-225084393eb2" defaultVariableName="Ar_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">argon content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">argon content on a dry matter basis</comment>
+  </property>
+  <property id="ae171669-ad44-43d5-9f0c-5dc6e17f1206">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_164</name>
+    <comment xml:lang="en">undefined allocation 164 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="17b34a51-0a5a-41c6-a8ed-42984b97ed14">
+    <name xml:lang="en">EcoSpold01Allocation_other_12</name>
+    <comment xml:lang="en">other allocation 12 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="de4b532b-fdfe-47f1-96f0-2f4a82cfcbd9">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_163</name>
+    <comment xml:lang="en">undefined allocation 163 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="2dec5fcb-b303-4bfa-8e30-0e043c523163" defaultVariableName="true_value" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">true value</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">allocation property applied in "true value" allocation</comment>
+  </property>
+  <property id="10516dfc-a6ee-4e9e-8a17-fbde71b06c26">
+    <name xml:lang="en">EcoSpold01Allocation_other_23</name>
+    <comment xml:lang="en">other allocation 23 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="7de227b7-59d4-4a2e-a3ba-a3d7b3d804e7">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_46</name>
+    <comment xml:lang="en">undefined allocation 46 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="dba83ee6-9127-4c81-86c9-15e29987dcdf" defaultVariableName="V_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">vanadium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">vanadium content on a dry matter basis</comment>
+  </property>
+  <property id="d4eb6078-d96f-4410-bb1d-cbf456c765ff">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_143</name>
+    <comment xml:lang="en">undefined allocation 143 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="1e4dda32-af87-4ead-8b71-3609d387d11f">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_41</name>
+    <comment xml:lang="en">undefined allocation 41 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="38836621-9b7d-43dc-bf7f-467fca9acefa">
+    <name xml:lang="en">EcoSpold01Allocation_physical_14</name>
+    <comment xml:lang="en">physical allocation 14 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="ff13a5f2-9270-42ff-8382-740d57bfa05c">
+    <name xml:lang="en">EcoSpold01Allocation_other_110</name>
+    <comment xml:lang="en">other allocation 110 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="e9688cbc-7400-457a-a936-5ab123ea326c" defaultVariableName="Al_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">aluminium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">aluminium content on a dry matter basis</comment>
+  </property>
+  <property id="0ab0dbcd-8b4a-409e-8766-f45a7758c3ff">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_31</name>
+    <comment xml:lang="en">undefined allocation 31 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="d95d853b-53a9-43e5-9c12-acc4a4ae6c7f">
+    <name xml:lang="en">EcoSpold01Allocation_other_36</name>
+    <comment xml:lang="en">other allocation 36 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="b00066a1-40f3-466c-9bf9-4be11256842e" defaultVariableName="fuel_use" unitId="980b811e-3905-4797-82a5-173f5568bc7e">
+    <name xml:lang="en">Corresponding fuel use</name>
+    <unitName xml:lang="en">MJ</unitName>
+    <comment xml:lang="en">Lower heating value of the fuel input related to the heat/electricity output</comment>
+  </property>
+  <property id="6b093a42-84fe-41a1-8488-0fb444a5cf9d" defaultVariableName="U_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">uranium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">uranium content on a dry matter basis</comment>
+  </property>
+  <property id="b181bebd-539c-49bc-810e-9a443060afbc" defaultVariableName="Th_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">thorium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">thorium content on a dry matter basis</comment>
+  </property>
+  <property id="aafefdf9-e3dd-499b-8a80-e31ac7012586" defaultVariableName="capacity_l_per_hour" unitId="bc240401-c632-4b0f-9fc3-945610d47fc5">
+    <name xml:lang="en">capacity [l/hour]</name>
+    <unitName xml:lang="en">l/hour</unitName>
+    <comment xml:lang="en">capacity in litres per hour</comment>
+  </property>
+  <property id="01232ebc-8511-4da3-a1e6-267172e6f155">
+    <name xml:lang="en">EcoSpold01Allocation_other_104</name>
+    <comment xml:lang="en">other allocation 104 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="53f505b2-ad50-4c64-a9d6-0d3e41fb3dd2">
+    <name xml:lang="en">EcoSpold01Allocation_other_6</name>
+    <comment xml:lang="en">other allocation 6 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="a9358458-9724-4f03-b622-106eda248916" defaultVariableName="water_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">water content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">water content on a dry matter basis</comment>
+  </property>
+  <property id="d8551abf-da96-4429-846b-0973136b7d48" defaultVariableName="Sn_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">tin content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">tin content on a dry matter basis</comment>
+  </property>
+  <property id="71a8b07c-84fb-4dea-a045-7a0950b7e95b">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_74</name>
+    <comment xml:lang="en">undefined allocation 74 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="932d75c9-e53e-46d7-832d-f04d77af4b91">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_3</name>
+    <comment xml:lang="en">undefined allocation 3 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="a88e1c23-984b-4d59-8689-9822b41ff482">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_127</name>
+    <comment xml:lang="en">undefined allocation 127 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="864f80ba-e9b3-45b5-a45b-2d5224c40487">
+    <name xml:lang="en">EcoSpold01Allocation_other_27</name>
+    <comment xml:lang="en">other allocation 27 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="1a7e58fe-d385-4d24-81c1-a6f682823a3e">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_172</name>
+    <comment xml:lang="en">undefined allocation 172 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="f6c7ebbb-902a-412f-a55b-0743aea00238" defaultVariableName="S_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">sulfur content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">sulfur content on a dry matter basis</comment>
+  </property>
+  <property id="6393c14b-db78-445d-a47b-c0cb866a1b25" defaultVariableName="C_content_non-fossil" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">carbon content, non-fossil</name>
+    <unitName xml:lang="en">kg</unitName>
+    <comment xml:lang="en">biogene carbon content on a dry matter basis</comment>
+  </property>
+  <property id="ca949a93-0642-4d1d-83bf-52faf10f2329" defaultVariableName="K_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">potassium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">potassium content on a dry matter basis</comment>
+  </property>
+  <property id="10f1ba60-d686-4fec-a93a-97bf45e660b0">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_110</name>
+    <comment xml:lang="en">undefined allocation 110 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="de9e34f7-0567-4804-865f-0b7cfa558edd">
+    <name xml:lang="en">EcoSpold01Allocation_other_37</name>
+    <comment xml:lang="en">other allocation 37 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="246d7910-43ad-4505-91e1-21d1c0d7c784">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_22</name>
+    <comment xml:lang="en">undefined allocation 22 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="23685f2b-904d-4f25-b53d-1e3d2cece12f">
+    <name xml:lang="en">EcoSpold01Allocation_other_64</name>
+    <comment xml:lang="en">other allocation 64 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="4594279a-e4ee-4e40-8dcd-48c8cdea1d94">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_112</name>
+    <comment xml:lang="en">undefined allocation 112 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="bf4d71d9-4301-4939-8a9d-36d8811b7db0" defaultVariableName="Be_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">beryllium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">beryllium content on a dry matter basis</comment>
+  </property>
+  <property id="104e722b-9fa8-4f23-8b14-433309420209">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_94</name>
+    <comment xml:lang="en">undefined allocation 94 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="94b2be61-35f2-40fb-b9ab-636ae5a0415b" defaultVariableName="La_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">lanthanum content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">lanthanum content on a dry matter basis</comment>
+  </property>
+  <property id="f69a7705-e7e5-4f97-a971-ca2b3ccc9d7d">
+    <name xml:lang="en">EcoSpold01Allocation_other_121</name>
+    <comment xml:lang="en">other allocation 121 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="af20a165-c287-4949-b0c5-faac84d03d37">
+    <name xml:lang="en">EcoSpold01Allocation_other_42</name>
+    <comment xml:lang="en">other allocation 42 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="4119c81d-5650-4af0-bbaf-2f892b78946f">
+    <name xml:lang="en">EcoSpold01Allocation_other_80</name>
+    <comment xml:lang="en">other allocation 80 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="330a5eb3-668a-4c44-9a25-55aa7305c88d">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_71</name>
+    <comment xml:lang="en">undefined allocation 71 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="0c45ba75-5070-4fd4-968f-163df0719411">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_40</name>
+    <comment xml:lang="en">undefined allocation 40 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="27fb8fa1-3055-4c62-8421-7d9588a3216f">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_158</name>
+    <comment xml:lang="en">undefined allocation 158 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="e5507d89-78ad-4746-900c-b9afa5a62ea6" defaultVariableName="Pb_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">lead content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">lead content on a dry matter basis</comment>
+  </property>
+  <property id="b62bf4de-86a1-4648-8623-c553991c7dc9">
+    <name xml:lang="en">EcoSpold01Allocation_other_83</name>
+    <comment xml:lang="en">other allocation 83 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="c99b7922-406a-4a2a-a5b5-cdc46b14ce2e">
+    <name xml:lang="en">EcoSpold01Allocation_other_44</name>
+    <comment xml:lang="en">other allocation 44 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="30f65a30-89d1-457b-a28a-63692feea6b4">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_73</name>
+    <comment xml:lang="en">undefined allocation 73 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="22640fa6-4eec-426e-ad6a-dec3e440ec36">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_103</name>
+    <comment xml:lang="en">undefined allocation 103 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="9fbbd119-6566-48c5-8799-1ef8390afe57">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_30</name>
+    <comment xml:lang="en">undefined allocation 30 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="ee301bc4-052a-40c2-a5d7-76fa6e429aa5" defaultVariableName="Au_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">gold content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">gold content on a dry matter basis</comment>
+  </property>
+  <property id="4872685d-64bd-45ed-a734-bc9e3e30ab19">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_129</name>
+    <comment xml:lang="en">undefined allocation 129 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="fe9f0d92-ecdf-4e72-bd20-fadd3b6175bf" defaultVariableName="Ge_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">germanium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">germanium content on a dry matter basis</comment>
+  </property>
+  <property id="51dcf8a2-7ad9-4291-b7dd-f7b89849443c">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_76</name>
+    <comment xml:lang="en">undefined allocation 76 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="6e79b548-79d9-4068-b13c-0f77fa590478">
+    <name xml:lang="en">EcoSpold01Allocation_other_99</name>
+    <comment xml:lang="en">other allocation 99 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="82a79813-89bc-46aa-b8c3-aa85b595365f">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_15</name>
+    <comment xml:lang="en">undefined allocation 15 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="e9fa11a1-1011-421d-aa34-0544d767a632" defaultVariableName="Ti_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">titanium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">titanium content on a dry matter basis</comment>
+  </property>
+  <property id="e5336a01-901a-47f6-ab7e-7e94cf0963db">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_32</name>
+    <comment xml:lang="en">undefined allocation 32 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="6c4a1198-e394-4244-b2c1-400f359251f5" defaultVariableName="Rb_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">rubidium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">rubidium content on a dry matter basis</comment>
+  </property>
+  <property id="5bb5c59e-6af9-403c-b325-2d158cb5984a">
+    <name xml:lang="en">EcoSpold01Allocation_other_134</name>
+    <comment xml:lang="en">other allocation 134 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="3aef92a8-1578-46ee-8ba4-aa4611bf95f3">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_14</name>
+    <comment xml:lang="en">undefined allocation 14 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="27a52505-9924-4fee-93ed-49fea90d8688">
+    <name xml:lang="en">EcoSpold01Allocation_other_75</name>
+    <comment xml:lang="en">other allocation 75 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="286bd819-5722-41b7-b4a2-cff94e76d4bf">
+    <name xml:lang="en">EcoSpold01Allocation_other_105</name>
+    <comment xml:lang="en">other allocation 105 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="c50751b6-e31f-473b-af99-664ad2ad6185">
+    <name xml:lang="en">conversion factor kg to MJ</name>
+    <comment xml:lang="en">Used to remove duplicate conversion datasets</comment>
+  </property>
+  <property id="f555cb34-c896-4f5f-986b-573ae7c7e5da">
+    <name xml:lang="en">EcoSpold01Allocation_other_18</name>
+    <comment xml:lang="en">other allocation 18 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="1e51ca3c-5b6b-4678-93ef-8fc4f8745f76">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_159</name>
+    <comment xml:lang="en">undefined allocation 159 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="aac3d6fa-9551-46dc-a6bb-f36e338d5fca">
+    <name xml:lang="en">EcoSpold01Allocation_other_24</name>
+    <comment xml:lang="en">other allocation 24 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="995265a2-f2cb-4c12-a961-766eb34392b9" defaultVariableName="Sr_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">strontium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">strontium content on a dry matter basis</comment>
+  </property>
+  <property id="4a46fd19-afb1-4fb3-8328-ae1fc4449536">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_75</name>
+    <comment xml:lang="en">undefined allocation 75 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="a8aa250d-d2d6-47a0-baac-d161806bf103">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_13</name>
+    <comment xml:lang="en">undefined allocation 13 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="c6cc9416-0127-478b-84bc-9d40a802686d">
+    <name xml:lang="en">EcoSpold01Allocation_other_57</name>
+    <comment xml:lang="en">other allocation 57 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="43e30a6f-82ee-4f81-b799-e835163c8dcd" defaultVariableName="Ta_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">tantalum content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">tantalum content on a dry matter basis</comment>
+  </property>
+  <property id="3db02346-808f-4eb6-9232-317a23c63484">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_7</name>
+    <comment xml:lang="en">undefined allocation 7 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="290526be-8bd4-4e92-a2f7-4901481e40da">
+    <name xml:lang="en">EcoSpold01Allocation_physical_11</name>
+    <comment xml:lang="en">physical allocation 11 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="7506683f-91dc-4628-943d-e4b42c279d21">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_170</name>
+    <comment xml:lang="en">undefined allocation 170 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="3ca17519-ac5d-4242-97f7-2625ceb5b671">
+    <name xml:lang="en">EcoSpold01Allocation_other_77</name>
+    <comment xml:lang="en">other allocation 77 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="d01683bd-aa77-46d1-85f8-23d429e022ee">
+    <name xml:lang="en">EcoSpold01Allocation_other_115</name>
+    <comment xml:lang="en">other allocation 115 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="7027204d-5781-4ae1-9a40-271b808304eb">
+    <name xml:lang="en">EcoSpold01Allocation_other_79</name>
+    <comment xml:lang="en">other allocation 79 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="114d7baf-042e-43b3-9838-f92d4ddb4e69">
+    <name xml:lang="en">EcoSpold01Allocation_other_74</name>
+    <comment xml:lang="en">other allocation 74 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="b0a4d18f-2eb1-4f63-96b3-b8ea31a42bb3" defaultVariableName="exergy" unitId="980b811e-3905-4797-82a5-173f5568bc7e">
+    <name xml:lang="en">exergy</name>
+    <unitName xml:lang="en">MJ</unitName>
+    <comment xml:lang="en">allocation factor for electricity (=1) vs. heat, where heat is calculated as the termodynamic mean temperature Tm = (Tfeed-Treturn)/ln(Tfeed/Treturn), relative to the application temperature (Tu, typically = 293 K), i.e. (Tm-Tu)/Tm</comment>
+  </property>
+  <property id="99779f35-bd0d-41cd-82b6-281a85c6da0e">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_161</name>
+    <comment xml:lang="en">undefined allocation 161 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="b7f03a47-0c8e-456b-ac0d-077ec06e3125">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_12</name>
+    <comment xml:lang="en">undefined allocation 12 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="d22b84cd-c54a-412d-b852-aa2c90ab876b">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_28</name>
+    <comment xml:lang="en">undefined allocation 28 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="4f3b2a38-e536-4342-9f6e-18475450e980">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_77</name>
+    <comment xml:lang="en">undefined allocation 77 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="cd4e3d6c-9898-4181-ba4d-d5763dc7e1c5">
+    <name xml:lang="en">EcoSpold01Allocation_other_31</name>
+    <comment xml:lang="en">other allocation 31 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="e89aabea-22d5-42b0-b849-2b0d01ed3740">
+    <name xml:lang="en">EcoSpold01Allocation_other_10</name>
+    <comment xml:lang="en">other allocation 10 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="f08f0bdf-eb3f-437c-bc28-0106936805d7">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_18</name>
+    <comment xml:lang="en">undefined allocation 18 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="004f9876-b7fe-4015-8f83-9e07edabe496">
+    <name xml:lang="en">EcoSpold01Allocation_other_109</name>
+    <comment xml:lang="en">other allocation 109 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="d445b2d3-d259-423c-b027-7a133e1def80">
+    <name xml:lang="en">EcoSpold01Allocation_other_46</name>
+    <comment xml:lang="en">other allocation 46 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="843b09ba-1ffd-4535-a751-9e1b4ebd0d2b">
+    <name xml:lang="en">EcoSpold01Allocation_other_118</name>
+    <comment xml:lang="en">other allocation 118 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="fd4a3f9c-447a-4271-9195-f3f9cc396c80">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_79</name>
+    <comment xml:lang="en">undefined allocation 79 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="a301a838-7975-4d89-9e74-8eb77ad03cd1" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">carbon content</name>
+    <unitName xml:lang="en">kg</unitName>
+    <comment xml:lang="en">carbon content on a dry matter basis (reserved; not for manual entry)</comment>
+  </property>
+  <property id="5fc6d1c5-6338-475b-8ad3-58be3c88bc86">
+    <name xml:lang="en">EcoSpold01Allocation_other_73</name>
+    <comment xml:lang="en">other allocation 73 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="c9d506f1-98dc-45d4-acb8-83095fb93317">
+    <name xml:lang="en">EcoSpold01Allocation_physical_15</name>
+    <comment xml:lang="en">physical allocation 15 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="bdfb2f07-5ec0-4c49-93c5-0e532c1b4a0f">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_66</name>
+    <comment xml:lang="en">undefined allocation 66 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="b4d2d9e3-85dc-4ef0-8184-6af23c011c98">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_56</name>
+    <comment xml:lang="en">undefined allocation 56 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="30fd0072-a0d4-4b5b-ad3e-dbd50a227ba5" defaultVariableName="Pa_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">protactinium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">protactinium content on a dry matter basis</comment>
+  </property>
+  <property id="28a73d20-406b-4feb-875f-3efbe7261aae">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_64</name>
+    <comment xml:lang="en">undefined allocation 64 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="615315e1-6e9f-4ec8-ac46-d0c79b2dd640">
+    <name xml:lang="en">EcoSpold01Allocation_other_117</name>
+    <comment xml:lang="en">other allocation 117 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="4131adc0-afda-4a73-b6b6-3ed9341ee3d9" defaultVariableName="vol" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
+    <name xml:lang="en">volume</name>
+    <unitName xml:lang="en">m3</unitName>
+    <comment xml:lang="en">volume</comment>
+  </property>
+  <property id="347a7539-bd46-41b1-a30d-4e087178a3d8">
+    <name xml:lang="en">EcoSpold01Allocation_other_125</name>
+    <comment xml:lang="en">other allocation 125 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="61205d13-4433-43f6-8b6f-dd76c2036618">
+    <name xml:lang="en">EcoSpold01Allocation_other_20</name>
+    <comment xml:lang="en">other allocation 20 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="86937b4e-c531-4ce5-b65e-ce0d17d3ca27" defaultVariableName="Ho_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">holmium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">holmium content on a dry matter basis</comment>
+  </property>
+  <property id="6a0ca084-7700-4acb-8ba8-5c8d10c50f59">
+    <name xml:lang="en">EcoSpold01Allocation_physical_4</name>
+    <comment xml:lang="en">physical allocation 4 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="4af77686-dcdd-4a5c-bfc4-a4eac0ab3f62">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_52</name>
+    <comment xml:lang="en">undefined allocation 52 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="ed198fe4-89cf-4812-96c0-f65919df0c33">
+    <name xml:lang="en">EcoSpold01Allocation_other_3</name>
+    <comment xml:lang="en">other allocation 3 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="f9c05486-1c02-4621-af34-2145cecf0fb6">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_122</name>
+    <comment xml:lang="en">undefined allocation 122 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="16bd8b23-46d6-442a-8822-b8475dedb616">
+    <name xml:lang="en">EcoSpold01Allocation_other_124</name>
+    <comment xml:lang="en">other allocation 124 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="bd75bdc0-2ceb-4569-8f30-a475eadd87a0">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_89</name>
+    <comment xml:lang="en">undefined allocation 89 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="a2047b68-9196-4f4f-8192-99f79898fa47">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_169</name>
+    <comment xml:lang="en">undefined allocation 169 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="0132d97c-5f19-4397-9197-59ab801b10cf" defaultVariableName="Cu_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">copper content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">copper content on a dry matter basis</comment>
+  </property>
+  <property id="606b5765-2832-4924-a08e-c782f713047e">
+    <name xml:lang="en">EcoSpold01Allocation_other_127</name>
+    <comment xml:lang="en">other allocation 127 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="0704ad55-e63f-4311-a54b-ad95e990eb72">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_81</name>
+    <comment xml:lang="en">undefined allocation 81 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="5f7dde76-e912-4ba0-9d93-c0b57704c617">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_120</name>
+    <comment xml:lang="en">undefined allocation 120 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="eb8b2ca3-c5a8-4297-8a02-e068fb012a75">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_93</name>
+    <comment xml:lang="en">undefined allocation 93 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="5d5ee305-56e4-4407-9bd0-9faa261af1c1">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_130</name>
+    <comment xml:lang="en">undefined allocation 130 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="6b90d16b-f20b-4b53-abc2-763f9455dc05" defaultVariableName="Br_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">bromine content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">bromine content on a dry matter basis</comment>
+  </property>
+  <property id="326f28c6-5976-4ae4-8a26-64fa1d3f6cad">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_109</name>
+    <comment xml:lang="en">undefined allocation 109 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="66e996b5-5f7b-449f-8893-0b787af21d7e" defaultVariableName="Co_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">cobalt content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">cobalt content on a dry matter basis</comment>
+  </property>
+  <property id="995afb89-8462-47bb-ae20-d7bd256259aa">
+    <name xml:lang="en">EcoSpold01Allocation_other_85</name>
+    <comment xml:lang="en">other allocation 85 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="4bb300e0-9696-45a4-808a-d4ed4e52fa0f">
+    <name xml:lang="en">EcoSpold01Allocation_other_9</name>
+    <comment xml:lang="en">other allocation 9 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="39b9c712-17bd-461c-902f-0c47168b3e0a">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_119</name>
+    <comment xml:lang="en">undefined allocation 119 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="8aaa7771-015a-4c28-8291-afa3342dbfbe" defaultVariableName="Te_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">tellurium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">tellurium content on a dry matter basis</comment>
+  </property>
+  <property id="f2283db2-62e4-467f-b9ac-c4f45be563b4" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">carbon allocation</name>
+    <unitName xml:lang="en">kg</unitName>
+    <comment xml:lang="en">carbon content per unit of product (reserved; not for manual entry)</comment>
+  </property>
+  <property id="3228318b-a090-4377-a41d-9f6c5553d775">
+    <name xml:lang="en">EcoSpold01Allocation_other_112</name>
+    <comment xml:lang="en">other allocation 112 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="5e4a4841-9282-4f36-a737-a1fbd1c38b8b">
+    <name xml:lang="en">EcoSpold01Allocation_other_65</name>
+    <comment xml:lang="en">other allocation 65 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="fea328b8-4c94-4fed-8ccd-b277a7d1052b">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_115</name>
+    <comment xml:lang="en">undefined allocation 115 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="0650a63d-be1c-49b6-94c5-d0dc2acc35d6" defaultVariableName="Ir_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">iridium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">iridium content on a dry matter basis</comment>
+  </property>
+  <property id="779537ad-2e38-4119-aa15-d49415136fdf">
+    <name xml:lang="en">EcoSpold01Allocation_other_50</name>
+    <comment xml:lang="en">other allocation 50 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="d3c0b420-1906-478c-8812-acfe6bf40c2e" defaultVariableName="Na_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">sodium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">sodium content on a dry matter basis</comment>
+  </property>
+  <property id="9f7de17b-15e2-4772-b847-62192a8abdbd">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_26</name>
+    <comment xml:lang="en">undefined allocation 26 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="fcf35248-3b07-43b7-a75c-77821e0ab19a">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_36</name>
+    <comment xml:lang="en">undefined allocation 36 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="b03c4941-1524-4dfb-a0e3-c3fd6fab8215">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_106</name>
+    <comment xml:lang="en">undefined allocation 106 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="1f3c2d02-f345-4df9-ba6a-88cdeaa67923" defaultVariableName="F_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">fluorine content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">fluorine content on a dry matter basis</comment>
+  </property>
+  <property id="1ddd3907-e24f-4b01-98ca-8ff1ca686c22">
+    <name xml:lang="en">EcoSpold01Allocation_other_53</name>
+    <comment xml:lang="en">other allocation 53 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="fdafa860-c059-437e-838d-9d151b2067b3" defaultVariableName="Tm_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">thulium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">thulium content on a dry matter basis</comment>
+  </property>
+  <property id="d0772b6b-5119-4d80-a322-f66e775c9b8a">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_155</name>
+    <comment xml:lang="en">undefined allocation 155 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="b4373c8a-ac59-401c-95a4-e3dac1acabf6">
+    <name xml:lang="en">EcoSpold01Allocation_other_119</name>
+    <comment xml:lang="en">other allocation 119 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="deba4909-fdf0-46d7-80ec-733b9142b16b">
+    <name xml:lang="en">EcoSpold01Allocation_other_96</name>
+    <comment xml:lang="en">other allocation 96 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="f4c39daf-a980-48ec-a45b-54e8ebd2bed8">
+    <name xml:lang="en">EcoSpold01Allocation_other_90</name>
+    <comment xml:lang="en">other allocation 90 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="2bf51b11-c178-4e01-ab8d-f8380195714e">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_4</name>
+    <comment xml:lang="en">undefined allocation 4 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="3e002aac-fa7c-47da-a6bc-cfbda96fd86c">
+    <name xml:lang="en">EcoSpold01Allocation_other_67</name>
+    <comment xml:lang="en">other allocation 67 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="beb07321-4679-4806-9466-0ff808375075">
+    <name xml:lang="en">EcoSpold01Allocation_physical_1</name>
+    <comment xml:lang="en">physical allocation 1 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="539447de-c9c8-4834-a23f-d3c8568b8ae2">
+    <name xml:lang="en">EcoSpold01Allocation_other_66</name>
+    <comment xml:lang="en">other allocation 66 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="7de04612-7740-43a3-8740-bb0cfe45e52f">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_10</name>
+    <comment xml:lang="en">undefined allocation 10 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="d2c1650c-a56f-4936-84b5-c9de10c9a37f">
+    <name xml:lang="en">EcoSpold01Allocation_physical_16</name>
+    <comment xml:lang="en">physical allocation 16 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="aefe9fab-ed23-4060-a35d-d24d5281926c" defaultVariableName="lifetime_capacity_l" unitId="86b0e4a2-57e5-48b8-a43d-22c7f8490dca">
+    <name xml:lang="en">lifetime capacity [l]</name>
+    <unitName xml:lang="en">l</unitName>
+    <comment xml:lang="en">lifetime capacity in litres</comment>
+  </property>
+  <property id="4054bfa7-dfcb-452e-b1dd-810b9e981506" defaultVariableName="Sb_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">antimony content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">antimont content on a dry matter basis</comment>
+  </property>
+  <property id="560016f5-5d3b-4793-8e81-deb16d910180">
+    <name xml:lang="en">EcoSpold01Allocation_other_52</name>
+    <comment xml:lang="en">other allocation 52 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="9b12772d-5204-4f46-86a6-0aa3e1670f6a">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_80</name>
+    <comment xml:lang="en">undefined allocation 80 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="51d4e726-0f87-4c62-9f3a-4fd008143561">
+    <name xml:lang="en">conversion factor m3 to MJ</name>
+    <comment xml:lang="en">Used to remove duplicate conversion datasets</comment>
+  </property>
+  <property id="d1af2cd4-c9d5-4c3a-af33-3d64deb37404">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_68</name>
+    <comment xml:lang="en">undefined allocation 68 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="422bd602-aed1-4d2e-9c47-b5ee2c277908">
+    <name xml:lang="en">EcoSpold01Allocation_other_137</name>
+    <comment xml:lang="en">other allocation 137 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="4dc56c79-a0ca-491c-b26c-c7c0128bac04">
+    <name xml:lang="en">EcoSpold01Allocation_other_43</name>
+    <comment xml:lang="en">other allocation 43 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="e8851fdc-aa2e-4468-b1ec-c23287af25d7">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_44</name>
+    <comment xml:lang="en">undefined allocation 44 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="7a6ab142-7599-49a1-8ce9-61ce26f37769">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_90</name>
+    <comment xml:lang="en">undefined allocation 90 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="3fda760d-9aba-4eb6-9ad2-95bb2ddc30b7">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_151</name>
+    <comment xml:lang="en">undefined allocation 151 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="229ac7df-a9f3-43cf-84c9-7f8141f3c951">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_152</name>
+    <comment xml:lang="en">undefined allocation 152 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="71661037-8aac-4af4-8d62-3b58ccda9232">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_38</name>
+    <comment xml:lang="en">undefined allocation 38 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="d23caec2-9ca7-4042-a814-056f266e1e28">
+    <name xml:lang="en">EcoSpold01Allocation_other_92</name>
+    <comment xml:lang="en">other allocation 92 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="72234199-6c37-4f1d-b083-0bcf85533bfe">
+    <name xml:lang="en">EcoSpold01Allocation_other_30</name>
+    <comment xml:lang="en">other allocation 30 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="e3c6bebb-7017-44d3-b22f-fe48987fbaa0">
+    <name xml:lang="en">EcoSpold01Allocation_physical_9</name>
+    <comment xml:lang="en">physical allocation 9 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="8d459bb4-ae16-4770-a6ea-91c5ac1cc63a">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_162</name>
+    <comment xml:lang="en">undefined allocation 162 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="84b2179e-d937-410e-bcee-0174569488f9">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_125</name>
+    <comment xml:lang="en">undefined allocation 125 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="60dacb81-e92c-4f1e-bf85-0f30a9921e4c">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_37</name>
+    <comment xml:lang="en">undefined allocation 37 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="9c38ea07-adcd-4018-8636-eb32382f39a7">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_5</name>
+    <comment xml:lang="en">undefined allocation 5 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="d61b8768-8ef6-4a99-ae16-9e51f24ad5b5" defaultVariableName="Gross_Heat_Value" unitId="980b811e-3905-4797-82a5-173f5568bc7e">
+    <name xml:lang="en">heating value, gross</name>
+    <unitName xml:lang="en">MJ</unitName>
+    <comment xml:lang="en">gross (upper) heating (calorific) value</comment>
+  </property>
+  <property id="f53a5dbc-3bd3-4570-adff-b00790ea3ffc" defaultVariableName="N_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">nitrogen content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">nitrogen content on a dry matter basis</comment>
+  </property>
+  <property id="8f14b33c-bc62-4c5b-96d9-6e92d3631eb2">
+    <name xml:lang="en">EcoSpold01Allocation_physical_10</name>
+    <comment xml:lang="en">physical allocation 10 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="e67802d9-321c-4494-a7b0-f769a634d6ca">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_134</name>
+    <comment xml:lang="en">undefined allocation 134 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="64d9c14d-3dce-41de-bd87-2c8520e3f6d6">
+    <name xml:lang="en">EcoSpold01Allocation_other_47</name>
+    <comment xml:lang="en">other allocation 47 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="26da0224-0cb4-4e78-8755-64be70cbcb52">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_121</name>
+    <comment xml:lang="en">undefined allocation 121 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="999af43a-1a83-4231-ba3c-600b1941b3a0" defaultVariableName="Pd_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">palladium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">palladium content on a dry matter basis</comment>
+  </property>
+  <property id="72ca3df5-6d2a-4a64-9fdf-d976136e4167" defaultVariableName="Y_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">yttrium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">yttrium content on a dry matter basis</comment>
+  </property>
+  <property id="52178bb1-123f-476f-b87b-0b0b220da342">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_98</name>
+    <comment xml:lang="en">undefined allocation 98 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="c2d8bd45-452a-4318-b841-cccdc7049829">
+    <name xml:lang="en">EcoSpold01Allocation_other_2</name>
+    <comment xml:lang="en">other allocation 2 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="8daf1327-bd94-4903-8e7b-5fe7731a259b" defaultVariableName="Ra_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">radium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">radium content on a dry matter basis</comment>
+  </property>
+  <property id="ad7781c7-5dc2-4421-b182-e1fd4cef7fa5" defaultVariableName="Cd_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">cadmium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">cadmium content on a dry matter basis</comment>
+  </property>
+  <property id="af7ef4cd-d96f-411f-8566-60150fa08f4e">
+    <name xml:lang="en">EcoSpold01Allocation_other_88</name>
+    <comment xml:lang="en">other allocation 88 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="e2bdc7a2-bfb2-4db4-9fa2-12e46f767097">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_19</name>
+    <comment xml:lang="en">undefined allocation 19 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="ed0f7fbe-11a4-4abd-916c-d6f5d73e8558">
+    <name xml:lang="en">EcoSpold01Allocation_other_106</name>
+    <comment xml:lang="en">other allocation 106 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="d1191f28-0cc9-4f82-9a26-bf49de106198">
+    <name xml:lang="en">EcoSpold01Allocation_other_70</name>
+    <comment xml:lang="en">other allocation 70 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="c3037e52-42ec-41bf-a3f2-f1a98f6355e5">
+    <name xml:lang="en">EcoSpold01Allocation_other_135</name>
+    <comment xml:lang="en">other allocation 135 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="a17f5864-6177-4619-82c5-3426c8c64e7d" defaultVariableName="Ga_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">gallium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">gallium content on a dry matter basis</comment>
+  </property>
+  <property id="ec1f2209-1f53-40d5-bc53-67f388c82f5a" defaultVariableName="lifetime_capacity_kWh" unitId="77ae64fa-7e74-4252-9c3b-889c1cd20bfc">
+    <name xml:lang="en">lifetime capacity [kWh]</name>
+    <unitName xml:lang="en">kWh</unitName>
+  </property>
+  <property id="62403f62-04a4-4089-b27d-f31c0f00d092">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_61</name>
+    <comment xml:lang="en">undefined allocation 61 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="41ca3038-3c06-4aa3-981a-5888bf9c926d">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_149</name>
+    <comment xml:lang="en">undefined allocation 149 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="2bc683e4-3780-4f00-8c1d-fd53e05cfde7" defaultVariableName="Mn_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">manganese content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">manganese content on a dry matter basis</comment>
+  </property>
+  <property id="c9011148-2905-474e-a858-c88d6ca870f3" defaultVariableName="Fr_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">francium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">francium content on a dry matter basis</comment>
+  </property>
+  <property id="c4c79eeb-95e1-43fb-b993-b6057296ddc5">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_160</name>
+    <comment xml:lang="en">undefined allocation 160 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="db0b4bbf-fd26-4ba2-b9de-0fd47476304f" defaultVariableName="Li_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">lithium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">lithium content on a dry matter basis</comment>
+  </property>
+  <property id="498924d9-17b0-4454-80dd-51adb77dedcb">
+    <name xml:lang="en">EcoSpold01Allocation_physical_13</name>
+    <comment xml:lang="en">physical allocation 13 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="e50220ad-77c2-41c6-9c4f-a4c99b5b633c">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_116</name>
+    <comment xml:lang="en">undefined allocation 116 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="7f341c54-c96f-49ce-990a-b430fd22475a">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_43</name>
+    <comment xml:lang="en">undefined allocation 43 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="6bc8ac5e-cc4c-45fb-93dc-53c0e45091df" defaultVariableName="energy_content" unitId="980b811e-3905-4797-82a5-173f5568bc7e">
+    <name xml:lang="en">energy content</name>
+    <unitName xml:lang="en">MJ</unitName>
+    <comment xml:lang="en">as gross calorific value (when relevant)</comment>
+  </property>
+  <property id="2903bca6-1b3d-4ac5-87a4-b6701cfbbe42">
+    <name xml:lang="en">consequential_small-scale_long-term</name>
+    <comment xml:lang="en">dummy variable for consequential, small-scale, long-term system model</comment>
+  </property>
+  <property id="6c393aad-7741-49f7-b407-61cd667cb86c">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_55</name>
+    <comment xml:lang="en">undefined allocation 55 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="e8e47ce2-af93-4f3e-99d2-1279f86f6d2c">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_95</name>
+    <comment xml:lang="en">undefined allocation 95 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="75e905a0-5ea1-48dc-af7f-88da015169b8">
+    <name xml:lang="en">EcoSpold01Allocation_other_132</name>
+    <comment xml:lang="en">other allocation 132 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="1b839039-4988-4fbd-8029-5425e2e77339">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_45</name>
+    <comment xml:lang="en">undefined allocation 45 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="144b7189-5b7f-41f2-b823-b90fa553900f">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_171</name>
+    <comment xml:lang="en">undefined allocation 171 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="f6f393da-d34f-470d-add4-bad3b3e2cf2e">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_23</name>
+    <comment xml:lang="en">undefined allocation 23 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="a83c5198-6c63-4066-95c7-1907d7bcf348">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_114</name>
+    <comment xml:lang="en">undefined allocation 114 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="b15297c5-5708-4ca2-9888-d455470f475c">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_54</name>
+    <comment xml:lang="en">undefined allocation 54 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="3677f68f-7c83-4abf-a2e7-3f4215e2ef49">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_150</name>
+    <comment xml:lang="en">undefined allocation 150 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="9676ed7d-a99c-40ed-9ff5-55081521ad8b">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_8</name>
+    <comment xml:lang="en">undefined allocation 8 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="ae7467f9-7161-4cd1-91dd-0bc49ccef2e7">
+    <name xml:lang="en">EcoSpold01Allocation_other_11</name>
+    <comment xml:lang="en">other allocation 11 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="7e83fd10-c04d-4a80-8df2-a8bbcc268c4a" defaultVariableName="Se_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">selenium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">selenium content on a dry matter basis</comment>
+  </property>
+  <property id="7acb6b78-3708-4660-a3fc-b0034d6c6caa">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_141</name>
+    <comment xml:lang="en">undefined allocation 141 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="ac040fce-c9ed-4623-b02a-e512fef4ad52">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_173</name>
+    <comment xml:lang="en">undefined allocation 173 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="f0606516-7150-4264-a0a2-d0b9e4510c55">
+    <name xml:lang="en">EcoSpold01Allocation_other_17</name>
+    <comment xml:lang="en">other allocation 17 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="61c2bb4e-3ad9-4489-bfce-14f67c31bc13">
+    <name xml:lang="en">EcoSpold01Allocation_other_28</name>
+    <comment xml:lang="en">other allocation 28 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="f404e699-76cc-4776-a4bc-9e1a3640d851">
+    <name xml:lang="en">EcoSpold01Allocation_other_25</name>
+    <comment xml:lang="en">other allocation 25 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="1222c4b8-3edb-4792-8538-ae5d5b4cbca2">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_108</name>
+    <comment xml:lang="en">undefined allocation 108 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="e5159f1c-ddbe-44bf-aed8-7e04acf81d88">
+    <name xml:lang="en">EcoSpold01Allocation_other_71</name>
+    <comment xml:lang="en">other allocation 71 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="f767b36f-62bf-4458-b694-ecbefd2ab970" defaultVariableName="Ni_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">nickel content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">nickel content on a dry matter basis</comment>
+  </property>
+  <property id="db9e4f42-3ef9-4e3c-a7d3-5fb4f3fc0aa6">
+    <name xml:lang="en">EcoSpold01Allocation_other_48</name>
+    <comment xml:lang="en">other allocation 48 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="f9da385d-5b1b-4548-826c-0bf5892a9fd9" defaultVariableName="Ca_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">calcium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">calcium content on a dry matter basis</comment>
+  </property>
+  <property id="0b27405b-3e4d-45aa-bb5c-3c52d2b04e0e" defaultVariableName="Eu_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">europium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">europium content on a dry matter basis</comment>
+  </property>
+  <property id="aae1dcfc-a4bd-4429-9446-8f99693fe9c5">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_148</name>
+    <comment xml:lang="en">undefined allocation 148 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="2a256b0b-6003-4669-a3c1-1d3eba2de45e" defaultVariableName="Hg_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">mercury content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">mercury content on a dry matter basis</comment>
+  </property>
+  <property id="f077d584-a74d-4c13-a8d7-3019f500094d">
+    <name xml:lang="en">EcoSpold01Allocation_other_49</name>
+    <comment xml:lang="en">other allocation 49 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="964f8b50-ce16-4364-835a-a3db5fb760b0" defaultVariableName="lifetime" unitId="2cf92850-0f92-4004-9dba-a6ceb6a414c2">
+    <name xml:lang="en">lifetime</name>
+    <unitName xml:lang="en">year</unitName>
+  </property>
+  <property id="31326064-33ba-4a7c-917c-ed5a91103b66">
+    <name xml:lang="en">EcoSpold01Allocation_other_32</name>
+    <comment xml:lang="en">other allocation 32 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="a065b4fb-9367-467c-b25c-38002016bb75">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_67</name>
+    <comment xml:lang="en">undefined allocation 67 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="d8074a22-bdf0-4236-afa9-e76db339c3e6">
+    <name xml:lang="en">EcoSpold01Allocation_other_34</name>
+    <comment xml:lang="en">other allocation 34 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="35ae1cd5-37e5-4c4f-b046-f516842eda2a">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_100</name>
+    <comment xml:lang="en">undefined allocation 100 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="d6594289-53bd-4e09-9d95-1ee65edc6659">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_133</name>
+    <comment xml:lang="en">undefined allocation 133 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="42d12e16-78e4-4baf-8604-50c3aff19cdb">
+    <name xml:lang="en">EcoSpold01Allocation_other_102</name>
+    <comment xml:lang="en">other allocation 102 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="8a8eec3f-2341-4834-a3ec-f73a6d57b571">
+    <name xml:lang="en">EcoSpold01Allocation_other_100</name>
+    <comment xml:lang="en">other allocation 100 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="ad626ff0-146c-48d1-98d6-8c490390e001">
+    <name xml:lang="en">EcoSpold01Allocation_other_68</name>
+    <comment xml:lang="en">other allocation 68 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="bb2f5120-57f4-4ae3-95ea-89d571b526d1" defaultVariableName="strokes" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">no. of deformation strokes</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">for use in metal extrusion</comment>
+  </property>
+  <property id="e66d61f6-8287-4cf1-bb0c-f978ee5e34b3" defaultVariableName="Bi_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">bismuth content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">bismuth content on a dry matter basis</comment>
+  </property>
+  <property id="e4d35ad5-61a9-4ebd-8ce0-9fb9da2648e9">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_132</name>
+    <comment xml:lang="en">undefined allocation 132 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="511ae34f-299d-4f34-a472-d437e2ea7f7f">
+    <name xml:lang="en">EcoSpold01Allocation_other_120</name>
+    <comment xml:lang="en">other allocation 120 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="56f09738-8225-4bdc-91d2-39ee6328f0ee" defaultVariableName="Ag_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">silver content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">silver content on a dry matter basis</comment>
+  </property>
+  <property id="ea0dd556-455f-4524-b594-785505f1c0af" defaultVariableName="Ce_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">cerium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">cerium content on a dry matter basis</comment>
+  </property>
+  <property id="e092deec-37ab-4f20-ad74-1460544a9911" defaultVariableName="Er_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">erbium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">erbium content on a dry matter basis</comment>
+  </property>
+  <property id="44454aa6-3e54-4bb3-850c-9011a7257985" defaultVariableName="Ru_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">ruthenium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">ruthenium content on a dry matter basis</comment>
+  </property>
+  <property id="e4fc784a-adb7-4c77-95d6-89c42f28d61f">
+    <name xml:lang="en">EcoSpold01Allocation_other_21</name>
+    <comment xml:lang="en">other allocation 21 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="84916b80-bf93-4e20-9b7c-593aa9518d09" defaultVariableName="W_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">tungsten content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">tungsten content on a dry matter basis</comment>
+  </property>
+  <property id="71f8f2c1-b495-4faa-b67f-ab4bf852ece7">
+    <name xml:lang="en">EcoSpold01Allocation_other_91</name>
+    <comment xml:lang="en">other allocation 91 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="dd7e15dc-c438-43f7-9c0d-d0a627163cf1" defaultVariableName="Si_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">silicon content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">silicon content on a dry matter basis</comment>
+  </property>
+  <property id="db2e27d1-47cd-4180-8416-4f79369de00c">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_6</name>
+    <comment xml:lang="en">undefined allocation 6 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="65387d28-9b09-44d2-9908-663c18b740a3" defaultVariableName="Yb_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">ytterbium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">ytterbium content on a dry matter basis</comment>
+  </property>
+  <property id="8930f8b6-1c5b-4fe8-926a-93ded8daa1a6">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_72</name>
+    <comment xml:lang="en">undefined allocation 72 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="7ed11387-207c-424f-922f-1cb1d2bf8596">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_140</name>
+    <comment xml:lang="en">undefined allocation 140 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="19859900-09d1-404d-a84a-dff37102a37a">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_126</name>
+    <comment xml:lang="en">undefined allocation 126 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="38583c32-c20b-4553-9152-b14b0bee1e61" defaultVariableName="lifetime_capacity_kg" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">lifetime capacity [kg]</name>
+    <unitName xml:lang="en">kg</unitName>
+  </property>
+  <property id="4b0bcb7d-53b1-4f01-bc6b-ce85159b0576">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_60</name>
+    <comment xml:lang="en">undefined allocation 60 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="8068cdb4-245b-46ea-8a80-a0d984ba4bfd">
+    <name xml:lang="en">EcoSpold01Allocation_other_81</name>
+    <comment xml:lang="en">other allocation 81 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="249183f5-61d4-4fe9-be48-0b36ed4818e2">
+    <name xml:lang="en">EcoSpold01Allocation_other_1</name>
+    <comment xml:lang="en">other allocation 1 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="d1299459-4bb3-4ae4-abaf-08c89bdc7e60">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_174</name>
+    <comment xml:lang="en">undefined allocation 174 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="20c6f95d-f952-431e-ac28-ac47155a16e7">
+    <name xml:lang="en">EcoSpold01Allocation_other_56</name>
+    <comment xml:lang="en">other allocation 56 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="2d2d6270-d512-4b0f-aa44-86241b4d6282">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_146</name>
+    <comment xml:lang="en">undefined allocation 146 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="a22e0fcb-dfa2-467e-910f-a8813dce8bf1">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_124</name>
+    <comment xml:lang="en">undefined allocation 124 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="b84cee83-08cf-43e8-bbff-51a6857ae19c">
+    <name xml:lang="en">EcoSpold01Allocation_other_26</name>
+    <comment xml:lang="en">other allocation 26 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="df06865b-1a20-480f-a3a1-ea494f96e566">
+    <name xml:lang="en">EcoSpold01Allocation_other_126</name>
+    <comment xml:lang="en">other allocation 126 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="c3a9f78c-10b3-4889-9436-1ce2c2433372">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_49</name>
+    <comment xml:lang="en">undefined allocation 49 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="de5f7231-dc8b-402a-a222-95341a848e0a">
+    <name xml:lang="en">EcoSpold01Allocation_other_69</name>
+    <comment xml:lang="en">other allocation 69 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="d938c38f-1e5a-4e41-9412-e3bf0f0cc610">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_144</name>
+    <comment xml:lang="en">undefined allocation 144 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="1dcfb203-7830-40b2-878d-13fc02a74051" defaultVariableName="Ba_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">barium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">barium content on a dry matter basis</comment>
+  </property>
+  <property id="a689662b-5119-429c-ae85-6115df50e093">
+    <name xml:lang="en">EcoSpold01Allocation_other_76</name>
+    <comment xml:lang="en">other allocation 76 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="33f96fe7-39da-47ca-837f-f2c311681d1b" defaultVariableName="Zn_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">zinc content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">zinc content on a dry matter basis</comment>
+  </property>
+  <property id="5ffa64c0-99a4-4a20-a1ec-4a7a4e9e0aac">
+    <name xml:lang="en">EcoSpold01Allocation_other_55</name>
+    <comment xml:lang="en">other allocation 55 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="ed52f355-d88d-4f6a-97ae-36de83cdaa6a">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_157</name>
+    <comment xml:lang="en">undefined allocation 157 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="fa091783-9951-4372-9150-35160f716a71">
+    <name xml:lang="en">EcoSpold01Allocation_other_15</name>
+    <comment xml:lang="en">other allocation 15 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="02b086c7-28a4-4204-b05b-d63631245216">
+    <name xml:lang="en">EcoSpold01Allocation_other_39</name>
+    <comment xml:lang="en">other allocation 39 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="eb730caf-f394-4e43-842d-bd85cef5f07d">
+    <name xml:lang="en">EcoSpold01Allocation_physical_12</name>
+    <comment xml:lang="en">physical allocation 12 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="829cf41b-3060-4fe5-a1ea-191a0a2c10cf">
+    <name xml:lang="en">EcoSpold01Allocation_other_89</name>
+    <comment xml:lang="en">other allocation 89 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="ebe8ff0d-a0b5-44d0-b437-4ef85a2a6284">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_153</name>
+    <comment xml:lang="en">undefined allocation 153 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="35d2e0b2-eca5-4897-a6af-b6d2e61a9079" defaultVariableName="Sc_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">scandium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">scandium content on a dry matter basis</comment>
+  </property>
+  <property id="4066a930-fa49-4c3b-97e5-b00beaed750c">
+    <name xml:lang="en">EcoSpold01Allocation_other_98</name>
+    <comment xml:lang="en">other allocation 98 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="f576f1a0-d669-4063-9309-82c4af778bb4" defaultVariableName="Gd_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">gadolinium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">gadolinium content on a dry matter basis</comment>
+  </property>
+  <property id="e40445b1-8aba-4282-851d-9c2d28b1a5c1" defaultVariableName="density" unitId="b06bab82-f0e8-426d-849a-ebdb5b553519">
+    <name xml:lang="en">density</name>
+    <unitName xml:lang="en">kg/l</unitName>
+  </property>
+  <property id="4fa5130c-9ff7-4a05-8941-cbe85266294f" defaultVariableName="Dy_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">dysprosium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">dysprosium content on a dry matter basis</comment>
+  </property>
+  <property id="f0b0d5bd-1c2f-4074-b5d9-d6253e73c0ce">
+    <name xml:lang="en">EcoSpold01Allocation_other_60</name>
+    <comment xml:lang="en">other allocation 60 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="9732cce6-14fe-4ce3-8bc9-8aa10d8b0418">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_113</name>
+    <comment xml:lang="en">undefined allocation 113 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="e59c55b1-f643-49bb-9af9-5fc992c06a8f">
+    <name xml:lang="en">EcoSpold01Allocation_other_97</name>
+    <comment xml:lang="en">other allocation 97 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="9a645b11-8a9d-4511-88fc-621d125289f6">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_104</name>
+    <comment xml:lang="en">undefined allocation 104 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="991c0653-1319-472b-8599-15da358b81e5">
+    <name xml:lang="en">EcoSpold01Allocation_other_45</name>
+    <comment xml:lang="en">other allocation 45 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="92dbd49f-8cf0-4510-b9c0-6b90443b328e" defaultVariableName="Rh_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">rhodium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">rhodium content on a dry matter basis</comment>
+  </property>
+  <property id="01e07f2d-bdf2-4331-b944-f58f4e337ff5">
+    <name xml:lang="en">EcoSpold01Allocation_other_51</name>
+    <comment xml:lang="en">other allocation 51 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="6d9e1462-80e3-4f10-b3f4-71febd6f1168" defaultVariableName="WWM" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">water in wet mass</name>
+    <unitName xml:lang="en">kg</unitName>
+    <comment xml:lang="en">water content on a wet matter basis</comment>
+  </property>
+  <property id="59d14f7c-d6ea-4770-af4a-aa3dd6538b98" defaultVariableName="Xe_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">xenon content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">xenon content on a dry matter basis</comment>
+  </property>
+  <property id="8cc1f034-59e9-49cc-8a7c-453f8deb0018">
+    <name xml:lang="en">EcoSpold01Allocation_other_7</name>
+    <comment xml:lang="en">other allocation 7 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="9909d836-d0a3-45ed-a8d6-62f5febc763e">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_21</name>
+    <comment xml:lang="en">undefined allocation 21 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="bbf35356-1757-4287-a72c-ae2bb1753731" defaultVariableName="Os_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">osmium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">osmium content on a dry matter basis</comment>
+  </property>
+  <property id="3ac16c15-0bf0-41a2-b6fe-a2a40185f82e">
+    <name xml:lang="en">EcoSpold01Allocation_other_59</name>
+    <comment xml:lang="en">other allocation 59 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="90082cb2-a539-44a0-a9aa-19aab80d4cf8">
+    <name xml:lang="en">EcoSpold01Allocation_other_62</name>
+    <comment xml:lang="en">other allocation 62 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="2544bcdb-ce26-42c3-a9d0-37e2e18a8e30">
+    <name xml:lang="en">EcoSpold01Allocation_physical_8</name>
+    <comment xml:lang="en">physical allocation 8 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="ada3f057-a72c-4580-b8e9-d957f30a813e">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_62</name>
+    <comment xml:lang="en">undefined allocation 62 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="c88931f1-9089-4ff2-b93c-e6331eb78d71">
+    <name xml:lang="en">EcoSpold01Allocation_other_87</name>
+    <comment xml:lang="en">other allocation 87 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="7ec3f14a-712b-4942-bc38-1a8a425e8729">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_166</name>
+    <comment xml:lang="en">undefined allocation 166 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="58dd6b6e-a0c7-46e6-9cd5-5d07de11a858">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_51</name>
+    <comment xml:lang="en">undefined allocation 51 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="bcd5fb37-3734-4b83-a22c-ec677e26f929">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_25</name>
+    <comment xml:lang="en">undefined allocation 25 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="20f028ac-cf7b-4052-aa36-247fbf2a16e0">
+    <name xml:lang="en">EcoSpold01Allocation_other_95</name>
+    <comment xml:lang="en">other allocation 95 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="e54fd3af-358d-4e00-ac13-84426f7c2768">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_11</name>
+    <comment xml:lang="en">undefined allocation 11 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="6b14b0c0-87b0-4be6-831a-bff2512917f8">
+    <name xml:lang="en">EcoSpold01Allocation_physical_2</name>
+    <comment xml:lang="en">physical allocation 2 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="0e73547d-0c62-48eb-9dca-d1c23d49c69d">
+    <name xml:lang="en">EcoSpold01Allocation_undefined_20</name>
+    <comment xml:lang="en">undefined allocation 20 used in EcoSpold01 datasets</comment>
+  </property>
+  <property id="7a3978ea-3e26-4329-bc8b-0915d58a7e6f" defaultVariableName="true_value_relation" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">true value relation</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">property to calculate "true value" from</comment>
+  </property>
+</validProperties>

@@ -1,0 +1,23 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:ELCDImporter" x:Class="ELCDImporter.MainWindow"
+        Title="MainWindow" Height="350" Width="525" >
+    <Window.DataContext>
+        <local:MainViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Button Content="Import Folder" HorizontalAlignment="Left" Margin="206,33,0,0" VerticalAlignment="Top" Width="93" IsDefault="True" Command="{Binding Import}"/>
+        <ProgressBar Value="{Binding Progress}" Maximum="{Binding MaxProgress}" HorizontalAlignment="Left" Height="26" Margin="75,60,0,0" VerticalAlignment="Top" Width="347"/>
+        <ListView  HorizontalAlignment="Left" Height="185" Margin="75,109,0,0" VerticalAlignment="Top" Width="347" ItemsSource="{Binding ProcessesList}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding processInformation.time.referenceYear}">
+                        
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Window>

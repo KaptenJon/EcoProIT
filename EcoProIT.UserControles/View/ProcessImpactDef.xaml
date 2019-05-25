@@ -1,0 +1,92 @@
+﻿<UserControl x:Class="EcoProIT.UserControles.View.ProcessImpactDef"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:dataLayer="clr-namespace:EcoProIT.DataLayer;assembly=EcoProIT.DataLayer"
+             xmlns:helpClasses="clr-namespace:HelpClasses;assembly=HelpClasses"
+            xmlns:controls="clr-namespace:FeserWard.Controls;assembly=Intellibox"
+             
+             mc:Ignorable="d" d:DesignWidth="533" d:DesignHeight="518.9">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+        <helpClasses:ProcessToInVisibilityConverter x:Key="ProcessToInvisible"/>
+        <helpClasses:BoolInverter x:Key="InverseBooleanConverter" />
+    </UserControl.Resources>
+    <Grid >
+
+        <ComboBox ItemsSource ="{Binding States}" DisplayMemberPath="Name" SelectedValue="{Binding SelectedState}" SelectedIndex="0"  HorizontalAlignment="Left" Margin="80,40,0,0" Name="comboBox1" VerticalAlignment="Top"
+                  Width="150"  />
+        <Label Content="State" Height="28" Margin="28,40,0,0" 
+               VerticalAlignment="Top" HorizontalAlignment="Left" Width="37"  />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="55,26,0,0"  VerticalAlignment="Top"
+                 Width="120" Visibility="Hidden"/>
+        <GroupBox Header="Machine Consumption" Margin="12,110,8,0" VerticalAlignment="Top" Height="71" >
+            <StackPanel  Margin="4" >
+                <RadioButton Padding="2" GroupName="StaticGroup" IsChecked="{Binding IsChecked, Converter={StaticResource InverseBooleanConverter}, ElementName=test}" Content="Per hour in state"  HorizontalAlignment="Left" 
+               VerticalAlignment="Top" />
+                <RadioButton Name="test" Padding="2" GroupName="StaticGroup" IsChecked="{Binding SelectedConsumption.Static}" Content="Every time used"  HorizontalAlignment="Left" 
+        	         VerticalAlignment="Top" />
+
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Product Allocation" Margin="12,186,8,0"  VerticalAlignment="Top" Height="71" Visibility="{Binding SelectedState.Name, Converter={StaticResource ProcessToInvisible}}" >
+            <StackPanel Margin="4">
+                <RadioButton  Padding="2" IsChecked="{Binding IsChecked, Converter={StaticResource InverseBooleanConverter}, ElementName=Alloca}"  GroupName="Allocate"  Content="Divided equally to all products that has used the node"  HorizontalAlignment="Left" 
+        	        VerticalAlignment="Top" />
+                <RadioButton Name="Alloca" Padding="2" GroupName="Allocate" IsChecked="{Binding SelectedConsumption.AllocationPerTime}"  Content="Divided to all products based on the time each products used the node" HorizontalAlignment="Left" 
+        	 VerticalAlignment="Top" />
+            </StackPanel>
+        </GroupBox>
+        <DataGrid AutoGenerateColumns="False" CanUserDeleteRows="True" CanUserAddRows="False" Margin="10,0,10,10" ItemsSource="{Binding SelectedConsumptions}" SelectedValue="{Binding SelectedConsumption, Mode=OneWayToSource}" Height="210" VerticalAlignment="Bottom" >
+            <DataGrid.Columns>
+                <DataGridTemplateColumn MinWidth="18" Header="Remove">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Delete"
+                                    Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}},
+                                              Path=DataContext.DeleteConsumptionCommand}"
+                                    CommandParameter="{Binding}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Consumable" Binding="{Binding Consumable.Name, Mode=OneWay}"
+                                    CanUserReorder="True" />
+                <DataGridTextColumn Header="Amount"
+                                    Binding="{Binding Amount, Mode=OneWay}"
+                                    CanUserReorder="True" />
+
+                <DataGridTextColumn Header="Unit"
+                                    Binding="{Binding UnitType, Mode=OneWay}"
+                                    CanUserReorder="True" />
+                <DataGridCheckBoxColumn Header="Static"  Binding="{Binding Static, Mode=OneWay}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Visibility="{Binding IsProcess, Converter={StaticResource BooleanToVisibilityConverter}}" Height="40" VerticalAlignment="Top" Margin="0,0,248,0">
+            <ComboBox HorizontalAlignment="Left"  VerticalAlignment="Top" MinWidth="150" Margin="81,10,0,0" 
+        	ItemsSource="{Binding Job}" SelectedIndex="0" SelectedValue="{Binding SelectedJob}" RenderTransformOrigin="-0.927,-1.591" />
+            <Label Content="Job" Margin="33,10,0,0" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Width="28" />
+        </Grid>
+        <ComboBox ItemsSource ="{x:Static dataLayer:ConnectLCIDB.Consumebles}"  SelectedValue="{Binding SelectedConsumption.Consumable}" DisplayMemberPath="Name" SelectedIndex="0"  HorizontalAlignment="Left" Margin="80,69,0,0" VerticalAlignment="Top"
+        	Width="150" RenderTransformOrigin="0.933,0.348" Height="22" />
+        <Label Content="Consums" Height="28" Margin="6,67,0,0" 
+        	VerticalAlignment="Top" HorizontalAlignment="Left" Width="59" />
+        <xctk:DecimalUpDown Value="{Binding SelectedConsumption.Amount, UpdateSourceTrigger=PropertyChanged}" Margin="70,268,0,0" HorizontalAlignment="Left" Width="78"  VerticalAlignment="Top" />
+        <Label Content="Amount" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,262,0,0" Height="26" Width="53"/>
+        <Label Content="{Binding SelectedConsumption.UnitType}" HorizontalAlignment="Left" Margin="153,268,0,0" VerticalAlignment="Top" />
+        <Button Content="Add Consumtion" Command="{Binding NewConsumptionCommand}" HorizontalAlignment="Left" Margin="293,266,0,0" VerticalAlignment="Top" Width="98" Height="22"/>
+
+        <GroupBox Header="Find Consumptions" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Height="100" Width="233">
+            <Grid>
+                <controls:Intellibox x:Name="Intelli" DisplayedValueBinding="{Binding Name}"  DataProvider="{Binding IntelliLCISearch}" Margin="10,10,-2,0" VerticalAlignment="Top">
+                    <controls:Intellibox.Columns>
+                        <controls:IntelliboxColumn DisplayMemberBinding="{Binding Name}" Width="100" Header="LCIName"></controls:IntelliboxColumn>
+                    </controls:Intellibox.Columns>
+                </controls:Intellibox>
+                <Button Command="{Binding AddNewConsumable}" CommandParameter="{Binding SelectedValue, ElementName=Intelli}" Content="Add to Common Consumables" Margin="10,40,10,0" Height="28" VerticalAlignment="Top" ></Button>
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</UserControl>

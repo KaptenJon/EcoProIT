@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+                    xmlns:ei="clr-namespace:Microsoft.Expression.Interactivity.Layout;assembly=Microsoft.Expression.Interactions"
+                    xmlns:userControles="clr-namespace:EcoProIT.UserControles;assembly=EcoProIT.UserControles">
+    <Style TargetType="Control">
+        <Setter Property="HorizontalAlignment"  Value="Center" />
+        <Setter Property="FontFamily" Value="Segoe UI"/>
+        <Setter Property="FontSize" Value="13"/>
+    </Style>
+    <Style TargetType="Window">
+        <Setter Property="Background"  Value="AliceBlue" />
+    </Style>
+    
+</ResourceDictionary>

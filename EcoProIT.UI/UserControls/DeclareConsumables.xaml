@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="EcoProIT.UI.UserControls.DeclareConsumables"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:properties="clr-namespace:EcoProIT.UI.Properties"
+             mc:Ignorable="d" 
+              >
+    <UserControl.Resources>
+        <properties:Resources x:Key="Resource" />
+    </UserControl.Resources>
+    <Grid DataContext="{Binding RelativeSource={RelativeSource Self}}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32" />
+            <RowDefinition Height="45" />
+        </Grid.RowDefinitions>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="55,0,0,0" Name="statetb" VerticalAlignment="Top" Visibility="Hidden" Width="120" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="77,6,0,0" Name="textBox1" VerticalAlignment="Top" Width="69" />
+            <Label Content="Consumes" Height="28" HorizontalAlignment="Left" Margin="6,7,0,0" Name="label3" VerticalAlignment="Top" Grid.RowSpan="2" />
+
+        <ComboBox DataContext="{StaticResource Resource}" Height="23" HorizontalAlignment="Right" SelectedItem="{Binding Path=SelectedConsumableConverter}" ItemsSource="{Binding Path=TimeConverters}" Margin="0,6,208,0" Name="comboBox1" VerticalAlignment="Top" Width="50" />
+           
+        <DockPanel HorizontalAlignment="Left"  Name="stackPanel1" VerticalAlignment="Top" Grid.Row="2">
+            <Label Content="of" Height="25" HorizontalAlignment="Left"  Name="label2" VerticalAlignment="Top" Width="22"/>
+            <Label Content="{Binding Path=ConsumableName}" Height="26"  Name="label4" VerticalAlignment="Top" HorizontalAlignment="Left" Width="10" />
+            <Label Content="per" Height="25" HorizontalAlignment="Left"  Name="label1" VerticalAlignment="Top" Width="33"  />
+            <ComboBox DataContext="{StaticResource Resource}" Height="23" SelectedItem="{Binding Path=SelectedTimeConverter}" ItemsSource="{Binding Path=TimeConverters}" Name="comboBox2" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" />
+        </DockPanel>
+    </Grid>
+</UserControl>

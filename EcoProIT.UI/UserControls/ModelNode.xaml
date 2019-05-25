@@ -1,0 +1,49 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:HelpClasses="clr-namespace:HelpClasses;assembly=HelpClasses" 
+			 xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+			 xmlns:viewModel="clr-namespace:EcoProIT.UI.UserControls.ViewModel"
+			 xmlns:userControls="clr-namespace:EcoProIT.UI.UserControls"
+			 xmlns:adobeImport="clr-namespace:EcoProIT.UI.UserControls.AdobeImport"
+			 x:Name="userControl" 
+			 x:Class="EcoProIT.UI.UserControls.ModelNode"         
+			  mc:Ignorable="d" Width="120" 
+			 MouseDoubleClick="MouseDoubleClick_1" AllowDrop="True" MouseMove="ModelNode_OnMouseMove"  Drop="DropMethod" DragEnter="Drag_Enter" >
+    <UserControl.Resources>
+        <HelpClasses:BooleanToOpacity x:Key="BooleanToOpacity"/>
+        <HelpClasses:BooleanToOpacityHidden x:Key="BooleanToOpacity1"/>
+    </UserControl.Resources>
+    <UserControl.DataContext>
+        <viewModel:ResourceDefinitionModel/>
+    </UserControl.DataContext>
+    <i:Interaction.Behaviors>
+        <userControls:DragBehavior x:Name="MovedPosition" DragBegun="MouseDragElementBehavior_DragBegun"  DragFinished="MouseDragElementBehavior_DragFinished"/>
+    </i:Interaction.Behaviors>
+    <Viewbox >
+        <DockPanel LastChildFill="True" Loaded="NodeLoaded" >
+            <adobeImport:GeneralNode Style="{Binding NodeStyle}" x:Name="border" DockPanel.Dock="Top" Height="120"
+									 Opacity="{Binding IsMouseOver, Converter={StaticResource BooleanToOpacity}, Mode=OneWay, RelativeSource={RelativeSource Self}}"  >
+                <StackPanel>
+                    <Border  DockPanel.Dock="Top" Height="106" Background="{Binding Gradient}" Opacity="{Binding ShowResults, Converter={StaticResource BooleanToOpacity1}}" />
+
+                    <Grid Margin="20,0,20,0">
+                       
+                        <TextBlock FontSize="55"  Text="{Binding ProcessName}" FontStyle="Normal"  TextWrapping="Wrap" TextAlignment="Center"   VerticalAlignment="Center" FontFamily="Microsoft YaHei UI"     />
+                        
+                    </Grid>
+                </StackPanel>
+            </adobeImport:GeneralNode>
+            <Expander VerticalAlignment="Bottom"  DockPanel.Dock="Bottom"  HorizontalAlignment="Center"  Expanded="Expander_Expanded" Collapsed="Expander_Collapsed" ExpandDirection="Down" IsExpanded="true"  />
+            <ItemsControl Height="30"  DockPanel.Dock="Bottom" ItemsSource="{Binding Parent.Parent.Parent.ProductLabels, RelativeSource={RelativeSource Self}}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel   Orientation="Horizontal" VerticalAlignment="Bottom"    />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </DockPanel> 
+    </Viewbox>
+</UserControl>

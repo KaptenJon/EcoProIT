@@ -1,0 +1,23 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="EcoProIT.UserControles.AdobeImport.Saveimage"
+	x:Name="Saveimage2"
+	d:DesignWidth="268.919" d:DesignHeight="277.703">
+
+
+	<Viewbox >
+			<Canvas Height="277.703" Width="268.919" >
+				<Path Data="F1M206.258,81.23L63.69,81.23 63.69,0.825 206.258,0.825z M254.837,0.5L15.081,0.5C7.028,0.5,0.5,7.028,0.5,15.082L0.5,263.621C0.5,271.674,7.028,278.203,15.081,278.203L254.837,278.203C262.89,278.203,269.419,271.674,269.419,263.621L269.419,15.082C269.419,7.028,262.89,0.5,254.837,0.5" Fill="#FF3C3C3B" Height="278.703" Canvas.Left="-0.5" Stroke="#FF3C3C3B" Canvas.Top="-0.5" Width="269.919"/>
+				<Path Data="F1M184.459,107.432L0,107.432 0,0 184.459,0z" Fill="#FFF6F6F6" Height="107.432" Canvas.Left="41.758" Canvas.Top="129.325" Width="184.459"/>
+				<Path Data="M0,0.5L152.027,0.5" Height="1" Canvas.Left="58.622" Stroke="#FF3C3C3B" Canvas.Top="155.825" Width="152.027"/>
+				<Path Data="M0,0.5L152.027,0.5" Height="1" Canvas.Left="57.623" Stroke="#FF3C3C3B" Canvas.Top="182.828" Width="152.027"/>
+				<Path Data="M0,0.5L152.027,0.5" Height="1" Canvas.Left="57.623" Stroke="#FF3C3C3B" Canvas.Top="212.833" Width="152.027"/>
+				<Path Data="F1M26.999,67.497L0,67.497 0,0 26.999,0z" Fill="#FF3C3C3B" Height="67.497" Canvas.Left="164.129" Canvas.Top="4.826" Width="26.999"/>
+			</Canvas>
+</Viewbox>
+
+</UserControl>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+The contents of this file are subject to the EcoSpold Public License Version 1.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.ecoinvent.ch.
+Software distributed under the License is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language governing rights and limitations under the License.
+The Original Code consists of the EcoSpold data format and EcoSpold Access.
+The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre for Life Cycle Inventories) and ifu Hamburg GmbH, Germany. Portions created by the ecoinvent Centre and ifu Hamburg GmbH are Copyright (C) ecoinvent Centre. All Rights Reserved.
+-->
+<validUnits majorRelease="3" minorRelease="0" majorRevision="0" minorRevision="95" contextId="de659012-50c4-4e96-b54a-fc781bf987ab" xmlns="http://www.EcoInvent.org/EcoSpold02">
+  <contextName xml:lang="en">ecoinvent</contextName>
+  <unit id="f2aaa4ba-fb58-49a7-a552-e7f64366f379">
+    <name xml:lang="en">m</name>
+    <comment xml:lang="en">metre</comment>
+  </unit>
+  <unit id="e32b56ef-fa80-4487-9796-f3c1476c27b3">
+    <name xml:lang="en">hour</name>
+  </unit>
+  <unit id="8266bd67-ebd3-4d31-b972-eee3cf0da36f">
+    <name xml:lang="en">year-m</name>
+    <comment xml:lang="en">metre-year (used for roads, railway-track)</comment>
+  </unit>
+  <unit id="af3de57e-0133-4d5c-8a8e-4f4277226256">
+    <name xml:lang="en">EUR2008</name>
+    <comment xml:lang="en">Euro currency unit at mid-year 2008</comment>
+  </unit>
+  <unit id="5b972631-34e3-4db7-a615-f6931770a0cb">
+    <name xml:lang="en">unit</name>
+    <comment xml:lang="en">unit, piece, number</comment>
+  </unit>
+  <unit id="86bbe475-8a8f-44d8-914c-e398787e7121">
+    <name xml:lang="en">ha</name>
+    <comment xml:lang="en">hectare (hecto-are) = 100 a = 10000 m2</comment>
+  </unit>
+  <unit id="1017f68a-f818-4f9d-a34d-a31e7386f628">
+    <name xml:lang="en">m2</name>
+    <comment xml:lang="en">square metre</comment>
+  </unit>
+  <unit id="eb955b7c-7bed-401f-9c76-5db716ca3640">
+    <name xml:lang="en">m2*year</name>
+    <comment xml:lang="en">square metre year</comment>
+  </unit>
+  <unit id="25371fa0-c015-46a9-a4ea-af7e480736f0">
+    <name xml:lang="en">EUR2009</name>
+    <comment xml:lang="en">Euro currency unit at mid-year 2009</comment>
+  </unit>
+  <unit id="2f4daad7-5331-4f14-930c-d8bca924557d">
+    <name xml:lang="en">metric ton*km</name>
+    <comment xml:lang="en">ton-kilometre (Mg*km)</comment>
+  </unit>
+  <unit id="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">dimensionless</name>
+    <comment xml:lang="en">for use with counted items, ratios, boolean expressions, dummy variables</comment>
+  </unit>
+  <unit id="ae252091-811b-461b-8e89-8f3075639eb1">
+    <name xml:lang="en">km</name>
+    <comment xml:lang="en">kilometre = 1000 metres</comment>
+  </unit>
+  <unit id="77ae64fa-7e74-4252-9c3b-889c1cd20bfc">
+    <name xml:lang="en">kWh</name>
+    <comment xml:lang="en">kilo Watt hour</comment>
+  </unit>
+  <unit id="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">kg</name>
+    <comment xml:lang="en">kilogram = 1000 grammes</comment>
+  </unit>
+  <unit id="7b75baf0-cbee-45e6-bf66-af119da06553">
+    <name xml:lang="en">EUR2005</name>
+    <comment xml:lang="en">Euro currency unit at mid-year 2005</comment>
+  </unit>
+  <unit id="2cf92850-0f92-4004-9dba-a6ceb6a414c2">
+    <name xml:lang="en">year</name>
+  </unit>
+  <unit id="b8a43d95-cb0e-4f19-a980-21555780f05c">
+    <name xml:lang="en">EUR2004</name>
+    <comment xml:lang="en">Euro currency unit at mid-year 2004</comment>
+  </unit>
+  <unit id="481b9712-c417-44f1-bfba-38d58088173c">
+    <name xml:lang="en">m3*year</name>
+    <comment xml:lang="en">cubic metre year</comment>
+  </unit>
+  <unit id="22dd5d20-97ab-471f-aa89-fdb38e46f802">
+    <name xml:lang="en">%</name>
+    <comment xml:lang="en">percent</comment>
+  </unit>
+  <unit id="b61bad7c-10e1-4f69-88f6-440a063ece33">
+    <name xml:lang="en">kWh/s</name>
+    <comment xml:lang="en">kilo Watt hour per second</comment>
+  </unit>
+  <unit id="3ce424af-a3eb-4c16-9bc8-aa4443c94f50">
+    <name xml:lang="en">kg/s</name>
+    <comment xml:lang="en">kilo gram per second</comment>
+  </unit>
+  <unit id="cb82ee83-7f40-4c5d-838f-4e507f98b547">
+    <name xml:lang="en">EUR2007</name>
+    <comment xml:lang="en">Euro currency unit at mid-year 2007</comment>
+  </unit>
+  <unit id="980b811e-3905-4797-82a5-173f5568bc7e">
+    <name xml:lang="en">MJ</name>
+    <comment xml:lang="en">mega Joule = 1000 J</comment>
+  </unit>
+  <unit id="4923348e-591b-4772-b224-d19df86f04c9">
+    <name xml:lang="en">kBq</name>
+    <comment xml:lang="en">kilo Becquerel</comment>
+  </unit>
+  <unit id="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
+    <name xml:lang="en">m3</name>
+    <comment xml:lang="en">cubic metre; volume; for Natural gas, biogas, compogas, town gas: normal cubic metre = cubic metre of gas at 15°C; 101.325 kPa (ISO 13443)</comment>
+  </unit>
+  <unit id="b06bab82-f0e8-426d-849a-ebdb5b553519">
+    <name xml:lang="en">kg/l</name>
+    <comment xml:lang="en">kilo gram per liter</comment>
+  </unit>
+  <unit id="86b0e4a2-57e5-48b8-a43d-22c7f8490dca">
+    <name xml:lang="en">l</name>
+    <comment xml:lang="en">liter</comment>
+  </unit>
+  <unit id="9dbdef14-e661-41e7-a878-e1f380b24d5a">
+    <name xml:lang="en">MW</name>
+    <comment xml:lang="en">mega watt</comment>
+  </unit>
+  <unit id="0e6f38bc-51be-4382-802d-1f389a88e589">
+    <name xml:lang="en">person-km</name>
+    <comment xml:lang="en">person-kilometre </comment>
+  </unit>
+  <unit id="5c084e2b-dc81-4148-b7ae-5defe7710d54">
+    <name xml:lang="en">EUR2010</name>
+    <comment xml:lang="en">Euro currency unit at mid-year 2010</comment>
+  </unit>
+  <unit id="9405b6ff-e347-406a-a395-b74b67196516">
+    <name xml:lang="en">EUR2006</name>
+    <comment xml:lang="en">Euro currency unit at mid-year 2006</comment>
+  </unit>
+  <unit id="bc240401-c632-4b0f-9fc3-945610d47fc5">
+    <name xml:lang="en">l/hour</name>
+    <comment xml:lang="en">liter per hour</comment>
+  </unit>
+</validUnits>

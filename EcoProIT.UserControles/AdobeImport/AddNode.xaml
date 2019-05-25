@@ -1,0 +1,53 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="EcoProIT.UI.AddNode"
+	x:Name="UserControl"
+	d:DesignWidth="113.53" d:DesignHeight="123.321">
+
+	<Grid x:Name="LayoutRoot">
+		<Path Data="F1M112.53,56.265C112.53,87.339 87.338,112.53 56.264,112.53 25.19,112.53 0,87.339 0,56.265 0,25.191 25.19,0 56.264,0 87.338,0 112.53,25.191 112.53,56.265" Fill="#FF95C11F" Margin="0.5,10.67,0.5,0.121"/>
+		<Path Data="F1M0,7.255L0,69.922C0,79.595,15,79.595,15,69.922L15,7.255C15,-2.418,0,-2.418,0,7.255" Fill="White" Margin="49.265,27.968,49.265,18.176"/>
+		<Path Data="F1M0,56.265C0,87.34 25.19,112.531 56.264,112.531 87.338,112.531 112.529,87.34 112.529,56.265 112.529,25.191 87.338,0 56.264,0 25.19,0 0,25.191 0,56.265" Margin="0.5,10.291,0.501,0.499">
+			<Path.Fill>
+				<RadialGradientBrush Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusY="0.5" RadiusX="0.5">
+					<GradientStop Color="White" Offset="0"/>
+					<GradientStop Color="#FFECF3DB" Offset="0.204"/>
+					<GradientStop Color="#FF95C11E" Offset="0.798"/>
+					<GradientStop Color="#FF84AB1B" Offset="0.84"/>
+					<GradientStop Color="#FF6F9018" Offset="1"/>
+				</RadialGradientBrush>
+			</Path.Fill>
+			<Path.OpacityMask>
+				<RadialGradientBrush Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusY="0.5" RadiusX="0.5">
+					<GradientStop Color="#00000000" Offset="0"/>
+					<GradientStop Color="#18000000" Offset="0.204"/>
+					<GradientStop Color="#A6000000" Offset="0.798"/>
+					<GradientStop Color="#CC000000" Offset="0.84"/>
+					<GradientStop Color="#F2000000" Offset="1"/>
+				</RadialGradientBrush>
+			</Path.OpacityMask>
+		</Path>
+		<Path Data="M113.03,56.765C113.03,87.839 87.838,113.03 56.764,113.03 25.69,113.03 0.5,87.839 0.5,56.765 0.5,25.691 25.69,0.5 56.764,0.5 87.838,0.5 113.03,25.691 113.03,56.765z" Stroke="White" Margin="0,9.791,0,0"/>
+		<Path Data="F1M7.255,15L69.922,15C79.595,15,79.595,0,69.922,0L7.255,0C-2.418,0,-2.418,15,7.255,15" Fill="White" Margin="18.176,59.435,18.178,48.886"/>
+		<Path Data="F1M0,29.309C0,45.496 12.5,58.619 27.919,58.619 43.338,58.619 55.838,45.496 55.838,29.309 55.838,13.123 43.338,0 27.919,0 12.5,0 0,13.123 0,29.309" Margin="5.832,0,51.86,64.702">
+			<Path.Fill>
+				<RadialGradientBrush Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusY="0.5" RadiusX="0.5">
+					<GradientStop Color="White" Offset="0"/>
+					<GradientStop Color="#FFECF3DB" Offset="0.724"/>
+					<GradientStop Color="#FFECF3DB" Offset="1"/>
+				</RadialGradientBrush>
+			</Path.Fill>
+			<Path.OpacityMask>
+				<RadialGradientBrush Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusY="0.5" RadiusX="0.5">
+					<GradientStop Color="#B2000000" Offset="0"/>
+					<GradientStop Color="#18000000" Offset="0.724"/>
+					<GradientStop Color="#18000000" Offset="1"/>
+				</RadialGradientBrush>
+			</Path.OpacityMask>
+		</Path>
+	</Grid>
+</UserControl>

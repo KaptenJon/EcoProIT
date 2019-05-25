@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="EcoProIT.UserControles.AdobeImport.ResultsShow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             >
+    <Viewbox>
+    <Grid Height="479" Width="480">
+        <Canvas x:Name="Result_icon" HorizontalAlignment="Left"  UseLayoutRounding="False" VerticalAlignment="Top" >
+            <Canvas x:Name="Layer_1"  Canvas.Left="0" Canvas.Top="0" >
+                <Path Data="F1M63.924,0C28.619,0,0,28.619,0,63.923L0,413.779C0,449.082,28.619,477.701,63.924,477.701L413.779,477.701C449.083,477.701,477.702,449.082,477.702,413.779L477.702,63.923C477.702,28.619,449.083,0,413.779,0z" Height="477.701" Canvas.Left="1.093" Canvas.Top="1.79" Width="477.702">
+                    <Path.Fill>
+                        <LinearGradientBrush EndPoint="0.505,0.741" StartPoint="0.492,-0.05">
+                            <GradientStop Color="#FFEAEAEA" Offset="0"/>
+                            <GradientStop Color="#FFEAEAEA" Offset="0.02"/>
+                            <GradientStop Color="#FFF0F0F0" Offset="0.167"/>
+                            <GradientStop Color="WhiteSmoke" Offset="0.51"/>
+                            <GradientStop Color="#FFF1F1F1" Offset="0.8"/>
+                            <GradientStop Color="#FFE9E9E9" Offset="0.876"/>
+                            <GradientStop Color="#FFDDDDDD" Offset="0.927"/>
+                            <GradientStop Color="#FFCECECE" Offset="0.966"/>
+                            <GradientStop Color="#FFC4C4C4" Offset="0.985"/>
+                            <GradientStop Color="#FFC4C4C4" Offset="0.985"/>
+                            <GradientStop Color="#FFC4C4C4" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Path.Fill>
+                </Path>
+                <Canvas Clip="M0,538.281L660.89,538.281 660.89,0 0,0z" Canvas.Left="0" Canvas.Top="0" >
+                    <Path Data="M414.279,478.203L64.424,478.203C29.12,478.203,0.5,449.583,0.5,414.279L0.5,64.424C0.5,29.12,29.12,0.5,64.424,0.5L414.279,0.5C449.583,0.5,478.203,29.12,478.203,64.424L478.203,414.279C478.203,449.583,449.583,478.203,414.279,478.203z" Height="478.703" Canvas.Left="0.593" Stroke="#FFF6F6F6" Canvas.Top="1.289" Width="478.703"/>
+                    <Path Data="F1M74.617,13.942L384.438,13.942C415.739,13.942,442.893,31.629,456.5,57.544L456.5,57.095C456.5,25.839,430.579,0.5,398.605,0.5L58.395,0.5C26.42,0.5,0.5,25.839,0.5,57.095L0.5,61.761C13.278,33.566,41.647,13.942,74.617,13.942" Fill="White" Height="64.076" Canvas.Left="9.499" Stroke="#FFF6F6F6" Canvas.Top="13.5" Width="457"/>
+                </Canvas>
+                <Path Data="M0,3.5L320.946,3.5" Height="7" Canvas.Left="80.727" Stroke="#FF1D1D1B" StrokeThickness="7" Canvas.Top="392.446" Width="320.946"/>
+                <Path Data="M3.5,320.946L3.5,0" Height="320.946" Canvas.Left="78.537" Stroke="#FF1D1D1B" StrokeThickness="7" Canvas.Top="77.96" Width="7"/>
+                <Path Data="F1M7.183,0L0,11.795 3.718,11.795 3.718,23.663 10.649,23.663 10.649,11.795 14.368,11.795z" Fill="#FF1D1D1B" Height="23.663" Canvas.Left="74.888" Canvas.Top="67.005" Width="14.368"/>
+                <Path Data="F1M11.962,0L11.962,3.623 0,3.623 0,10.377 11.962,10.377 11.962,14 23.852,7z" Fill="#FF1D1D1B" Height="14" Canvas.Left="389.702" Canvas.Top="388.834" Width="23.852"/>
+                <Path Data="M0.132,188.996L107.817,187.574 284.633,6.997" Height="198.994" Canvas.Left="87.867" Stroke="#FFE40D17" StrokeThickness="20" Canvas.Top="139.005" Width="291.778"/>
+                <Path Data="M0.035,10L285.035,11" Height="21" Canvas.Left="87.465" Stroke="#FF27348B" StrokeThickness="20" Canvas.Top="258" Width="285.07"/>
+                <Path Data="M0.057,10.526L87.557,10.026 286.557,238.026" Height="244.602" Canvas.Left="88.943" Stroke="#FF3AAA35" StrokeThickness="20" Canvas.Top="107.475" Width="294.091"/>
+                <Path Data="F1M5.695,43.931L26.329,23.332 35.288,32.307 43.995,0 11.675,8.655 20.633,17.627 0,38.226z" Fill="#FFE30614" Height="43.931" Canvas.Left="346.695" Canvas.Top="127.654" Width="43.995"/>
+                <Path Data="F1M0.097,18.122L26.439,18.74 26.589,30.199 52.579,15.712 26.191,0 26.341,11.456 0,10.838z" Fill="#FF27348B" Height="30.199" Canvas.Left="341.197" Canvas.Top="253.061" Width="52.579"/>
+                <Path Data="F1M0,5.267L19.046,27.342 9.443,35.625 41.034,46.657 34.749,13.793 25.148,22.076 6.104,0z" Fill="#FF3AAA35" Height="46.657" Canvas.Left="352.969" Canvas.Top="319.497" Width="41.034"/>
+            </Canvas>
+        </Canvas>
+
+    </Grid>
+    </Viewbox>
+</UserControl>

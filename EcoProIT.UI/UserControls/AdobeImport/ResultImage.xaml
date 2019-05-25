@@ -1,0 +1,25 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="EcoProIT.UI.UserControls.AdobeImport.ResultImage"
+	x:Name="UserControl"
+	d:DesignWidth="338.665" d:DesignHeight="335.828">
+
+	<Grid x:Name="LayoutRoot">
+		<Canvas x:Name="Result">
+			<Path Data="M-0.001,3.5L320.946,3.5" Height="7" Canvas.Left="5.839" Stroke="#FF1D1D1B" StrokeThickness="7" Canvas.Top="325.44" Width="320.946"/>
+			<Path Data="M3.5,320.946L3.5,0" Height="320.946" Canvas.Left="3.649" Stroke="#FF1D1D1B" StrokeThickness="7" Canvas.Top="10.954" Width="7"/>
+			<Path Data="F1M10.649,23.661L10.649,11.795 14.367,11.795 7.183,0 0,11.795 3.718,11.795 3.718,23.661z" Fill="#FF1D1D1B" Height="23.662" Canvas.Left="0" Canvas.Top="0" Width="14.367"/>
+			<Path Data="F1M0,10.377L11.962,10.377 11.962,14 23.851,6.999 11.962,0 11.962,3.623 0,3.623z" Fill="#FF1D1D1B" Height="14" Canvas.Left="314.814" Canvas.Top="321.828" Width="23.851"/>
+			<Path Data="M0.132,188.996L107.817,187.574 284.633,6.996" Height="198.995" Canvas.Left="12.979" Stroke="#FFE40D17" StrokeThickness="20" Canvas.Top="71.998" Width="291.778"/>
+			<Path Data="M0.035,10L285.035,11" Height="21" Canvas.Left="12.577" Stroke="#FF27348B" StrokeThickness="20" Canvas.Top="190.994" Width="285.07"/>
+			<Path Data="M0.057,10.526L87.557,10.026 286.557,238.026" Height="244.602" Canvas.Left="14.055" Stroke="#FF3AAA35" StrokeThickness="20" Canvas.Top="40.469" Width="294.091"/>
+			<Path Data="F1M5.695,43.931L26.329,23.332 35.288,32.307 43.995,0 11.676,8.655 20.633,17.627 0,38.226z" Fill="#FFE30614" Height="43.931" Canvas.Left="271.806" Canvas.Top="60.648" Width="43.995"/>
+			<Path Data="F1M0.096,18.122L26.438,18.74 26.588,30.199 52.578,15.712 26.19,0 26.342,11.456 0,10.838z" Fill="#FF27348B" Height="30.199" Canvas.Left="266.31" Canvas.Top="186.056" Width="52.579"/>
+			<Path Data="F1M0,5.266L19.046,27.341 9.444,35.625 41.034,46.656 34.749,13.793 25.149,22.075 6.104,0z" Fill="#FF3AAA35" Height="46.656" Canvas.Left="278.081" Canvas.Top="252.492" Width="41.034"/>
+		</Canvas>
+	</Grid>
+</UserControl>

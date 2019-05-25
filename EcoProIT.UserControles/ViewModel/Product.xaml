@@ -1,0 +1,30 @@
+<CheckBox xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+            xmlns:helpClasses="clr-namespace:HelpClasses;assembly=HelpClasses"
+          FlowDirection="RightToLeft" 
+             x:Class="EcoProIT.UserControles.ViewModel.Product"         
+              mc:Ignorable="d"
+              PreviewMouseLeftButtonDown="List_PreviewMouseLeftButtonDown" 
+              PreviewMouseMove="List_MouseMove" 
+              DataContext="{Binding RelativeSource={RelativeSource Self}}"
+              IsChecked="{Binding CheckChanged}" 
+              >
+    <StackPanel Orientation="Horizontal">
+        <StackPanel.Resources>
+            <xctk:ColorToSolidColorBrushConverter x:Key="ColorToSolidColorBrushConverter"/>
+            <helpClasses:BooleanToVisibilityConverter x:Key="VisabilityConverter"/>
+        </StackPanel.Resources>
+        
+        <Label PreviewMouseLeftButtonDown="List_PreviewMouseLeftButtonDown" PreviewMouseMove="List_MouseMove" Background="LightGray" Content="{Binding ProductName}" Visibility="{Binding Editmode, Converter={StaticResource VisabilityConverter}, ConverterParameter=True}" BorderBrush="Black" Width="130"/>
+        <TextBox Name="Editbox" Background="LightYellow" KeyDown="EditBox_KeyDown" Text="{Binding ProductName, UpdateSourceTrigger=PropertyChanged}" Visibility="{Binding Editmode, Converter={StaticResource VisabilityConverter}, ConverterParameter=False}" BorderBrush="Black" Width="130" />
+        <xctk:ColorPicker SelectedColor="{Binding Color}"   Width="43" />
+        <Button Content="Define" MouseDoubleClick="Control_OnMouseDoubleClick">
+
+</Button>
+    </StackPanel>
+
+</CheckBox>

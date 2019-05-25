@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+The contents of this file are subject to the EcoSpold Public License Version 1.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.ecoinvent.ch.
+Software distributed under the License is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language governing rights and limitations under the License.
+The Original Code consists of the EcoSpold data format and EcoSpold Access.
+The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre for Life Cycle Inventories) and ifu Hamburg GmbH, Germany. Portions created by the ecoinvent Centre and ifu Hamburg GmbH are Copyright (C) ecoinvent Centre. All Rights Reserved.
+-->
+<validParameters majorRelease="3" minorRelease="0" majorRevision="0" minorRevision="13" contextId="de659012-50c4-4e96-b54a-fc781bf987ab" xmlns="http://www.EcoInvent.org/EcoSpold02">
+  <contextName xml:lang="en">ecoinvent</contextName>
+  <parameter id="5954dfe8-8c6e-43dc-968c-39ac562da5cf" defaultVariableName="steel_hot">
+    <name xml:lang="en">steel, hot extrusion</name>
+    <comment xml:lang="en">steel, hot extrusion</comment>
+  </parameter>
+  <parameter id="ef7543c6-86db-4cb5-808c-00153a58e665" defaultVariableName="steel_warm">
+    <name xml:lang="en">steel, warm extrusion</name>
+    <comment xml:lang="en">steel, warm extrusion</comment>
+  </parameter>
+  <parameter id="790cca24-22fa-4d7f-b259-763df02c2e99" defaultVariableName="alu" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">aluminium</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">aluminium</comment>
+  </parameter>
+  <parameter id="00582ff9-4b75-4ea7-9b80-5f2bc5664c25" defaultVariableName="steel_cold">
+    <name xml:lang="en">steel, cold extrusion</name>
+    <comment xml:lang="en">steel, cold extrusion</comment>
+  </parameter>
+</validParameters>

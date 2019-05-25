@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+The contents of this file are subject to the EcoSpold Public License Version 1.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.ecoinvent.ch.
+Software distributed under the License is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language governing rights and limitations under the License.
+The Original Code consists of the EcoSpold data format and EcoSpold Access.
+The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre for Life Cycle Inventories) and ifu Hamburg GmbH, Germany. Portions created by the ecoinvent Centre and ifu Hamburg GmbH are Copyright (C) ecoinvent Centre. All Rights Reserved.
+-->
+<validSources majorRelease="3" minorRelease="0" majorRevision="0" minorRevision="280" contextId="de659012-50c4-4e96-b54a-fc781bf987ab" xmlns="http://www.EcoInvent.org/EcoSpold02">
+  <contextName xml:lang="en">ecoinvent</contextName>
+  <source id="1c15f773-97c3-4c00-a508-5e50ae5f6cec" sourceType="4" year="2007" volumeNo="12" firstAuthor="Zah R." additionalAuthors="Hischier R." title="Life Cycle Inventories of Detergents" titleOfAnthology="Final report ecoinvent data v2.0" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=143</comment>
+  </source>
+  <source id="c4cdc91a-b96b-49bf-ac2d-f2b101b051ac" sourceType="3" year="2009" volumeNo="6" firstAuthor="Jungbluth, N." additionalAuthors="Stucki, M., Frischknecht, R." title="Photovoltaics" namesOfEditors="Bauer C." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent v2.1" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=24</comment>
+  </source>
+  <source id="34685cb8-822d-422f-8160-ef89de1c59a7" sourceType="4" year="2007" volumeNo="10" firstAuthor="Classen M." additionalAuthors="Althaus H.-J., Blaser S., Doka G., Jungbluth N., Tuchschmid M." title="Life Cycle Inventories of Metals" titleOfAnthology="Final report ecoinvent data v2.0" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=177</comment>
+  </source>
+  <source id="48979487-a5f5-4084-9463-3aa32e06764c" sourceType="4" year="2004" volumeNo="8" firstAuthor="Althaus H.-J." additionalAuthors="Chudacoff M., Hischier R., Jungbluth N., Osses M., Primas A." title="Life Cycle Inventories of Chemicals" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, EMPA-DU" issueNo="0">
+    <comment>EcoSpold01Number=161</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="530b73be-9dba-4b3e-a66c-64217ae1f4be" sourceType="4" year="2007" volumeNo="9" firstAuthor="Werner F." additionalAuthors="Althaus H.-J., Künniger T., Richter K., Jungbluth N." title="Life Cycle Inventories of Wood as Fuel and Construction Material" titleOfAnthology="Final report ecoinvent data v2.0" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL" issueNo="0">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=140</comment>
+  </source>
+  <source id="7d6d85d7-d350-435c-9b6f-921aee6c6e64" sourceType="4" year="2007" volumeNo="6" firstAuthor="Heck, T." title="Wärme-Kraft-Kopplung" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=153</comment>
+  </source>
+  <source id="7ca68eeb-e04e-4042-bee1-f682021a60db" sourceType="3" year="2007" volumeNo="12" firstAuthor="Zah R." additionalAuthors="Hischier R." title="Life Cycle Inventories of Detergents" titleOfAnthology="Final report ecoinvent data v2.0" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL">
+    <comment>EcoSpold01Number=12</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="de5302ba-4f76-4eb9-9d1d-85af041e7775" sourceType="4" year="2003" volumeNo="4" firstAuthor="Hedemann J." additionalAuthors="König, U." title="Technical Documentation of the ecoinvent Database" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, IFU">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=135</comment>
+  </source>
+  <source id="98da9017-2ca3-4254-9ea5-1a4a504f128d" sourceType="4" year="2009" volumeNo="3" firstAuthor="Hischier, R." additionalAuthors="Weidema B., Althaus H.-J., Doka, G., Dones, R., Frischknecht R., Hellweg S., Humbert S., Jungbluth N., Köllner, T., Loerincik, Y. Margni M., Nemecek, T., Simons, A." title="Implementation of Life Cycle Impact Assessment Methods" titleOfAnthology="Final report ecoinvent data v2.1" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=212</comment>
+  </source>
+  <source id="330fe2f2-0774-48a2-ab10-6890d99c01af" sourceType="4" year="2007" volumeNo="6" firstAuthor="Jungbluth, N." additionalAuthors="Tuchschmid, M." title="Photovoltaics" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=202</comment>
+  </source>
+  <source id="afa033c0-b9e1-484c-a4e2-bf5d37baecee" sourceType="4" year="2007" volumeNo="6" firstAuthor="Dones R." additionalAuthors="Bauer C., Bolliger R., Burger B., Faist Emmenegger M., Frischknecht R., Heck T., Jungbluth N., Röder A." title="Sachbilanzen von Energiesystemen" titleOfAnthology="Final report ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=137</comment>
+  </source>
+  <source id="8dcb3055-562a-46dd-86ff-0a691a119f4a" sourceType="3" year="2007" volumeNo="6" firstAuthor="Bolliger, R." additionalAuthors="Bauer, Ch." title="Wasserkraft" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=17</comment>
+  </source>
+  <source id="36a883d5-eb4f-426b-83b2-d835c3622036" sourceType="4" year="2007" volumeNo="6" firstAuthor="Bolliger, R." additionalAuthors="Bauer, Ch." title="Wasserkraft" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment>EcoSpold01Number=148</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="12737577-2433-423c-b232-6413431a3cf7" sourceType="4" year="2004" volumeNo="6" firstAuthor="Heck, T." title="Wärme-Kraft-Kopplung" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent 2000" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=167</comment>
+  </source>
+  <source id="fa7e7476-cacf-4e0a-9ab9-010908819320" sourceType="4" year="2007" volumeNo="6" firstAuthor="Dones, R." title="Kernenergie" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=150</comment>
+  </source>
+  <source id="e20ce637-e5fb-4b31-a695-3ee105459d96" sourceType="4" year="2004" volumeNo="14" firstAuthor="Spielmann M." additionalAuthors="Kägi T., Stadler P.,Tietje O." title="Life Cycle Inventories of Transport Services" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, UNS" issueNo="0">
+    <comment xml:lang="en">CD-ROM and UNS-working paper No. 39</comment>
+    <comment>EcoSpold01Number=165</comment>
+  </source>
+  <source id="a3e674f9-5fa4-4734-87bc-58bdc35fb86e" sourceType="4" year="2007" volumeNo="1" firstAuthor="Frischknecht R." additionalAuthors="Althaus H.-J., Doka, G., Dones, R., Hellweg, S., Hischier, R., Jungbluth N., Nemecek, T., Rebitzer, G., Spielmann, M." title="Overview and Methodology" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=132</comment>
+  </source>
+  <source id="0b1bf7a5-2448-4e20-b18c-6f4edb65bec8" sourceType="4" year="2007" volumeNo="6" firstAuthor="Bauer, C." title="Holzenergie" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment>EcoSpold01Number=147</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="9dc401b6-e63f-441a-9077-f317a3068730" sourceType="4" year="2004" volumeNo="12" firstAuthor="Zah R." additionalAuthors="Hischier R." title="Life Cycle Inventories of Detergents" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, EMPA-SG">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=164</comment>
+  </source>
+  <source id="e5e10a60-a16f-40f1-a94b-a76c203bb24e" sourceType="4" year="2007" volumeNo="6" firstAuthor="Jungbluth, N." title="Erdöl" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=154</comment>
+  </source>
+  <source id="f4389550-252a-40fb-ba4c-56c98dc68947" sourceType="4" year="2008" volumeNo="13" firstAuthor="Doka G." title="Life Cycle Inventories of Waste Treatment Services" titleOfAnthology="Final report ecoinvent data v2.1" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL" issueNo="0">
+    <comment>EcoSpold01Number=210</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="2c4135b1-c43f-4912-a362-a354c78d0dac" sourceType="4" year="2008" volumeNo="3" firstAuthor="Hischier, R." additionalAuthors="Weidema B., Althaus H.-J., Doka, G., Dones, R., Frischknecht R., Hellweg S., Humbert S., Jungbluth N., Margni M., Nemecek, T., Simons A., Spielmann M." title="Implementation of Life Cycle Impact Assessment Methods" titleOfAnthology="Final report ecoinvent data v2.1" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI">
+    <comment>EcoSpold01Number=208</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="6d4b1ce1-7b56-44a8-b709-12a514ac4654" sourceType="4" year="2004" volumeNo="6" firstAuthor="Röder, A." additionalAuthors="Ch. Bauer, R. Dones" title="Kohle" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent 2000" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=168</comment>
+  </source>
+  <source id="aae54aff-ca65-4fd7-b52e-3513a1443605" sourceType="4" year="2007" volumeNo="19" firstAuthor="Sutter, J." additionalAuthors="0" title="Life Cycle Inventories of Highly Pure Chemicals" namesOfEditors="0" titleOfAnthology="Final report ecoinvent Data v2.0" placeOfPublications="Duebendorf and St. Gallen, CH" publisher="Swiss Centre for LCI, ETHZ">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=195</comment>
+  </source>
+  <source id="c81fcd1b-8cf4-4c89-a8b7-709742eb4aa4" sourceType="4" year="2007" volumeNo="5" firstAuthor="Dones R." additionalAuthors="Bauer C., Bolliger R., Burger B., Faist Emmenegger M., Frischknecht R., Heck T., Jungbluth N., Röder A." title="Life Cycle Inventories of Energy Systems: Results for Current Systems in Switzerland and other UCTE Countries" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=136</comment>
+  </source>
+  <source id="5583d413-a865-43b8-a942-f933adf57c74" sourceType="3" year="2007" volumeNo="6" firstAuthor="Frischknecht, R." additionalAuthors="M., Tuchschmid, Faist Emmenegger, M., Bauer, C., Dones, R." title="Strommix und Stromnetz" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=21</comment>
+  </source>
+  <source id="084f5bbe-752b-4a7a-b9d8-9135b15ffa00" sourceType="3" year="2007" volumeNo="8" firstAuthor="Althaus H.-J." additionalAuthors="Chudacoff M., Hischier R., Jungbluth N., Osses M., Primas A." title="Life Cycle Inventories of Chemicals" titleOfAnthology="Final report ecoinvent data v2.0" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL">
+    <comment>EcoSpold01Number=8</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="c1e37bd2-786e-4445-b36c-f90ecb7876ba" sourceType="3" year="2007" volumeNo="6" firstAuthor="Faist Emmenegger, M." additionalAuthors="Heck, T., Jungbluth, N." title="Erdgas" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=20</comment>
+  </source>
+  <source id="1df9b549-4461-43db-acf0-37c174c5c358" sourceType="4" year="2009" volumeNo="16" firstAuthor="Hischier, R." additionalAuthors="Althaus H.-J., Bauer, Chr., Doka, G., Frischknecht R., Jungbluth N., Margni M., Nemecek, T., Simons A., Spielmann M." title="Documentation of changes implemented in ecoinvent Data v2.1" titleOfAnthology="Final report ecoinvent data v2.1" placeOfPublications="Dübendorf. CH" publisher="Swiss Centre for LCI">
+    <comment>EcoSpold01Number=217</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="2349c548-1d2c-46fd-bbad-b93abc019d7d" sourceType="3" year="2007" volumeNo="11" firstAuthor="Hischier R." title="Life Cycle Inventories of Packaging and Graphical Paper" titleOfAnthology="Final report ecoinvent data v2.0" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=11</comment>
+  </source>
+  <source id="32021478-624d-4cb1-b7ab-24d7960cbff5" sourceType="4" year="2003" volumeNo="6" firstAuthor="Jungbluth, N." title="Photovoltaik" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent 2000" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=155</comment>
+  </source>
+  <source id="e77a52e5-4bad-4eee-b53e-5af10ebf404c" sourceType="3" year="2007" volumeNo="9" firstAuthor="Werner F." additionalAuthors="Althaus H.-J., Künniger T., Richter K., Jungbluth N." title="Life Cycle Inventories of Wood as Fuel and Construction Material" titleOfAnthology="Final report ecoinvent data v2.0" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL">
+    <comment>EcoSpold01Number=9</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="224dde3b-4668-4085-812b-2f021d984a18" sourceType="4" year="2007" volumeNo="6" firstAuthor="Jungbluth, N." title="Sonnenkollektor-Anlagen" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment>EcoSpold01Number=156</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="c4ae43a2-27c9-4569-b85a-d676ce428b62" sourceType="4" year="2007" volumeNo="18" firstAuthor="Hischier R." additionalAuthors="Classen M., Lehmann M., Scharnhorst W." title="Life Cycle Inventories of Electric and Electronic Equipment - Production, Use &amp; Disposal" titleOfAnthology="Final report ecoinvent Data v2.0" placeOfPublications="Duebendorf and St. Gallen, CH" publisher="Swiss Centre for LCI, Empa - TSL">
+    <comment>EcoSpold01Number=203</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="1562fd65-27ed-467d-b23d-9a30eb568c60" sourceType="3" year="2007" volumeNo="21" firstAuthor="Althaus H.J." additionalAuthors="Dinkel F., Stettler C., Werner F." title="Life Cycle Inventories of Renewable Materials" titleOfAnthology="Final report ecoinvent Data v2.0" placeOfPublications="Duebendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=48</comment>
+  </source>
+  <source id="92d693e8-a51f-4808-9a6a-a6a5a7c829c6" sourceType="4" year="2007" volumeNo="8" firstAuthor="Althaus H.-J." additionalAuthors="Chudacoff M., Hischier R., Jungbluth N., Osses M., Primas A." title="Life Cycle Inventories of Chemicals" titleOfAnthology="Final report ecoinvent data v2.0" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=139</comment>
+  </source>
+  <source id="eaf2d1be-2601-41fd-92fc-c75a78094780" sourceType="3" year="2007" volumeNo="25" firstAuthor="Hässig, W." additionalAuthors="Primas, A." title="Ökologische Aspekte der Komfortlüftungen im Wohnbereich" titleOfAnthology="Final report ecoinvent Data v2.0" placeOfPublications="Dübendorf and Zürich, CH" publisher="Swiss Centre for LCI, B+H">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=51</comment>
+  </source>
+  <source id="a3ba5207-5834-4d67-b417-38951b3ead65" sourceType="4" year="2007" volumeNo="13" firstAuthor="Doka G." title="Life Cycle Inventories of Waste Treatment Services" titleOfAnthology="Final report ecoinvent data v2.0" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=144</comment>
+  </source>
+  <source id="15229d9c-1cd2-4bdb-86a6-9c3514d62ac5" sourceType="3" year="2007" volumeNo="15" firstAuthor="Nemecek, T." additionalAuthors="Kägi, T., Blaser, S." title="Life Cycle Inventories of Agricultural Production Systems" titleOfAnthology="Ecoinvent report version 2.0" placeOfPublications="Duebendorf and Zurich, CH" publisher="Swiss Centre for LCI, ART">
+    <comment>EcoSpold01Number=15</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="28aa361d-e15e-4008-a8c8-76b287f7a630" sourceType="4" year="2004" volumeNo="15" firstAuthor="Nemecek, T." additionalAuthors="Heil A., Huguenin, O., Meier, S., Erzinger S., Blaser S., Dux. D., Zimmermann A.," title="Life Cycle Inventories of Agricultural Production Systems" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, FAL &amp; FAT" issueNo="0">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=166</comment>
+  </source>
+  <source id="2ac3f88a-3339-4e8a-b1d4-37d758debf68" sourceType="4" year="2004" volumeNo="6" firstAuthor="Dones R." additionalAuthors="Bauer C., Bolliger R., Burger B., Faist Emmenegger M., Frischknecht R., Heck T., Jungbluth N., Röder A." title="Sachbilanzen von Energiesystemen" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment>EcoSpold01Number=159</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="87d3195e-2a1a-433d-97fc-00e627af4f47" sourceType="4" year="2007" volumeNo="6" firstAuthor="Röder, A." additionalAuthors="Ch. Bauer, R. Dones" title="Kohle" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment>EcoSpold01Number=157</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="d692d147-9e66-4884-8e26-0a8f6a2afbde" sourceType="3" year="2007" volumeNo="6" firstAuthor="Heck, T." title="Wärme-Kraft-Kopplung" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=22</comment>
+  </source>
+  <source id="923e7058-2c3e-45fa-a7c6-5382cf60b420" sourceType="3" year="2007" volumeNo="6" firstAuthor="Jungbluth, N." title="Erdöl" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment>EcoSpold01Number=23</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="73d9f8b9-e95c-4e3c-b390-cb22fa3ec8e0" sourceType="4" year="2008" volumeNo="6" firstAuthor="Jungbluth, N." additionalAuthors="Tuchschmid, M., Stucki, M., Frischknecht, R." title="Photovoltaics" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment>EcoSpold01Number=207</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="7ddae914-c576-49bc-9441-a51f03425011" sourceType="4" year="2003" volumeNo="3" firstAuthor="Frischknecht R." additionalAuthors="Althaus H.-J., Doka, G., Dones, R., Hellweg, S., Hischier, R., Jungbluth N., &#xD;&#xA;Nemecek, T., Pennington, D.W., Spielmann, M." title="Implementation of Life Cycle Impact Assessment Methods" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=134</comment>
+  </source>
+  <source id="cd73ee50-4adb-4603-814e-12d397871d53" sourceType="3" year="2009" volumeNo="10" firstAuthor="Classen M." additionalAuthors="Althaus H.-J., Blaser S., Doka G., Jungbluth N., Tuchschmid M." title="Life Cycle Inventories of Metals" titleOfAnthology="Final report ecoinvent data v2.1" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=10</comment>
+  </source>
+  <source id="92837df1-a119-4f81-84db-8b38af5d7ce7" sourceType="4" year="2007" volumeNo="15" firstAuthor="Nemecek, T." additionalAuthors="Kägi, T., Blaser, S." title="Life Cycle Inventories of Agricultural Production Systems" namesOfEditors="0" titleOfAnthology="Ecoinvent report version 2.0" placeOfPublications="Duebendorf and Zurich, CH" publisher="Swiss Centre for LCI, ART">
+    <comment>EcoSpold01Number=146</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="24dd0a39-98dd-4c62-97bd-26bd3b144efe" sourceType="3" year="2007" volumeNo="14" firstAuthor="Spielmann M." additionalAuthors="Dones R; Bauer C." title="Life Cycle Inventories of Transport Services" titleOfAnthology="Final report ecoinvent Data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=14</comment>
+  </source>
+  <source id="015c0001-d994-4fb0-831b-ac8c4ba7d275" sourceType="4" year="2004" volumeNo="10" firstAuthor="Althaus H.-J." additionalAuthors="Blaser S., Classen M., Jungbluth N." title="Life Cycle Inventories of Metals" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, EMPA-DU">
+    <comment>EcoSpold01Number=162</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="71272329-1b17-415b-9f9b-299ebfbce109" sourceType="3" year="2007" volumeNo="22" firstAuthor="Sutter, J." title="Life Cycle Inventories of Petrochemical Solvents" titleOfAnthology="Final report ecoinvent Data v2.0" placeOfPublications="Duebendorf and St. Gallen, CH" publisher="Swiss Centre for LCI, ETHZ">
+    <comment>EcoSpold01Number=49</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="5f97bb23-5083-4b36-bb12-1f37080a97c6" sourceType="4" year="2004" volumeNo="7" firstAuthor="Kellenberger D." additionalAuthors="Althaus H.-J., Jungbluth N., Künniger T." title="Life Cycle Inventories of Building Products" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, EMPA-DU">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=160</comment>
+  </source>
+  <source id="fbd3b556-5237-4d45-be82-c248c1952501" sourceType="4" year="2007" volumeNo="6" firstAuthor="Frischknecht, R." additionalAuthors="Tuchschmid, M., Faist Emmenegger, M.,Bauer, C., Dones, R." title="Strommix und Stromnetz" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=152</comment>
+  </source>
+  <source id="5fec87ce-e19e-4bea-845a-ebb7631d5ead" sourceType="3" year="2007" volumeNo="6" firstAuthor="Heck, T." title="Wärmepumpen" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment>EcoSpold01Number=27</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="c87964f9-f250-4710-89ac-c0d426c282d5" sourceType="4" year="2007" volumeNo="7" firstAuthor="Kellenberger D." additionalAuthors="Althaus H.-J., Jungbluth N., Künniger T." title="Life Cycle Inventories of Building Products" titleOfAnthology="Final report ecoinvent data v2.0" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL">
+    <comment>EcoSpold01Number=138</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="69fb1e1c-0475-434a-9863-dcdd6167eac1" sourceType="4" year="2009" volumeNo="6" firstAuthor="Dones, R." additionalAuthors="Doka G." title="Kernenergie" namesOfEditors="Bauer C." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent v2.1" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=215</comment>
+  </source>
+  <source id="ba72c1a9-c9d4-42d7-baf5-7711792cfc54" sourceType="3" year="2010" volumeNo="16" firstAuthor="Hischier, R." additionalAuthors="Althaus H.-J., Bauer, Chr., Büsser S., Doka, G., Frischknecht R., Kleijer A., Leuenberger M., Nemecek, T., Simons A." title="Documentation of changes implemented in ecoinvent Data v2.2" titleOfAnthology="Final report ecoinvent data v2.2" placeOfPublications="Dübendorf. CH" publisher="Swiss Centre for LCI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=52</comment>
+  </source>
+  <source id="c583918a-4966-49b7-a312-132553b5fabd" sourceType="4" year="2000" volumeNo="10" firstAuthor="Althaus H.-J." additionalAuthors="Blaser S., Classen M., Jungbluth N." title="Life Cycle Inventories of Metals" namesOfEditors="0" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, EMPA-DU">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=141</comment>
+  </source>
+  <source id="70205bff-f757-468c-bc08-5ced183738ae" sourceType="4" year="2007" volumeNo="21" firstAuthor="Althaus H.J." additionalAuthors="Dinkel F., Werner F." title="Life Cycle Inventories of Renewable Materials" namesOfEditors="0" titleOfAnthology="Final report ecoinvent Data v2.0" placeOfPublications="Duebendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL" journal="0" issueNo="0">
+    <comment>EcoSpold01Number=205</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="09b8e936-a90e-496a-a706-b16f822e79d8" sourceType="3" year="2007" volumeNo="23" firstAuthor="Steiner, R." additionalAuthors="Frischknecht, R." title="Life Cycle Inventories of Metal Processing and Compressed Air Supply" titleOfAnthology="Final report ecoinvent Data v2.0" placeOfPublications="Dübendorf and Uster, CH" publisher="Swiss Centre for LCI, ESU">
+    <comment>EcoSpold01Number=50</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="1376b82f-00f8-4f7d-846e-e3239d65118e" sourceType="3" year="2009" volumeNo="6" firstAuthor="Dones, R." additionalAuthors="Doka G." title="Kernenergie" namesOfEditors="Bauer C." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent v2.1" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment>EcoSpold01Number=19</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="96c7ea0d-ec72-4444-8629-d148a1bc6f24" sourceType="4" year="2008" volumeNo="10" firstAuthor="Classen M." additionalAuthors="Althaus H.-J., Blaser S., Doka G., Jungbluth N., Tuchschmid M." title="Life Cycle Inventories of Metals" titleOfAnthology="Final report ecoinvent data v2.1" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL" issueNo="0">
+    <comment>EcoSpold01Number=209</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="fed3c171-207d-4b8c-b30f-235a9909d650" sourceType="4" year="2007" volumeNo="22" firstAuthor="Sutter, J." additionalAuthors="0" title="Life Cycle Inventories of Petrochemical Solvents" namesOfEditors="0" titleOfAnthology="Final report ecoinvent Data v2.0" placeOfPublications="Duebendorf and St. Gallen, CH" publisher="Swiss Centre for LCI, ETHZ" journal="0" issueNo="0">
+    <comment>EcoSpold01Number=198</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="a315323c-2291-41dc-b873-a220d9ec52cf" sourceType="4" year="2007" volumeNo="2" firstAuthor="Frischknecht R." additionalAuthors="Althaus H.-J., Doka, G., Dones, R., Hellweg, S., Hischier, R., Jungbluth N., &#xD;&#xA;Nemecek, T., Rebitzer, G., Spielmann, M.&#xD;&#xA;" title="Code of Practice" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI">
+    <comment>EcoSpold01Number=133</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="3f81d932-6544-4dc1-a9d7-794c70cd96d9" sourceType="3" year="2007" volumeNo="20" firstAuthor="Primas A." title="Life Cycle Inventories of new CHP systems" titleOfAnthology="Final report ecoinvent Data v2.0" placeOfPublications="Duebendorf and Zurich, CH" publisher="Swiss Centre for LCI, B&amp;H AG">
+    <comment>EcoSpold01Number=47</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="e62ee33e-b5cd-48c5-9a09-7136d31416da" sourceType="3" year="2007" volumeNo="19" firstAuthor="Sutter, J." title="Life Cycle Inventories of Highly Pure Chemicals" titleOfAnthology="Final report ecoinvent Data v2.0" placeOfPublications="Duebendorf and St. Gallen, CH" publisher="Swiss Centre for LCI, ETHZ">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=46</comment>
+  </source>
+  <source id="244e8e26-3e28-41aa-be36-0bd1b40263c0" sourceType="4" year="2007" volumeNo="14" firstAuthor="Spielmann M." additionalAuthors="Dones R; Bauer C." title="Life Cycle Inventories of Transport Services" titleOfAnthology="Final report ecoinvent Data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI" issueNo="0">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=145</comment>
+  </source>
+  <source id="25f4bbf1-fdfe-41ec-bc16-eee0c8dc86d7" sourceType="4" year="2007" volumeNo="11" firstAuthor="Hischier R." title="Life Cycle Inventories of Packaging and Graphical Paper" titleOfAnthology="Final report ecoinvent data v2.0" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL">
+    <comment>EcoSpold01Number=142</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="26f2fb2a-550c-4dc7-95ac-806f27219c14" sourceType="4" year="2007" volumeNo="17" firstAuthor="Jungbluth N." additionalAuthors="Chudacoff M., Dauriat A., Dinkel F., Doka G., Faist Emmenegger M., Gnansounou E., Kljun N., Spielmann M., Stettler C., Sutter J." title="Life Cycle Inventories of Bioenergy" titleOfAnthology="Final report ecoinvent data v2.0" placeOfPublications="Duebendorf and Uster, CH" publisher="Swiss Centre for LCI, ESU">
+    <comment>EcoSpold01Number=170</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="357c8fac-ccb5-427b-87ec-47d6beae4b9d" sourceType="4" year="2004" volumeNo="11" firstAuthor="Hischier R." title="Life Cycle Inventories of Packaging and Graphical Paper" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, EMPA-SG">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=163</comment>
+  </source>
+  <source id="ddc49440-d8e2-4309-a7df-387982ea2337" sourceType="3" year="2007" volumeNo="17" firstAuthor="Jungbluth N." additionalAuthors="Chudacoff M., Dauriat A., Dinkel F., Doka G., Faist Emmenegger M., Gnansounou E., Kljun N., Spielmann M., Stettler C., Sutter J." title="Life Cycle Inventories of Bioenergy" titleOfAnthology="Final report ecoinvent data v2.0" placeOfPublications="Duebendorf and Uster, CH" publisher="Swiss Centre for LCI, ESU">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=40</comment>
+  </source>
+  <source id="2c6cfb9c-3375-4b33-b751-20d3ac0ea0c7" sourceType="4" year="2008" volumeNo="6" firstAuthor="Dones, R." additionalAuthors="Doka G." title="Kernenergie" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=211</comment>
+  </source>
+  <source id="22c76853-1711-4669-8871-35b4f9aafee8" sourceType="4" year="2007" volumeNo="20" firstAuthor="Primas A." additionalAuthors="0" title="Life Cycle Inventories of new CHP systems" namesOfEditors="0" titleOfAnthology="Final report ecoinvent Data v2.0" placeOfPublications="Duebendorf and Zurich, CH" publisher="Swiss Centre for LCI, B&amp;H AG">
+    <comment>EcoSpold01Number=204</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="964ba674-b6c5-403b-bb68-51e9b4d9905c" sourceType="3" year="2009" volumeNo="3" firstAuthor="Hischier, R." additionalAuthors="Weidema B., Althaus H.-J., Doka, G., Dones, R., Frischknecht R., Hellweg S., Humbert S., Jungbluth N., Köllner, T., Loerincik, Y. Margni M., Nemecek, T., Simons, A. " title="Implementation of Life Cycle Impact Assessment Methods" titleOfAnthology="Final report ecoinvent data v2.1" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI">
+    <comment>EcoSpold01Number=3</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="411808fb-555b-4ffc-a611-52004beeaaf0" sourceType="4" year="2007" volumeNo="6" firstAuthor="Heck, T." title="Wärmepumpen" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=169</comment>
+  </source>
+  <source id="493a21d0-b6c4-49d7-93ab-eb1a4d6bd574" sourceType="3" year="2007" volumeNo="6" firstAuthor="Burger, B." additionalAuthors="Bauer, Ch." title="Windkraft" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment>EcoSpold01Number=18</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="e15f8b38-8514-48d8-b440-e5fafabe2704" sourceType="4" year="2007" volumeNo="6" firstAuthor="Faist Emmenegger, M." additionalAuthors="Heck, T., Jungbluth, N." title="Erdgas" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=151</comment>
+  </source>
+  <source id="402f2dc0-f9b5-4685-b90d-37545e668bea" sourceType="4" year="2007" volumeNo="23" firstAuthor="Steiner, R." additionalAuthors="Frischknecht, R." title="Life Cycle Inventories of Metal Processing and Compressed Air Supply" namesOfEditors="0" titleOfAnthology="Final report ecoinvent Data v2.0" placeOfPublications="Dübendorf and Uster, CH" publisher="Swiss Centre for LCI, ESU" journal="0" issueNo="0">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=199</comment>
+  </source>
+  <source id="dc136f52-c274-4578-a31c-a7e6070d3f38" sourceType="3" year="2009" volumeNo="16" firstAuthor="Hischier, R." additionalAuthors="Althaus H.-J., Bauer, Chr., Doka, G., Frischknecht R., Jungbluth N., Margni M., Nemecek, T., Simons A., Spielmann M." title="Documentation of changes implemented in ecoinvent Data v2.1" titleOfAnthology="Final report ecoinvent data v2.1" placeOfPublications="Dübendorf. CH" publisher="Swiss Centre for LCI">
+    <comment>EcoSpold01Number=45</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="e26cc0a3-1469-47dd-afba-a35ed0c1ffab" sourceType="3" year="2007" volumeNo="6" firstAuthor="Dones R." additionalAuthors="Bauer C., Bolliger R., Burger B., Faist Emmenegger M., Frischknecht R., Heck T., Jungbluth N., Röder A." title="Sachbilanzen von Energiesystemen" titleOfAnthology="Final report ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=6</comment>
+  </source>
+  <source id="6ad10bdb-b629-4991-94a9-478b752cde90" sourceType="3" year="2007" volumeNo="6" firstAuthor="Röder, A." additionalAuthors="Ch. Bauer, R. Dones" title="Kohle" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=26</comment>
+  </source>
+  <source id="eb8c59a8-bb5b-4d53-b888-e1cc0743671f" sourceType="4" year="2007" volumeNo="3" firstAuthor="Frischknecht R." additionalAuthors="Jungbluth N., Althaus H.-J., Doka, G., Dones, R., Hellweg S., Hischier R., Humbert S., Margni M., Nemecek, T., Spielmann M." title="Implementation of Life Cycle Impact Assessment Methods" titleOfAnthology="Final report ecoinvent data v2.0" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI">
+    <comment>EcoSpold01Number=201</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="b95ff30e-53df-49f4-b124-1b67a66f1f87" sourceType="4" year="2009" volumeNo="10" firstAuthor="Classen M." additionalAuthors="Althaus H.-J., Blaser S., Doka G., Jungbluth N., Tuchschmid M." title="Life Cycle Inventories of Metals" titleOfAnthology="Final report ecoinvent data v2.1" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL">
+    <comment>EcoSpold01Number=213</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="f5833dbb-6831-40f3-8d06-b4596fed1bf4" sourceType="4" year="2007" volumeNo="6" firstAuthor="Burger, B." additionalAuthors="Bauer, Ch." title="Windkraft" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment>EcoSpold01Number=149</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="289eb0aa-9742-47cf-9cfa-f7747b6350a0" sourceType="4" year="2009" volumeNo="6" firstAuthor="Jungbluth, N." additionalAuthors="Stucki, M., Frischknecht, R." title="Photovoltaics" namesOfEditors="Bauer C." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent v2.1" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment>EcoSpold01Number=216</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="2e0b7630-9b4e-4161-bff2-481b2477599c" sourceType="4" year="2004" volumeNo="3" firstAuthor="Frischknecht R." additionalAuthors="Jungbluth N., Althaus H.-J., Doka, G., Dones, R., Hellweg S., Hischier R., &#xD;&#xA;Humbert S., Margni M., Nemecek, T., Spielmann M." title="Implementation of Life Cycle Impact Assessment Methods" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI" issueNo="0">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=158</comment>
+  </source>
+  <source id="fec2aae6-c64f-4837-9935-d07d41128246" sourceType="4" year="2009" volumeNo="13" firstAuthor="Doka G." title="Life Cycle Inventories of Waste Treatment Services" titleOfAnthology="Final report ecoinvent data v2.1" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=214</comment>
+  </source>
+  <source id="f6bc0bb2-ee4a-4847-bc92-242dca5f5a70" sourceType="3" year="2007" volumeNo="18" firstAuthor="Hischier R." additionalAuthors="Classen M., Lehmann M., Scharnhorst W." title="Life Cycle Inventories of Electric and Electronic Equipment - Production, Use &amp; Disposal" titleOfAnthology="Final report ecoinvent Data v2.0" placeOfPublications="Duebendorf and St. Gallen, CH" publisher="Swiss Centre for LCI, Empa - TSL">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=42</comment>
+  </source>
+  <source id="5ffc1a89-5da8-44d5-9d2d-fb0d61dadc6e" sourceType="4" year="2007" volumeNo="25" firstAuthor="Hässig, W." additionalAuthors="Primas, A." title="Ökologische Aspekte der Komfortlüftungen im Wohnbereich" titleOfAnthology="Final report ecoinvent Data v2.0" placeOfPublications="Dübendorf and Zürich, CH" publisher="Swiss Centre for LCI, B+H">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=206</comment>
+  </source>
+  <source id="3e598c43-84bd-40fa-b349-b86beff3727f" sourceType="3" year="2009" volumeNo="13" firstAuthor="Doka G." title="Life Cycle Inventories of Waste Treatment Services" titleOfAnthology="Final report ecoinvent data v2.1" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=13</comment>
+  </source>
+  <source id="8682b67a-eaf9-4b8a-b4c5-fd057405fa7f" sourceType="3" year="2007" volumeNo="6" firstAuthor="Jungbluth, N." title="Sonnenkollektor-Anlagen" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=25</comment>
+  </source>
+  <source id="1c44de9d-ddf9-4061-9e55-378109e70156" sourceType="3" year="2007" volumeNo="6" firstAuthor="Bauer, C." title="Holzenergie" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=16</comment>
+  </source>
+  <source id="efeb6874-be8d-49ac-b739-c64f98596010" sourceType="3" year="2007" volumeNo="7" firstAuthor="Kellenberger D." additionalAuthors="Althaus H.-J., Jungbluth N., Künniger T." title="Life Cycle Inventories of Building Products" titleOfAnthology="Final report ecoinvent data v2.0" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL">
+    <comment>EcoSpold01Number=7</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+</validSources>

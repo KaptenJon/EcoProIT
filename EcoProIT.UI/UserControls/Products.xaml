@@ -1,0 +1,42 @@
+﻿<UserControl
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:ignore="http://www.ignore.com" 
+		xmlns:viewModel1="clr-namespace:EcoProIT.UI.ViewModel"
+		x:Class="EcoProIT.UI.UserControls.Products"
+		mc:Ignorable="d ignore"
+		>
+
+	<StackPanel>
+
+		<d:StackPanel.DataContext>
+			<viewModel1:MainViewModel/>
+		</d:StackPanel.DataContext>
+
+		<Label Content="Products"/>
+		<ListBox x:Name="_listBox" 
+			ItemsSource="{Binding ProductList}" 
+			SelectedItem="{Binding SelectedProduct}"
+			ItemContainerStyle="{DynamicResource myLBStyle}"
+				 >
+			<ListBox.Resources>
+				<Style x:Key="myLBStyle" TargetType="{x:Type ListBoxItem}">
+					<!--<EventSetter Event="MouseUp" Handler="CurrentItemClick"/>-->
+					<Style.Resources>
+						<SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}"
+							Color="SteelBlue"/>
+						<SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}"
+							Color="SteelBlue"/>
+
+					</Style.Resources>
+					<EventSetter Event="UIElement.PreviewGotKeyboardFocus" Handler="SelectCurrentItem"/>
+				</Style>
+
+			</ListBox.Resources>
+
+
+		</ListBox>
+	</StackPanel>
+</UserControl>
