@@ -4,17 +4,19 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
 using System.Windows;
-#if !WINRT
 using System.Windows.Media;
-using System.Windows.Threading;
+#if !WINRT
 #else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
 using Windows.Foundation;
 using Windows.UI;
 #endif
+using System.Windows.Threading;
+using EcoProIT.Chart.Collections;
+using EcoProIT.Chart.Points;
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Series
 {
     /// <summary>
     /// 
@@ -30,6 +32,7 @@ namespace Sparrow.Chart
         /// </summary>
         public virtual void GeneratePointsFromSource()
         {
+            Chart.ActualCategoryValues.Clear();
             XValues = this.GetReflectionValues(this.XPath, PointsSource, XValues, false);
             YValues = this.GetReflectionValues(this.LowPath, PointsSource, YValues, false);
             if (YValues == null || YValues.Count == 0)

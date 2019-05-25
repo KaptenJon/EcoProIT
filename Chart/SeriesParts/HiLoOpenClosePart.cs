@@ -1,7 +1,8 @@
 ﻿using System.Windows;
-#if !WINRT
-using System.Windows.Shapes;
 using System.Windows.Controls;
+using System.Windows.Shapes;
+#if !WINRT
+
 #else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -9,7 +10,7 @@ using Windows.Foundation;
 using Windows.UI.Xaml.Shapes;
 #endif
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.SeriesParts
 {
     public class HiLoOpenClosePart : LinePartBase
     {
@@ -19,7 +20,7 @@ namespace Sparrow.Chart
         internal Point Point4;
         internal Point Point5;
         internal Point Point6;
-        
+
         internal bool IsBearfill;
         Canvas _canvas;
         Line _line1;

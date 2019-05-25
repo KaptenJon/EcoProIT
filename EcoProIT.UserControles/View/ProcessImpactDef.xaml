@@ -6,13 +6,14 @@
              xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
              xmlns:dataLayer="clr-namespace:EcoProIT.DataLayer;assembly=EcoProIT.DataLayer"
              xmlns:helpClasses="clr-namespace:HelpClasses;assembly=HelpClasses"
-            xmlns:controls="clr-namespace:FeserWard.Controls;assembly=Intellibox"
+             xmlns:xcdg="http://schemas.xceed.com/wpf/xaml/datagrid"
+             xmlns:controls="clr-namespace:FeserWard.Controls;assembly=Intellibox"
              
              mc:Ignorable="d" d:DesignWidth="533" d:DesignHeight="518.9">
     <UserControl.Resources>
+        <xctk:InverseBoolConverter x:Key="InverseBoolConverter"></xctk:InverseBoolConverter>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
         <helpClasses:ProcessToInVisibilityConverter x:Key="ProcessToInvisible"/>
-        <helpClasses:BoolInverter x:Key="InverseBooleanConverter" />
     </UserControl.Resources>
     <Grid >
 
@@ -24,7 +25,7 @@
                  Width="120" Visibility="Hidden"/>
         <GroupBox Header="Machine Consumption" Margin="12,110,8,0" VerticalAlignment="Top" Height="71" >
             <StackPanel  Margin="4" >
-                <RadioButton Padding="2" GroupName="StaticGroup" IsChecked="{Binding IsChecked, Converter={StaticResource InverseBooleanConverter}, ElementName=test}" Content="Per hour in state"  HorizontalAlignment="Left" 
+                <RadioButton Padding="2" GroupName="StaticGroup" IsChecked="{Binding IsChecked, Converter={StaticResource InverseBoolConverter}, ElementName=test}" Content="Per hour in state"  HorizontalAlignment="Left" 
                VerticalAlignment="Top" />
                 <RadioButton Name="test" Padding="2" GroupName="StaticGroup" IsChecked="{Binding SelectedConsumption.Static}" Content="Every time used"  HorizontalAlignment="Left" 
         	         VerticalAlignment="Top" />
@@ -33,7 +34,7 @@
         </GroupBox>
         <GroupBox Header="Product Allocation" Margin="12,186,8,0"  VerticalAlignment="Top" Height="71" Visibility="{Binding SelectedState.Name, Converter={StaticResource ProcessToInvisible}}" >
             <StackPanel Margin="4">
-                <RadioButton  Padding="2" IsChecked="{Binding IsChecked, Converter={StaticResource InverseBooleanConverter}, ElementName=Alloca}"  GroupName="Allocate"  Content="Divided equally to all products that has used the node"  HorizontalAlignment="Left" 
+                <RadioButton  Padding="2" IsChecked="{Binding IsChecked, Converter={StaticResource InverseBoolConverter}, ElementName=Alloca}"  GroupName="Allocate"  Content="Divided equally to all products that has used the node"  HorizontalAlignment="Left" 
         	        VerticalAlignment="Top" />
                 <RadioButton Name="Alloca" Padding="2" GroupName="Allocate" IsChecked="{Binding SelectedConsumption.AllocationPerTime}"  Content="Divided to all products based on the time each products used the node" HorizontalAlignment="Left" 
         	 VerticalAlignment="Top" />

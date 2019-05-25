@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Utility
 {
     /// <summary>
     /// Axis Utility for Sparrow Chart

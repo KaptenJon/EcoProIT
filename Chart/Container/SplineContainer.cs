@@ -1,10 +1,13 @@
 ﻿using System.Windows;
+using System.Windows.Media;
 #if WINRT
 using Windows.UI.Xaml.Media;
 #else
-using System.Windows.Media;
 #endif
-namespace Sparrow.Chart
+using EcoProIT.Chart.Extensions;
+using EcoProIT.Chart.Series;
+
+namespace EcoProIT.Chart.Container
 {
     /// <summary>
     /// SplineSeries Container
@@ -19,7 +22,7 @@ namespace Sparrow.Chart
                 SplineSeries splineSeries = series as SplineSeries;
                 var points = splineSeries.SplinePoints;
                 var pointCount = splineSeries.SplinePoints.Count;
-                if (RenderingMode == RenderingMode.Default)
+                if (RenderingMode == Utility.RenderingMode.Default)
                 {
                     PartsCanvas.Children.Clear();
                     for (int i = 0; i < splineSeries.Parts.Count; i++)
@@ -35,12 +38,12 @@ namespace Sparrow.Chart
                     {
                         switch (RenderingMode)
                         {
-                            case RenderingMode.GDIRendering:
+                            case Utility.RenderingMode.GDIRendering:
                                 GDIGraphics.DrawBezier(pen, points[i].AsDrawingPointF(), splineSeries.FirstControlPoints[i].AsDrawingPointF(), splineSeries.SecondControlPoints[i].AsDrawingPointF(), points[i + 1].AsDrawingPointF());
                                 break;
-                            case RenderingMode.Default:
+                            case Utility.RenderingMode.Default:
                                 break;
-                            case RenderingMode.WritableBitmap:
+                            case Utility.RenderingMode.WritableBitmap:
                                 this.WritableBitmap.Lock();
                                 WritableBitmapGraphics.DrawBezier(pen, points[i].AsDrawingPointF(), splineSeries.FirstControlPoints[i].AsDrawingPointF(), splineSeries.SecondControlPoints[i].AsDrawingPointF(), points[i + 1].AsDrawingPointF());
                                 this.WritableBitmap.AddDirtyRect(new Int32Rect(0, 0, WritableBitmap.PixelWidth, WritableBitmap.PixelHeight));

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
-#if !WINRT
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Media;
 using System.Windows.Shapes;
+#if !WINRT
 #else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -15,8 +15,12 @@ using Windows.UI.Xaml.Media;
 using Windows.Foundation;
 using Windows.UI.Xaml.Shapes;
 #endif
+using EcoProIT.Chart.Converters;
+using EcoProIT.Chart.Series;
+using EcoProIT.Chart.Utility;
+using BooleanToVisibilityConverter = EcoProIT.Chart.Converters.BooleanToVisibilityConverter;
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Axis
 {
 
     /// <summary>
@@ -40,9 +44,11 @@ namespace Sparrow.Chart
         /// </summary>
         internal void Update()
         {
-           
-            if (Labels == null || Labels.Count() == 0)
-                Labels = new List<ContentControl>();
+            Initialize();
+            return;
+            /**
+            if (Labels.Count() == 0)
+                return;
             double desiredHeight = 0;
             double labelSize = 0;
             CalculateAutoInterval();
@@ -52,8 +58,7 @@ namespace Sparrow.Chart
                 double xAxisWidthStep = this.ActualWidth*0.9 / ((MIntervalCount > 0) ? MIntervalCount : 1);
                 double xAxisWidthPosition = 0;
                 double minorstep = 0;
-                if(AxisLine != null)
-                    AxisLine.X2 = this.ActualWidth;
+                AxisLine.X2 = this.ActualWidth;
 
                 MStartValue = 1.0 / (Labels.Count)/2;
                 
@@ -160,7 +165,7 @@ namespace Sparrow.Chart
                         for (int j = 0; j < offset; j++)
                         {
                             ContentControl label = new ContentControl();
-                            label.Content = MLabels[this.MLabels.Count - offset];
+                            label.Content = MLabels[this.MLabels.Count - offset - 1];
                             Binding labelTemplateBinding = new Binding();
                             labelTemplateBinding.Path = new PropertyPath("LabelTemplate");
                             labelTemplateBinding.Source = this;
@@ -178,6 +183,7 @@ namespace Sparrow.Chart
                             styleBinding.Source = this;
                             tickLine.SetBinding(Line.StyleProperty, styleBinding);
                             tickLine.Measure(new Size(this.ActualHeight, this.ActualWidth));
+                            xAxisWidthPosition = this.DataToPoint(MStartValue + (MInterval / 2 * j));
                             tickLine.X1 = xAxisWidthPosition - (tickLine.DesiredSize.Width / 2);
                             tickLine.X2 = xAxisWidthPosition - (tickLine.DesiredSize.Width / 2);
 
@@ -276,8 +282,6 @@ namespace Sparrow.Chart
                                 this.Children.Add(minorLine);
                                 minorstep += minorstep;
                             }
-                            if(MajorTickLines == null)
-                                MajorTickLines = new List<Line>();
                             MajorTickLines.Add(tickLine);
                             this.Children.Add(label);
                             this.Children.Add(tickLine);
@@ -302,6 +306,8 @@ namespace Sparrow.Chart
                     }
                     for (int i = 0; i < this.MLabels.Count; i++)
                     {
+                       // xAxisWidthPosition = this.DataToPoint(MStartValue + (MInterval / 2 * i));
+
                         ContentControl label = Labels[i];
                         label.Content = MLabels[i];
                         label.Measure(new Size(this.ActualHeight, this.ActualWidth));
@@ -311,7 +317,6 @@ namespace Sparrow.Chart
                         //label.RenderTransformOrigin = new Point(0.5, 0.5);
                         label.RenderTransform = labelRotation;      
                         Line tickLine = MajorTickLines[i];
-                       
                         int minorCount = 0;
                         tickLine.X1 = xAxisWidthPosition;
                         tickLine.X2 = xAxisWidthPosition;                        
@@ -344,11 +349,10 @@ namespace Sparrow.Chart
 
                         }
                         xAxisWidthPosition += xAxisWidthStep;
-                    }  
+                    }
+                    Update();
                 }
                 desiredHeight += labelSize;   
-                if(header == null)
-                    header = new Label();
                 header.Measure(new Size(this.ActualHeight, this.ActualWidth));
                 Canvas.SetLeft(header, (this.ActualWidth / 2) - (header.DesiredSize.Width / 2));
                 Canvas.SetTop(header, desiredHeight);
@@ -356,7 +360,7 @@ namespace Sparrow.Chart
                 this.Chart.AxisHeight = desiredHeight;
             }
             //if (this.Chart.AxisHeight < desiredHeight)
-                
+                */
         }
 
         /// <summary>
@@ -364,21 +368,41 @@ namespace Sparrow.Chart
         /// </summary>
         internal void Initialize()
         {
+            
+            if (Labels != null)
+                Labels.Clear();
+            var seriesBase = Chart.Series.FirstOrDefault();
+            if (seriesBase != null)
+            {
+                MMaxValue = seriesBase.CountXValues;
+            }
             double desiredHeight = 0;
             double labelSize = 0;
             //if (m_MinValue == m_startValue + m_Interval)
+
             CalculateAutoInterval();
             GenerateLabels();
+
+            var wid = ActualWidth;
+            var c = Chart.ActualCategoryValues.Count;
+            if (c == 0)
+                return;
+
+           
+
             if (this.ActualHeight > 0 && this.ActualWidth > 0)
             {
-               
+                MStartValue = 1.0 / (MLabels.Count);
                 this.Children.Clear();
-                double xAxisWidthStep = this.ActualWidth / ((MIntervalCount > 0) ? MIntervalCount : 1);
+                double xAxisWidthStep = (this.ActualWidth / ((MLabels.Count > 0) ? MLabels.Count : 1));
                 double xAxisWidthPosition = this.DataToPoint(MStartValue);
+                // xAxisWidthPosition= xAxisWidthStep ;
+                
                 double minorstep = 0;
                 //m_offset = this.DataToPoint(m_MinValue + m_Interval);
                 Rect oldRect = new Rect(0, 0, 0, 0);
                 AxisLine = new Line();
+
                 AxisLine.X1 = 0;
                 AxisLine.X2 = this.ActualWidth;
                 AxisLine.Y1 = 0;
@@ -392,6 +416,7 @@ namespace Sparrow.Chart
                 MinorTickLines = new List<Line>();
                 for (int i = 0; i < this.MLabels.Count; i++)
                 {
+                    xAxisWidthPosition = i * (wid / c) + ((wid / c) / 2);
                     ContentControl label = new ContentControl();
                     label.Content = MLabels[i];
                     Binding labelTemplateBinding = new Binding();
@@ -400,7 +425,7 @@ namespace Sparrow.Chart
                     label.SetBinding(ContentControl.ContentTemplateProperty, labelTemplateBinding);
                     label.Measure(new Size(this.ActualHeight, this.ActualWidth));
                     RotateTransform labelRotation = new RotateTransform();
-                    labelRotation.Angle = LabelAngle;
+                    labelRotation.Angle = 90;
                     Rect rotatedRect = GetRotatedRect(new Rect(0, 0, label.DesiredSize.Width, label.DesiredSize.Height), labelRotation);
                     //label.RenderTransformOrigin = new Point(0.5, 0.5);
                     label.RenderTransform = labelRotation;                    
@@ -413,8 +438,8 @@ namespace Sparrow.Chart
                     styleBinding.Source = this;
                     tickLine.SetBinding(Line.StyleProperty, styleBinding);
                     tickLine.Measure(new Size(this.ActualHeight, this.ActualWidth));
-                    tickLine.X1 = xAxisWidthPosition - (tickLine.DesiredSize.Width / 2);
-                    tickLine.X2 = xAxisWidthPosition - (tickLine.DesiredSize.Width / 2);                   
+                    tickLine.X1 = xAxisWidthPosition -(tickLine.DesiredSize.Width / 2);
+                    tickLine.X2 = xAxisWidthPosition -(tickLine.DesiredSize.Width / 2);                   
                     
                     switch (this.MajorTicksPosition)
                     {
@@ -523,7 +548,9 @@ namespace Sparrow.Chart
                     }
                     if (this.LabelAngle == 0)
                     {
-                        Canvas.SetLeft(label, xAxisWidthPosition - (label.DesiredSize.Width / 2));
+                        //Canvas.SetLeft(label, xAxisWidthPosition - (label.DesiredSize.Width / 2));
+                        var pos = i * (wid / c) + ((wid / c) / 2);// -label.DesiredSize.Width;
+                        Canvas.SetLeft(label, pos + desiredHeight);
                         Canvas.SetTop(label, desiredHeight);
                         labelSize = Math.Max(labelSize, label.DesiredSize.Height);
                     }
@@ -555,12 +582,14 @@ namespace Sparrow.Chart
                 desiredHeight += header.DesiredSize.Height ;
                 this.Children.Add(header);
                 this.Children.Add(AxisLine);
-
+                XIsInitialized = true;
                 this.Chart.AxisHeight = desiredHeight;
             }
            // if (this.Chart.AxisHeight < desiredHeight)
                 
         }
+
+        public bool XIsInitialized { get; set; }
 
         /// <summary>
         /// Gets the styles.
@@ -583,7 +612,7 @@ namespace Sparrow.Chart
         /// </summary>
         internal override void InvalidateVisuals()
         {            
-            if (!IsInitialized)
+            if (!XIsInitialized)
                 Initialize();
             else
                 Update();
@@ -599,7 +628,7 @@ namespace Sparrow.Chart
             if (!(MMinValue == MMaxValue))
                 return ((value - MMinValue) * (this.ActualWidth / (MMaxValue - MMinValue)));
             else
-                return 0;
+                return 0.5 * ActualWidth;
         }
 
         /// <summary>

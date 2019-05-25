@@ -27,7 +27,7 @@ namespace EcoProIT.UI.SimulationModel
         private DESResource _machine = DESResource.Create(1);
         private DESMachine parentDES = null;
         private int _nrofProductsProcessed;
-        private static modeloutputContext context = DatabaseConnection.GetModelContext();
+    
         private HashSet<DESMachine> parents = new HashSet<DESMachine>();
         
         public DESMachine(SimulationModel sim, ModelNode involvednode, DESMachine parentNode) : base(sim)

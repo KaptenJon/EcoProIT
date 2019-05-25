@@ -1,11 +1,16 @@
-﻿#if !WINRT
+﻿using EcoProIT.Chart.Collections;
+using EcoProIT.Chart.Extensions;
+using EcoProIT.Chart.Series;
+using EcoProIT.Chart.Utility;
+#if !WINRT
 using System.Windows.Media;
+
 #else
 using Windows.UI.Xaml.Media;
 #endif
 
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Container
 {
     public class HiLoOpenCloseContainer : SeriesContainer
     {

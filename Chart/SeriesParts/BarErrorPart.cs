@@ -1,9 +1,9 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
-using System.Windows.Controls;
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.SeriesParts
 {
     public class BarErrorPart : LinePartBase
     {
@@ -13,7 +13,6 @@ namespace Sparrow.Chart
         internal Point Point4;
         internal Point Point5;
         internal Point Point6;
-       
         internal bool IsBearfill;
         Canvas _canvas;
         Line _line1;
@@ -60,6 +59,7 @@ namespace Sparrow.Chart
             this.Mean = mean;
             this.Error = error;
             this.XName = name;
+
         }
 
         public string XName { get; set; }
@@ -251,7 +251,7 @@ namespace Sparrow.Chart
                 _line4.X2 = Point5.X + (Point6.X - Point5.X) / 2;
                 _line4.Y1 = Point4.Y;
                 _line4.Y2 = Point6.Y;
-                _canvas.ToolTip = string.Format("{0} std:{1}", Mean, Error);
+                _canvas.ToolTip = string.Format("{2}:\n{0} std:{1}", Mean, Error, XName);
             }
             
         }

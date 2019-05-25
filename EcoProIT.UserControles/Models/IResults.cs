@@ -15,11 +15,33 @@ namespace EcoProIT.UserControles.Models
     public abstract class IResults:INotifyPropertyChanged
     {
         private string _resultId;
-        private Dictionary<Consumable, decimal> _consumables = new Dictionary<Consumable, decimal>();
+        private Dictionary<Consumable, Statistic> _consumables = new Dictionary<Consumable, Statistic>();
         private Statistic _totalProducedStats;
+        private Dictionary<Consumable, decimal> _meanConsumables;
 
-        public Dictionary<Consumable, decimal> Consumables
-        { get { return _consumables; } protected set { _consumables = value; OnPropertyChanged("Consumables"); } }
+        public Dictionary<Consumable, Statistic> Consumables
+        { get { return _consumables; } protected set { _consumables = value; OnPropertyChanged(); } }
+
+        public Dictionary<Consumable, decimal> MeanConsumables
+        {
+            get { return _meanConsumables; }
+            protected set
+            {
+                if (Equals(value, _meanConsumables)) return;
+                _meanConsumables = value;
+                OnPropertyChanged();
+            }
+        }
+        public Dictionary<Consumable, List<decimal>> RunResultsTotal
+        {
+            get { return _runResultsTotal; }
+            set
+            {
+                if (Equals(value, _runResultsTotal)) return;
+                _runResultsTotal = value;
+                OnPropertyChanged();
+            }
+        }
 
         public static string SelectedIndex { get; set; }
 
@@ -63,6 +85,7 @@ namespace EcoProIT.UserControles.Models
         protected static HashSet<Pair<ParallelQuery<ProductResult>, ParallelQuery<MachineState>>> SourceSimulationModelSet { get; private set; }
         protected static Dictionary<string, decimal> _nodeIndicatorBase = new Dictionary<string, decimal>();
         private static decimal _totalTime;
+        private Dictionary<Consumable, List<decimal>> _runResultsTotal = new Dictionary<Consumable, List<decimal>>();
 
         public decimal NodeIndicator
         {

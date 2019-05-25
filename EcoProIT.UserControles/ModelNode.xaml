@@ -6,54 +6,43 @@
 			 xmlns:ViewModel="clr-namespace:EcoProIT.UserControles.ViewModel" 
 			 xmlns:HelpClasses="clr-namespace:HelpClasses;assembly=HelpClasses" 
 			 xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
-			 xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" 
-			 xmlns:ee="http://schemas.microsoft.com/expression/2010/effects"
 			 xmlns:userControles="clr-namespace:EcoProIT.UserControles"
+			 xmlns:AdobeImport="clr-namespace:EcoProIT.UserControles.AdobeImport"
 			 x:Name="userControl" 
 			 x:Class="EcoProIT.UserControles.ModelNode"         
-			 BorderBrush="Black" MaxHeight="80" MaxWidth="130" mc:Ignorable="d" 
+			 BorderBrush="Black" MaxHeight="100" MaxWidth="160" mc:Ignorable="d" 
 			 MouseDoubleClick="MouseDoubleClick_1" AllowDrop="True"  Drop="DropMethod" DragEnter="Drag_Enter" >
-
 	<UserControl.Resources>
+        <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary Source="Temp.xaml" />
+        </ResourceDictionary.MergedDictionaries>
 		<HelpClasses:BooleanToOpacity x:Key="BooleanToOpacity"/>
-	</UserControl.Resources>
-
+		<HelpClasses:BooleanToOpacityHidden x:Key="BooleanToOpacity1"/>
+        </ResourceDictionary>
+    </UserControl.Resources>
 	<UserControl.DataContext>
 		<ViewModel:ResourceDefinitionModel/>
 	</UserControl.DataContext>
-
-
 	<i:Interaction.Behaviors>
-
-        <userControles:DragBehavior x:Name="MovedPosition" DragBegun="MouseDragElementBehavior_DragBegun"  DragFinished="MouseDragElementBehavior_DragFinished"/>
-	   
-	   <!-- <ei:MouseDragElementBehavior  ConstrainToParentBounds="True" />-->
+		<userControles:DragBehavior x:Name="MovedPosition" DragBegun="MouseDragElementBehavior_DragBegun"  DragFinished="MouseDragElementBehavior_DragFinished"/>
 	</i:Interaction.Behaviors>
-
-
-	<Viewbox >
+	<Viewbox  >
 		<DockPanel LastChildFill="True" Loaded="NodeLoaded" >
-			<Border x:Name="border" CornerRadius="3000" DockPanel.Dock="Top"    Height="106" Background="{Binding Gradient}" Opacity="{Binding IsMouseOver, Converter={StaticResource BooleanToOpacity}, Mode=OneWay, RelativeSource={RelativeSource Self}}" >
-				<!--  <Border.Background>
+			<AdobeImport:GeneralNode x:Name="border" DockPanel.Dock="Top" Height="106" 
+									 Opacity="{Binding IsMouseOver, Converter={StaticResource BooleanToOpacity}, Mode=OneWay, RelativeSource={RelativeSource Self}}"  ><!--Style="{DynamicResource GeneralNodeStyle}"--> 
 				
-				<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
-					<GradientStop Color="{Binding Intensity, Mode=OneWay}" Offset="1" />
-					<GradientStop Color="{Binding Intensity2, Mode=OneWay}" Offset="0.501" />
-				</LinearGradientBrush>
-			</Border.Background>-->
-				<Grid>
+                <StackPanel>
+					<Border  DockPanel.Dock="Top" Height="106" Background="{Binding Gradient}" Opacity="{Binding ShowResults, Converter={StaticResource BooleanToOpacity1}}" />
 
-					<Label  FontSize="22" x:Name="ContentName" Content="{Binding ProcessName}"  FontStyle="Normal"  HorizontalAlignment="Center"  Margin="10,35" RenderTransformOrigin="0.533,0.961" MaxWidth="230" VerticalAlignment="Center" FontWeight="Bold"   >
-		
+					<Grid>
+						<Label  FontSize="60"  Content="{Binding ProcessName}"  FontStyle="Normal" HorizontalContentAlignment="Center" HorizontalAlignment="Center"   VerticalAlignment="Center" FontWeight="Bold"    />
+						<Viewbox  Height="50" VerticalAlignment="Top" Width="50" Margin="0,0,149,0">
 
-						
-
-					</Label>
-					<Viewbox  Height="50" VerticalAlignment="Top" Width="50" Margin="0,0,149,0">
-						<Image x:Name="NodeImage"  Height="5000" Width="5000" />
-					</Viewbox>
-				</Grid>
-			</Border>
+						</Viewbox>
+					</Grid>
+				</StackPanel>
+			</AdobeImport:GeneralNode>
 			<Expander VerticalAlignment="Bottom"  DockPanel.Dock="Bottom"  HorizontalAlignment="Center"  Expanded="Expander_Expanded" Collapsed="Expander_Collapsed" ExpandDirection="Down" IsExpanded="true"  />
 			<ItemsControl Height="30"  DockPanel.Dock="Bottom" ItemsSource="{Binding Parent.Parent.Parent.ProductLabels, RelativeSource={RelativeSource Self}}">
 				<ItemsControl.ItemsPanel>

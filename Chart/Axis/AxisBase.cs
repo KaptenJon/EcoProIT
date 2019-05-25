@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-#if !WINRT
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Shapes;
 using System.Windows.Media;
+using System.Windows.Shapes;
+#if !WINRT
 #else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -12,8 +12,12 @@ using Windows.UI.Xaml.Media;
 using Windows.Foundation;
 using Windows.UI.Xaml.Shapes;
 #endif
+using EcoProIT.Chart.Chart;
+using EcoProIT.Chart.Collections;
+using EcoProIT.Chart.Series;
+using EcoProIT.Chart.Utility;
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Axis
 {
     /// <summary>
     /// Base for Axis
@@ -66,7 +70,7 @@ namespace Sparrow.Chart
                 Source = new Uri(@"/Sparrow.Chart.DirectX2D_x64;component/Themes/Styles.xaml", UriKind.Relative)
 #elif WPF
 #if NET45
-                Source = new Uri(@"/Sparrow.Chart.Wpf.45;component/Themes/Styles.xaml", UriKind.Relative)
+                Source = new Uri(@"/EcoProIT.Chart;component/Themes/Styles.xaml", UriKind.Relative)
 #elif NET40
                 Source = new Uri(@"/Sparrow.Chart.Wpf.40;component/Themes/Styles.xaml", UriKind.Relative)
 #else
@@ -352,7 +356,7 @@ namespace Sparrow.Chart
             MLabels.Clear();
             MLabelValues.Clear();
             double value = MMinValue;
-            for (int i = 0; i <= MIntervalCount; i++)
+            for ( int i = 0; i <= MIntervalCount; i++)
             {
                 //if (value >= m_MinValue && value <= m_MaxValue)
                 //{
@@ -480,7 +484,7 @@ namespace Sparrow.Chart
                         default:
                             break;
                     }
-                    if (MIntervalCount <= 1)
+                    if (MIntervalCount < 1)
                         _isIntervalCountZero = true;
                     MIntervalCount = (MIntervalCount > 0) ? MIntervalCount : 1;
 
@@ -515,7 +519,8 @@ namespace Sparrow.Chart
                 }
                 this.MIntervalCount = (int)Math.Abs(((int)MMaxValue - (int)MMinValue) / (int)MInterval);
                 MIntervalCount = (MIntervalCount > 0) ? MIntervalCount : 1;
-                
+                if (MIntervalCount < 1)
+                    _isIntervalCountZero = true;
             }
             
             RefreshSeries();

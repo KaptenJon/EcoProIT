@@ -12,7 +12,7 @@ using System.Windows.Shapes;
 using EcoProIT.DataLayer;
 using EcoProIT.UserControles.Models;
 using EcoProIT.UserControles.View;
-using GalaSoft.MvvmLight.CommandWpf;
+using GalaSoft.MvvmLight.Command;
 using HelpClasses;
 
 namespace EcoProIT.UserControles.ViewModel
@@ -72,17 +72,37 @@ namespace EcoProIT.UserControles.ViewModel
 			
 			public override void UpdateConsumptions()
 			{
-				var dic = Consumables.ToDictionary(consumable => consumable.Key, consumable => consumable.Value);
-				var f = SourceTableOrdered.Where(t => t.ProductType == ResultId);
-				if(!f.Any())
-					return;
+				var dic = new Dictionary<Consumable, List<decimal>>();
+				foreach (var pair in SourceSimulationModelSet)
+				{
+					var runresult = UpdateConsumablesOneRun(pair.Key, pair.Value);
+					foreach (var runresultcons in runresult)
+					{
+						if (dic.ContainsKey(runresultcons.Key))
+						dic[runresultcons.Key].Add(runresultcons.Value); //(IResults.TotalTime/3600);
+					else
+						dic.Add(runresultcons.Key, new List<decimal>(new [] {runresultcons.Value}));
+					}
+				}
+				var res = dic.ToDictionary(t=> t.Key, i=>new Statistic(i.Value.Mean(), i.Value.StandardDeviation()));
+				Consumables = res;
+				MeanConsumables = res.ToDictionary(t => t.Key, t => t.Value.Mean);
+				
+			}
+
+			private Dictionary<Consumable, decimal> UpdateConsumablesOneRun(ParallelQuery<ProductResult> productResultsTableOrdered, ParallelQuery<MachineState> mashineStatesOrdered)
+			{
+				var dic = new Dictionary<Consumable, decimal>();
+				var f = productResultsTableOrdered.Where(t => t.ProductType == ResultId);
+				if (!f.Any())
+					return dic;
 
 				var allNodes = new HashSet<ModelNode>();
 
 				//Direct
 				foreach (var pair in Nodes)
 				{
-					var sumTime = f.Where(t => t.ModelNode == pair.Key.ResourceModel.ProcessName).Sum(t => t.Total,null);
+					var sumTime = f.Where(t => t.ModelNode == pair.Key.ResourceModel.ProcessName).Sum(t => t.Total, null);
 					var count = f.Count(t => t.ModelNode == pair.Key.ResourceModel.ProcessName);
 					foreach (var consumption in pair.Value.State.Consumptions)
 					{
@@ -117,20 +137,21 @@ namespace EcoProIT.UserControles.ViewModel
 
 				if (Nodes.Count > 0)
 				{
-
 					var count = f.Count(t => t.ModelNode == Nodes.Last().Key.ResourceModel.ProcessName);
 					if (count == 0)
 						count = 1;
-					var res = dic.ToDictionary(i => i.Key, i => i.Value/count);
+					var res = dic.ToDictionary(i => i.Key, i => i.Value/((decimal)count));
 					var totaltime = TotalTime;
 					if (totaltime == 0)
 						totaltime = 1;
-					dic.Add(new Consumable(){Name = "Processed per hour"}, count/(totaltime/3600000));
-					dic.Add(new Consumable() { Name = "Processed" }, count);
-					dic = res;
+					res.Add(new Consumable() {Name = "Processed per hour"}, count/(totaltime/3600000));
+					res.Add(new Consumable() {Name = "Processed"}, count);
+					return res;
 				}
-				Consumables = dic;
+				return dic;
+
 			}
+
 			public decimal ConsumptionforInterval(ulong start, ulong end, string index)
 			{
 				var dic = Consumables.ToDictionary(consumable => consumable.Key, consumable => consumable.Value);

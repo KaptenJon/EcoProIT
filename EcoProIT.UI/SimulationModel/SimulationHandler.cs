@@ -33,6 +33,7 @@ namespace EcoProIT.UI.SimulationModel
 
         private bool _isRunning;
         private long _nrOfIterations = System.Environment.ProcessorCount;
+        private TimeSpan _timeStatus;
 
 
         private void CreateModel(IEnumerable<Product> productenumerable, ulong simulationTime)
@@ -110,7 +111,33 @@ namespace EcoProIT.UI.SimulationModel
 
         public void sim_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
+            if(_nextUpdate > DateTime.Now)
+                return;
+            _nextUpdate = DateTime.Now + TimeSpan.FromSeconds(1);
             DispatcherHelper.CheckBeginInvokeOnUI(new Action(() => Status = (int)(sims.Average(t => t.RunStatus) * 100.0 )));
+            DispatcherHelper.CheckBeginInvokeOnUI(new Action(() =>
+            {
+                var av = sims.Average(t => t.RunStatus);
+                TimeStatus = TimeSpan.FromTicks((long) ((DateTime.Now - _startedTime).Ticks*(1.0 - av)/av));
+
+            }));
+        }
+
+        private DateTime _nextUpdate = DateTime.Now;
+        private DateTime _startedTime = DateTime.Now;
+
+        public TimeSpan TimeStatus
+        {
+            get { if(ViewModelBase.IsInDesignModeStatic)
+                    return new TimeSpan(1,2,3);
+                return _timeStatus; }
+            set
+            {
+                if (value.Equals(_timeStatus)) return;
+                _timeStatus = value;
+                OnPropertyChanged();
+                OnPropertyChanged("TimeStatusString");
+            }
         }
 
         internal async void run(IEnumerable<Product> products, ulong simulationTime)
@@ -120,9 +147,11 @@ namespace EcoProIT.UI.SimulationModel
 
             CreateModel(products, simulationTime);
             List<Task> runs = new List<Task>();
-            var db = DataLayer.DatabaseConnection.GetModelContext();
 
-        foreach (SimulationModel sim in sims)
+            _startedTime = DateTime.Now;
+            _nextUpdate = DateTime.Now + TimeSpan.FromSeconds(10);
+            TimeStatus = TimeSpan.Zero;
+            foreach (SimulationModel sim in sims)
             {
                 if (sim != null)
                 {
@@ -132,6 +161,7 @@ namespace EcoProIT.UI.SimulationModel
                     runs.Last().Start();
                 }
             }
+            
             var waitforall = new Task(() => Task.WaitAll(runs.ToArray()));
             waitforall.Start();
             await waitforall;
@@ -189,6 +219,16 @@ namespace EcoProIT.UI.SimulationModel
                 }
             }
             
+        }
+
+        public string TimeStatusString  
+        {
+            get
+            {
+                if (TimeStatus == TimeSpan.Zero)
+                    return "";
+                return "Time Left: " + TimeStatus.ToString(@"hh\:mm\:ss");
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

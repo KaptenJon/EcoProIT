@@ -1,15 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
-#if !WINRT
 using System.Windows.Controls;
+#if !WINRT
+
 #else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 #endif
 
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Utility
 {
     /// <summary>
     /// http://chriscavanagh.wordpress.com/2009/02/27/elementrecycler-for-silverlight-and-wpf/

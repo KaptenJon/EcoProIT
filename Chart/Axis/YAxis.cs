@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
-#if !WINRT
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Media;
 using System.Windows.Shapes;
+using EcoProIT.Chart.Series;
+using EcoProIT.Chart.Utility;
+using BooleanToVisibilityConverter = EcoProIT.Chart.Converters.BooleanToVisibilityConverter;
+#if !WINRT
+
 #else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -15,7 +19,7 @@ using Windows.UI.Xaml.Media;
 using Windows.Foundation;
 using Windows.UI.Xaml.Shapes;
 #endif
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Axis
 {
     /// <summary>
     /// YAxis for Sparrow Chart
@@ -53,7 +57,7 @@ namespace Sparrow.Chart
         /// </summary>
         internal override void InvalidateVisuals()
         {
-            if (!IsInitialized)
+            if (!YIsInitialized)
                 Initialize();
             else
                 Update();
@@ -67,10 +71,6 @@ namespace Sparrow.Chart
             double desiredWidth = 0;
             CalculateAutoInterval();
             GenerateLabels();
-            if(AxisLine == null )
-                AxisLine = new Line();
-            if(Labels == null)
-                Labels = new List<ContentControl>();
             if (this.ActualHeight > 0 && this.ActualWidth > 0)
             {
                 double yAxisHeightStep = this.ActualHeight / ((MIntervalCount > 0) ? MIntervalCount : 1);
@@ -192,7 +192,7 @@ namespace Sparrow.Chart
                         for (int j = 0; j < offset; j++)
                         {
                             ContentControl label = new ContentControl();
-                            label.Content = MLabels[this.MLabels.Count - offset ];
+                            label.Content = MLabels[this.MLabels.Count - offset - 1];
                             //label.ContentTemplate = this.LabelTemplate;
                             Binding labelTemplateBinding = new Binding();
                             labelTemplateBinding.Path = new PropertyPath("LabelTemplate");
@@ -274,8 +274,6 @@ namespace Sparrow.Chart
                                 this.Children.Add(minorLine);
                             }
                             this.Children.Add(label);
-                            if(MajorTickLines == null)
-                                MajorTickLines = new List<Line>();
                             MajorTickLines.Add(tickLine);
                             this.Children.Add(tickLine);
                         }
@@ -392,10 +390,6 @@ namespace Sparrow.Chart
                         yAxisHeightPosition += yAxisHeightStep;
                         //desiredWidth = desiredWidth + labelSize;
                     }
-                }
-                if (header == null)
-                {
-                   header = new Label(); 
                 }
                 header.Measure(new Size(this.ActualHeight, this.ActualWidth));
                 Canvas.SetLeft(header, this.ActualWidth - labelSize - header.DesiredSize.Height - this.MajorLineSize - 1);
@@ -571,11 +565,13 @@ namespace Sparrow.Chart
                 desiredWidth = desiredWidth + header.DesiredSize.Height ;
                 this.Children.Add(header);
                 this.Children.Add(AxisLine);
- 
+                YIsInitialized = true;
                 this.Chart.AxisWidth = desiredWidth;
             }
                            
         }
+
+        public bool YIsInitialized { get; set; }
 
         /// <summary>
         /// Datas to point.
@@ -636,7 +632,6 @@ namespace Sparrow.Chart
                     {
                         return value.ToString("0.###");
                     }
-                   
                 case YType.DateTime:
 #if !WINRT
                     return DateTime.FromOADate(value).ToString(this.StringFormat);

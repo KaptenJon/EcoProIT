@@ -1,4 +1,4 @@
-﻿namespace Sparrow.Chart
+﻿namespace EcoProIT.Chart.Points
 {
     /// <summary>
     /// DoublePoint for Series.Points

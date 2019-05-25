@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows;
-#if !WINRT
 using System.Windows.Media;
+#if !WINRT
 
 #else
 using Windows.UI.Xaml.Media;
@@ -10,7 +10,7 @@ using Windows.Foundation;
 using Windows.UI;
 #endif
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Utility
 {       
     /// <summary>
     /// BezierSpline

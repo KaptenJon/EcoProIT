@@ -3,8 +3,9 @@ using Microsoft.WindowsAPICodePack.DirectX.Direct2D1;
 #endif
 using System;
 using System.Windows.Media;
+using EcoProIT.Chart.Utility;
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Extensions
 {
     /// <summary>
     /// WindowsMedia Extensions for Conversion

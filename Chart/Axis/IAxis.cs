@@ -2,8 +2,9 @@
 #if WINRT
 using Windows.UI.Xaml;
 #endif
+using EcoProIT.Chart.Collections;
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Axis
 {
 
     /// <summary>

@@ -1,8 +1,9 @@
 ﻿using System.Windows;
-#if !WINRT
+using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Shapes;
-using System.Windows.Controls;
+#if !WINRT
+
 #else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -11,7 +12,7 @@ using Windows.Foundation;
 using Windows.UI.Xaml.Shapes;
 #endif
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.SeriesParts
 {
     public class ScatterPart : FillPartBase
     {

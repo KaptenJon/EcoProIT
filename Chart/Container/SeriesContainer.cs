@@ -1,16 +1,17 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Windows.Interop;
+using System.Windows.Media.Imaging;
+using System.Windows.Threading;
+using EcoProIT.Chart.Extensions;
 #if WPF
 using System.Drawing;
 #endif
+using System;
+using System.Diagnostics;
 using System.Windows;
-#if !WINRT
 using System.Windows.Controls;
-using System.Windows.Interop;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using Image=System.Windows.Controls.Image;
-using System.Windows.Threading;
+using Image = System.Windows.Controls.Image;
+#if !WINRT
 #else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -25,7 +26,11 @@ using D3D10 = Microsoft.WindowsAPICodePack.DirectX.Direct3D10;
 using DirectX = Microsoft.WindowsAPICodePack.DirectX;
 using Microsoft.WindowsAPICodePack.DirectX.DirectWrite;
 #endif
-namespace Sparrow.Chart
+using EcoProIT.Chart.Panels;
+using EcoProIT.Chart.Series;
+using EcoProIT.Chart.Utility;
+
+namespace EcoProIT.Chart.Container
 {
     /// <summary>
     /// SeriesBase Container

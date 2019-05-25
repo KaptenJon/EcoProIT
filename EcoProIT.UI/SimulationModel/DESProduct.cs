@@ -4,7 +4,7 @@ using EcoProIT.DataLayer;
 using EcoProIT.UserControles.ViewModel;
 using HelpClasses;
 using React;
-
+using Xceed.Wpf.AvalonDock.Converters;
 
 namespace EcoProIT.UI.SimulationModel
 {

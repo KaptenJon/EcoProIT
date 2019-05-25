@@ -37,7 +37,6 @@ namespace EcoProIT.UI.ViewModel
         private ObservableCollection<Product> _products = new ObservableCollection<Product>();
         private Product _selectedProduct;
         private ModelNode _selectedNode;
-        private DispatcherTimer UpdateStatusTimer;
         private static modeloutputContext db;
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -69,43 +68,32 @@ namespace EcoProIT.UI.ViewModel
             db = DatabaseConnection.GetModelContext();
             if(db == null)
                 return;
-            UpdateStatusTimer = new DispatcherTimer(TimeSpan.FromSeconds(3), DispatcherPriority.Background, UpdateDBStatus, Dispatcher.CurrentDispatcher);
-            UpdateStatusTimer.Start();
         }
 
         void simHandler_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            if(e.PropertyName == "IsRunning")
+            if (e.PropertyName == "IsRunning")
+            {
+
+                RaisePropertyChanged("ShowToResults");
+                RaisePropertyChanged("ShowToDesigner");
                 RaisePropertyChanged("RunSimulations");
+                
+            }
+            if (e.PropertyName == "HasResults")
+            {
+                RaisePropertyChanged("ShowToResults");
+                RaisePropertyChanged("ShowToDesigner");
+                RaisePropertyChanged("HasResults");
+            }
+            
         }
 
-        private void UpdateDBStatus(object sender, EventArgs e)
-        {
-            if (simHandler.IsRunning)
-            {
-                RetrieveResult = false;
-                ToDesigner = false;
-                return;
-            }
-            if (simHandler.HasResults)
-            {
-                HasResult = true;
-                RetrieveResult = true;
-            }
-            else
-            {
-                HasResult = false;
-            }
-        }
+
 
         public bool HasResult
         {
-            get { return !SimHandler.IsRunning && _hasResults; }
-            set
-            {
-                _hasResults = value;
-                RaisePropertyChanged("HasResult");
-            }
+            get { return !SimHandler.IsRunning && simHandler.HasResults; }
         }
 
         private void MainViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -384,9 +372,7 @@ namespace EcoProIT.UI.ViewModel
         private IHasResults _selectedResult;
         private ulong _simulationTime = 40;
         private string _selectedResultConsumable;
-        private bool _retriveResults = false;
-        private bool _showResults;
-        private bool _hasResults;
+
         private string _welcomeTitle;
        
         private int GetLastPrimeryNodePosition()
@@ -404,20 +390,22 @@ namespace EcoProIT.UI.ViewModel
             }
         }
 
-        public Dictionary<string, decimal> TotalNodeConsumebles
+
+        //Borde goras pa annat satt for std
+        public Dictionary<string, Statistic> TotalNodeConsumebles
         {
             get
             {
                 var result = (from i in GridNodes.SelectMany(t => t.ResourceModel.Result.Consumables)
                     group i by i.Key.Name
                     into g
-                    select g).ToDictionary(i => i.Key, i => i.Sum(t => t.Value));
-                ;
-                foreach (var index in IndexCalculator.Indexes)
-                {
-                    result.Add(index.IndexName,
-                        index.Calculation(GridNodes.SelectMany(t => t.ResourceModel.Result.Consumables)));
-                }
+                    select g).ToDictionary(i => i.Key, i => new Statistic(i.Sum(t => t.Value.Mean), 0));
+                
+                //foreach (var index in IndexCalculator.Indexes)
+                //{
+                //    result.Add(index.IndexName,
+                //        index.Calculation(GridNodes.SelectMany(t => t.ResourceModel.Result.Consumables)));
+                //}
 
                 return result;
             }
@@ -616,6 +604,9 @@ namespace EcoProIT.UI.ViewModel
 
         }
 
+        /// <summary>
+        /// No STD
+        /// </summary>
         public Dictionary<string, Statistic> SelectedResultNodeConsumables
         {
             get
@@ -624,48 +615,48 @@ namespace EcoProIT.UI.ViewModel
                 if (indexes.Any(t => t.IndexName == SelectedResultConsumable))
                     return GridNodes.AsParallel().ToDictionary(t => t.ResourceModel.ProcessName,
                         t =>
-                            new Statistic(indexes.First(p => p.IndexName == SelectedResultConsumable)
-                                .Calculation(t.ResourceModel.Result.Consumables), (decimal)0.0001));
+                            indexes.First(p => p.IndexName == SelectedResultConsumable)
+                                .StatisticCalculation(t.ResourceModel.Result.Consumables));
 
                 return (from q in from i in GridNodes
                     select
                         new
                         {
                             name = i.ResourceModel.ProcessName,
-                            value =
+                            statistic =
                                 (from p in i.ResourceModel.Result.Consumables
                                     where p.Key.Name == SelectedResultConsumable
-                                    select p.Value).Sum()
+                                    select p.Value).FirstOrDefault()
+                           
                         }
-                    where q.value > 0
-                    orderby q.value descending
-                    select q).ToDictionary(t => t.name, t => new Statistic(t.value, t.value/10));
+                        where q.statistic !=null && q.statistic.Mean > 0
+                        orderby q.statistic.Mean descending
+                        select q).ToDictionary(t => t.name, t=> t.statistic );
             }
         }
 
-        public bool RetrieveResult
+        public enum Modes { DesignMode, ResultMode}
+        private Modes _currentMode = Modes.DesignMode;
+        public Modes CurrentMode
         {
-            get { return _retriveResults; }
+            get { return _currentMode; }
             set
             {
-                if(value == _retriveResults)
-                    return;
-                _retriveResults = value;
-                
-                
-                RaisePropertyChanged("RetrieveResult");
+                _currentMode = value;
+                RaisePropertyChanged();
+                RaisePropertyChanged("ShowToResults");
+                RaisePropertyChanged("ShowToDesigner");
             }
         }
 
-        public bool ShowResults
+        public bool ShowToResults
         {
-            get { return _showResults; }
-            set
-            {
-                _showResults = value;
-                ToDesigner = value;
-                RaisePropertyChanged("ShowResults");
-            }
+            get { return HasResult && _currentMode != Modes.ResultMode; }
+        }
+
+        public bool ShowToDesigner
+        {
+            get { return !SimHandler.IsRunning && _currentMode != Modes.DesignMode; }
         }
 
         #endregion
@@ -676,16 +667,8 @@ namespace EcoProIT.UI.ViewModel
         }
 
 
-        /// <summary>
-        /// Gets the WelcomeTitle property.
-        /// Changes to that property's value raise the PropertyChanged event. 
-        /// </summary>
-        public string WelcomeTitle
-        {
-            get { return _welcomeTitle; }
-        }
+
         private SimulationHandler simHandler = new SimulationHandler();
-        private bool _toDesigner;
 
         public RelayCommand RunSimulations  
         {
@@ -700,17 +683,7 @@ namespace EcoProIT.UI.ViewModel
         public SimulationHandler SimHandler
         { get { return simHandler; } }
 
-        public bool ToDesigner
-        {
-            get { return _toDesigner; }
-            set
-            {
-                _toDesigner = value;
-                if (value)
-                    RetrieveResult = false;
-                RaisePropertyChanged();
-            }
-        }
+
 
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
@@ -735,40 +708,8 @@ namespace EcoProIT.UI.ViewModel
 
         }
 
-        ////public override void Cleanup()
-        ////{
-        ////    // Clean up if needed
 
-        ////    base.Cleanup();
-        ////}
-        private ObservableCollection<Model> oc;
-        public ObservableCollection<Model> TestData
-        {
-            get
-            {
-                if (oc != null)
-                    return oc;
-                TestData = new ObservableCollection<Model>();
-                oc.Add(new Model("D", 10, 1 ));
-                oc.Add(new Model("E", 9, 0.2));
-                oc.Add(new Model("B", 8, 0.5));
-                oc.Add(new Model("A", 10, 2));
-                return oc;
-            }
-            set { oc = value; }
-        }
 
     }
-    public class Model
-    {
-        public double Error { get; set; }
-        public double Mean { get; set; }
-        public string Name { get; set; }
-        public Model(string name, double mean, double error)
-        {
-            Mean = mean;
-            Error = error;
-            Name = name;
-        }
-    }
+
 }

@@ -179,7 +179,7 @@ namespace React.Distribution
         {
             IUniform u = GetUniform();
             double d = u.NextDouble();
-            for (; d <= 1e-10; d = u.NextDouble()) ; // <-- SEMI!
+            if (d <= 1e-10) d = 1e-10; // <-- SEMI!
             return -Math.Log(d) / Lambda;
         }
     }

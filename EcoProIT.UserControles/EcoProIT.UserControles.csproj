@@ -51,14 +51,44 @@
     </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AdobeImport\Buffer.xaml.cs">
+      <DependentUpon>Buffer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AdobeImport\DeleteImage.xaml.cs">
       <DependentUpon>DeleteImage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AdobeImport\ResultsShow.xaml.cs">
-      <DependentUpon>ResultsShow.xaml</DependentUpon>
+    <Compile Include="AdobeImport\DesignModeImage.xaml.cs">
+      <DependentUpon>DesignModeImage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AdobeImport\RunImage.xaml.cs">
-      <DependentUpon>RunImage.xaml</DependentUpon>
+    <Compile Include="AdobeImport\Facility.xaml.cs">
+      <DependentUpon>Facility.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdobeImport\GeneralNode.xaml.cs">
+      <DependentUpon>GeneralNode.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdobeImport\NewProductImage.xaml.cs">
+      <DependentUpon>NewProductImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdobeImport\OpenFileImage.xaml.cs">
+      <DependentUpon>OpenFileImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdobeImport\PicProduction.xaml.cs">
+      <DependentUpon>PicProduction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdobeImport\Process.xaml.cs">
+      <DependentUpon>Process.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdobeImport\ResultImage.xaml.cs">
+      <DependentUpon>ResultImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdobeImport\RunSimulationImage.xaml.cs">
+      <DependentUpon>RunSimulationImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdobeImport\SaveImage.xaml.cs">
+      <DependentUpon>SaveImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdobeImport\StopSimulationImage.xaml.cs">
+      <DependentUpon>StopSimulationImage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Buffer.cs" />
     <Compile Include="DeclareConsumables.xaml.cs">
@@ -105,19 +135,59 @@
       <DependentUpon>Product.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\ResourceDefinitionModel.cs" />
+    <Page Include="AdobeImport\Buffer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="AdobeImport\DeleteImage.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="AdobeImport\ResultsShow.xaml">
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AdobeImport\RunImage.xaml">
+    <Page Include="AdobeImport\DesignModeImage.xaml">
+      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="App.xaml">
+    <Page Include="AdobeImport\Facility.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AdobeImport\GeneralNode.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AdobeImport\NewProductImage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AdobeImport\OpenFileImage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AdobeImport\PicProduction.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AdobeImport\Process.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AdobeImport\ResultImage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AdobeImport\RunSimulationImage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AdobeImport\SaveImage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AdobeImport\StopSimulationImage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Temp.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -212,8 +282,8 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
-      <HintPath>..\packages\CommonServiceLocator.2.0.2\lib\net45\CommonServiceLocator.dll</HintPath>
+    <Reference Include="CommonServiceLocator, Version=2.0.4.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.2.0.4\lib\net45\CommonServiceLocator.dll</HintPath>
     </Reference>
     <Reference Include="GalaSoft.MvvmLight, Version=5.4.1.0, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
       <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
@@ -221,9 +291,12 @@
     <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.4.1.0, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
       <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
     </Reference>
-    <Reference Include="GalaSoft.MvvmLight.Platform">
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.4.1.0, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
       <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Expression.Drawing" />
+    <Reference Include="Microsoft.Expression.Effects" />
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="PresentationFramework.Aero" />
@@ -233,12 +306,15 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Controls.DataVisualization.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\WPFToolkit.DataVisualization.3.5.50211.1\lib\System.Windows.Controls.DataVisualization.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="System.Windows.Controls.Input.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\WPFToolkit.3.5.50211.1\lib\System.Windows.Controls.Input.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="System.Windows.Controls.Layout.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\WPFToolkit.3.5.50211.1\lib\System.Windows.Controls.Layout.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -247,6 +323,7 @@
     <Reference Include="System.Xaml" />
     <Reference Include="WindowsBase" />
     <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\WPFToolkit.3.5.50211.1\lib\WPFToolkit.dll</HintPath>
     </Reference>
     <Reference Include="Xceed.Wpf.AvalonDock, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
@@ -300,7 +377,6 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- 
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

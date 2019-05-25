@@ -1,17 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows;
-#if !WINRT
-using System.Windows.Media;
 using System.Windows.Data;
+using System.Windows.Media;
+#if !WINRT
 #else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Media;
 using Windows.Foundation;
 #endif
+using EcoProIT.Chart.Chart;
+using EcoProIT.Chart.Collections;
+using EcoProIT.Chart.Container;
+using EcoProIT.Chart.Points;
+using EcoProIT.Chart.SeriesParts;
+using EcoProIT.Chart.Utility;
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Series
 {
     public class HiLoOpenCloseSeries : StockChartBase
     {

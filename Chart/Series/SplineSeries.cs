@@ -1,15 +1,18 @@
 ﻿using System.Linq;
 using System.Windows;
-#if !WINRT
 using System.Windows.Media;
-
+#if !WINRT
 #else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
 using Windows.Foundation;
 #endif
+using EcoProIT.Chart.Container;
+using EcoProIT.Chart.Points;
+using EcoProIT.Chart.SeriesParts;
+using EcoProIT.Chart.Utility;
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Series
 {
     /// <summary>
     /// Spline Series for Sparrow Charts

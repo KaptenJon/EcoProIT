@@ -5,13 +5,12 @@ using System.Collections.Specialized;
 using System.Globalization;
 using System.IO;
 using System.Windows;
-#if !WINRT
 using System.Windows.Controls;
 using System.Windows.Data;
+using System.Windows.Input;
 using System.Windows.Markup;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Input;
+#if !WINRT
 #else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -23,8 +22,16 @@ using Windows.Foundation;
 using Windows.Devices.Input;
 using Windows.UI.Xaml.Markup;
 #endif
+using System.Windows.Media.Imaging;
+using EcoProIT.Chart.Axis;
+using EcoProIT.Chart.Collections;
+using EcoProIT.Chart.Legend;
+using EcoProIT.Chart.Panels;
+using EcoProIT.Chart.Series;
+using EcoProIT.Chart.Utility;
 
-namespace Sparrow.Chart
+
+namespace EcoProIT.Chart.Chart
 {
     /// <summary>
     /// SparrowChart Control
@@ -39,14 +46,15 @@ namespace Sparrow.Chart
         internal ContainerCollection Containers;
         internal int IndexCount = 0;
         internal RootPanel RootDockPanel;
-        internal Legend legend;
+        internal Legend.Legend legend;
         internal Grid InnerChartPanel;
         internal Grid OuterChartPanel;
         internal List<ColumnSeries> ColumnSeries;
         internal List<HiLoOpenCloseSeries> HiLoOpenCloseSeries;
         internal List<BarErrorSeries> BarErrorSeries;
         internal List<ColumnSeries> CandleStickSeries;
-
+        internal double MAxisheight=0;
+        internal double MAxiswidth=0;
 
         ResourceDictionary styles;
         internal ObservableCollection<LegendItem> LegendItems;
@@ -99,7 +107,7 @@ namespace Sparrow.Chart
 #endif                       
             BrushTheme();       
             base.OnApplyTemplate();
-            legend = (Legend)this.GetTemplateChild("Part_Legend");
+            legend = (Legend.Legend)this.GetTemplateChild("Part_Legend");
             InnerChartPanel = (Grid)this.GetTemplateChild("Part_InnerChartPanel");
             OuterChartPanel = (Grid)this.GetTemplateChild("Part_OuterChartPanel");
             
@@ -138,7 +146,7 @@ namespace Sparrow.Chart
                             //}
                         }
                     this.Legend.ItemsSource = this.LegendItems;                   
-                    
+
                     switch (this.Legend.LegendPosition)
                     {
                         case LegendPosition.Inside:
@@ -213,7 +221,7 @@ namespace Sparrow.Chart
 #else
 #if WPF
 #if NET45
-                Source = new Uri(@"/Sparrow.Chart.Wpf.45;component/Themes/Styles.xaml", UriKind.Relative)
+                Source = new Uri(@"/EcoPRoIT.Chart;component/Themes/Styles.xaml", UriKind.Relative)
 #elif NET40
                 Source = new Uri(@"/Sparrow.Chart.Wpf.40;component/Themes/Styles.xaml", UriKind.Relative)
 #else
@@ -259,9 +267,7 @@ namespace Sparrow.Chart
         /// <param name="e">The <see cref="NotifyCollectionChangedEventArgs"/> instance containing the event data.</param>
         void OnSeriesCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
-            switch (e.Action)
-            {
-                case NotifyCollectionChangedAction.Add:
+
                     
                     foreach (SeriesBase series in e.NewItems)
                     {
@@ -292,22 +298,11 @@ namespace Sparrow.Chart
                         {
                             BarErrorSeries.Add(series as BarErrorSeries);
                         }
-                        
+
                         RefreshLegend();
                     }                   
-                    break;
-#if WPF
-                case NotifyCollectionChangedAction.Move:
-                    break;
-#endif
-                case NotifyCollectionChangedAction.Remove:
-                    break;
-                case NotifyCollectionChangedAction.Replace:
-                    break;
-                case NotifyCollectionChangedAction.Reset:
-                    break;
                     
-            }
+            
             if (this.Containers != null)
                 this.Containers.Refresh();
         }
@@ -697,7 +692,7 @@ namespace Sparrow.Chart
                    {
                        BarErrorSeries.Add(series as BarErrorSeries);
                    }
-                 
+
                    RefreshLegend();
                }
                if (this.Containers != null)
@@ -713,9 +708,9 @@ namespace Sparrow.Chart
         /// <value>
         /// The legend.
         /// </value>
-        public Legend Legend
+        public Legend.Legend Legend
         {
-            get { return (Legend)GetValue(LegendProperty); }
+            get { return (Legend.Legend)GetValue(LegendProperty); }
             set { SetValue(LegendProperty, value); }
         }
 
@@ -723,7 +718,7 @@ namespace Sparrow.Chart
         /// The legend property
         /// </summary>
         public static readonly DependencyProperty LegendProperty =
-            DependencyProperty.Register("Legend", typeof(Legend), typeof(SparrowChart), new PropertyMetadata(null,OnLegendChanged));
+            DependencyProperty.Register("Legend", typeof(Legend.Legend), typeof(SparrowChart), new PropertyMetadata(null,OnLegendChanged));
 
         /// <summary>
         /// Called when [legend changed].

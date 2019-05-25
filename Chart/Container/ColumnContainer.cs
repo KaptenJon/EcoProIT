@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Windows;
-#if !WINRT
 using System.Windows.Media;
 using System.Windows.Shapes;
-
+#if !WINRT
 #else
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Shapes;
@@ -16,8 +15,12 @@ using Sparrow.Directx2D;
 using Microsoft.WindowsAPICodePack.DirectX.Direct2D1;
 using Microsoft.WindowsAPICodePack.DirectX.DirectWrite;
 #endif
+using EcoProIT.Chart.Extensions;
+using EcoProIT.Chart.Series;
+using EcoProIT.Chart.SeriesParts;
+using EcoProIT.Chart.Utility;
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Container
 {
     public class ColumnContainer : SeriesContainer
     {

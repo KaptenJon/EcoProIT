@@ -1,21 +1,22 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Linq;
+using System.Runtime.InteropServices;
+using System.Windows.Interop;
+using System.Windows.Media.Imaging;
+using EcoProIT.Chart.Extensions;
 #if WPF
 using System.Drawing;
 #endif
-using System.Linq;
-using System.Runtime.InteropServices;
+using System;
+using System.Diagnostics;
 using System.Windows;
-#if !WINRT
 using System.Windows.Controls;
-using System.Windows.Interop;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using Point = System.Windows.Point;
-using Image = System.Windows.Controls.Image;
-using System.Windows.Threading;
-using Size = System.Windows.Size;
 using System.Windows.Data;
+using System.Windows.Media;
+using System.Windows.Threading;
+using Image = System.Windows.Controls.Image;
+using Point = System.Windows.Point;
+using Size = System.Windows.Size;
+#if !WINRT
 #else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -32,7 +33,14 @@ using DirectX = Microsoft.WindowsAPICodePack.DirectX;
 using Microsoft.WindowsAPICodePack.DirectX.DirectWrite;
 using Microsoft.WindowsAPICodePack.DirectX.Direct2D1;
 #endif
-namespace Sparrow.Chart
+using EcoProIT.Chart.Axis;
+using EcoProIT.Chart.Chart;
+using EcoProIT.Chart.Collections;
+using EcoProIT.Chart.Container;
+using EcoProIT.Chart.Series;
+using EcoProIT.Chart.Utility;
+
+namespace EcoProIT.Chart.Panels
 {
     /// <summary>
     /// Container Panel
@@ -57,7 +65,7 @@ namespace Sparrow.Chart
         public static readonly DependencyProperty SeriesProperty =
             DependencyProperty.Register("Series", typeof(SeriesCollection), typeof(ContainerCollection), new PropertyMetadata(null));
 
-     
+
 #if DIRECTX2D
         protected Directx2DBitmap DirectxBimap;
         protected D3D10Image Directx2DGraphics;
@@ -68,17 +76,19 @@ namespace Sparrow.Chart
        
 #endif
 #if WPF
-        
+
         protected bool isDirectXInitialized;
         private int bpp = PixelFormats.Bgra32.BitsPerPixel / 8;
         private IntPtr MapViewPointer;
         protected Graphics GDIGraphics;
         protected InteropBitmap InteropBitmap;
- 
+        internal double dpiFactor =0;
         protected WriteableBitmap WritableBitmap;
         protected Bitmap ImageBitmap;
         protected Graphics WritableBitmapGraphics;
 #endif
+
+
 
         
 
@@ -577,7 +587,7 @@ namespace Sparrow.Chart
             {               
                 container.RenderingMode = this.RenderingMode;
 #if WPF
-                container.dpiFactor = 0;
+                container.dpiFactor = this.dpiFactor;
 #endif
                 //container.Height = this.ActualHeight;
                 //container.Width = this.ActualWidth;
@@ -636,7 +646,7 @@ namespace Sparrow.Chart
                     container.Container = this;
                     container.RenderingMode = this.RenderingMode;
 #if WPF
-                    container.dpiFactor = 0;
+                    container.dpiFactor = this.dpiFactor;
 #endif
                     container.Collection = this;
                     switch (RenderingMode)

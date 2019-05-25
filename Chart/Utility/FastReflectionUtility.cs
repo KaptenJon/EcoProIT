@@ -2,7 +2,7 @@
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Utility
 {
     #region FastProperty
     /// <summary>

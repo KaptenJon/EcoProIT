@@ -1,13 +1,17 @@
 ﻿using System.Windows;
-#if !WINRT
 using System.Windows.Media;
-
+#if !WINRT
 #else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
 using Windows.Foundation;
 #endif
-namespace Sparrow.Chart
+using EcoProIT.Chart.Container;
+using EcoProIT.Chart.Points;
+using EcoProIT.Chart.SeriesParts;
+using EcoProIT.Chart.Utility;
+
+namespace EcoProIT.Chart.Series
 {
     /// <summary>
     /// Line Series for Sparrow Chart

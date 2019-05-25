@@ -1,11 +1,12 @@
 ﻿using System;
-#if !WINRT
 using System.Windows.Data;
+#if !WINRT
+
 #else
 using Windows.UI.Xaml.Data;
 #endif
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Converters
 {
     /// <summary>
     /// Double negative value Converter

@@ -1,7 +1,8 @@
 ﻿using System.Windows;
-#if !WINRT
-using System.Windows.Shapes;
 using System.Windows.Controls;
+using System.Windows.Shapes;
+#if !WINRT
+
 #else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -10,11 +11,14 @@ using Windows.UI.Xaml.Shapes;
 #endif
 
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.SeriesParts
 {
     public class ColumnPart : FillPartBase
     {       
-        internal Rectangle RectPart=null;
+        internal double PartWidth=0;
+        internal double PartHeight=0;
+        internal double ColumnMargin=0;
+        internal Rectangle RectPart;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ColumnPart"/> class.

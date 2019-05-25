@@ -5,12 +5,10 @@ using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Reflection;
 using System.Windows;
-using HelpClasses;
-#if !WINRT
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Media;
-using System.Windows.Threading;
+#if !WINRT
 #else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -18,8 +16,17 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Media;
 using Windows.Foundation;
 #endif
+using System.Windows.Threading;
+using EcoProIT.Chart.Axis;
+using EcoProIT.Chart.Chart;
+using EcoProIT.Chart.Collections;
+using EcoProIT.Chart.Container;
+using EcoProIT.Chart.Converters;
+using EcoProIT.Chart.Points;
+using EcoProIT.Chart.SeriesParts;
+using EcoProIT.Chart.Utility;
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Series
 {
     /// <summary>
     /// Base for All Series
@@ -35,7 +42,7 @@ namespace Sparrow.Chart
         }
 
         protected double YMin { get; set; }
-
+        public int CountXValues {get {return XValues.Count;}}
         protected double YMax
         {
             get { return _yMax == YMin ? _yMax + 1 : _yMax; }
@@ -52,6 +59,8 @@ namespace Sparrow.Chart
         internal bool IsFill;
         protected bool IsRefreshed;
         internal bool IsPointsGenerated;
+
+        
 
         /// <summary>
         /// Generates the datas.
@@ -284,7 +293,6 @@ namespace Sparrow.Chart
             if (!String.IsNullOrEmpty(path))
             {
                 IEnumerator enumerator = source.GetEnumerator();
-               
                 for (int i = 0; i < position - 1; i++)
                 {
                     enumerator.MoveNext();

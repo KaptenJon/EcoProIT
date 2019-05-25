@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
@@ -31,7 +32,12 @@ namespace EcoProIT.DataLayer
 
         public bool Equals(Consumable other)
         {
-            return Name.Equals(other.Name);
+            return String.Equals(Name,other.Name);
+        }
+
+        public override int GetHashCode()
+        {
+            return Name.GetHashCode();
         }
     }
     [Serializable]
@@ -725,11 +731,17 @@ namespace EcoProIT.DataLayer
             {
                 ParameterConverter[0] = value;
                 DESRandom = new Exponential(ParameterConverter.GetStandard(0));
+                ParameterConverter.CollectionChanged += ParameterConverterOnCollectionChanged;
                 OnPropertyChanged();
                 OnPropertyChanged("AutomodCode");
                 OnPropertyChanged("CMSDDistribution");
                 OnPropertyChanged("ShowParameters");
             }
+        }
+
+        private void ParameterConverterOnCollectionChanged(object sender, NotifyCollectionChangedEventArgs notifyCollectionChangedEventArgs)
+        {
+            DESRandom = new Exponential(ParameterConverter.GetStandard(0));
         }
 
 

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Points
 {
     /// <summary>
     /// TimePoint for Series.Points

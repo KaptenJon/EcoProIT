@@ -1,7 +1,8 @@
 ﻿using System.Windows;
-#if !WINRT
 using System.Windows.Media;
 using System.Windows.Shapes;
+#if !WINRT
+
 #else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
@@ -10,7 +11,7 @@ using Windows.UI.Xaml.Shapes;
 #endif
 
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.SeriesParts
 {
     public class AreaPart : FillPartBase
     {

@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
+using EcoProIT.Chart.Collections;
+using EcoProIT.Chart.Points;
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Converters
 {
     /// <summary>
     /// String To ChartPoint Converter

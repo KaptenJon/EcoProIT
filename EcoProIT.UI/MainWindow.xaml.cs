@@ -27,13 +27,18 @@ namespace EcoProIT.UI
 
         public MainWindow()
         {
+
+
+
             InitializeComponent();
             DispatcherHelper.Initialize();
 
-            _viewModel = (MainViewModel)DataContext;
+            _viewModel = (MainViewModel) DataContext;
             ModelNode._grid = _viewModel.GridUIElement;
             Product.Grid = _viewModel.GridUIElement;
-            if (AppDomain.CurrentDomain.SetupInformation.ActivationArguments != null && AppDomain.CurrentDomain.SetupInformation.ActivationArguments.ActivationData != null && AppDomain.CurrentDomain.SetupInformation.ActivationArguments.ActivationData.Any())
+            if (AppDomain.CurrentDomain.SetupInformation.ActivationArguments != null &&
+                AppDomain.CurrentDomain.SetupInformation.ActivationArguments.ActivationData != null &&
+                AppDomain.CurrentDomain.SetupInformation.ActivationArguments.ActivationData.Any())
             {
                 try
                 {
@@ -47,7 +52,9 @@ namespace EcoProIT.UI
                         OpenNodes(s);
                     }
                 }
-                catch { }
+                catch
+                {
+                }
             }
 
         }
@@ -76,61 +83,42 @@ namespace EcoProIT.UI
 
         private void Retrive_Results(object sender, RoutedEventArgs e)
         {
-            Button b = sender as Button;
-            if (b == null)
-                return;
-            if (b.Content.ToString() == " To Designer ")
+            var models = _viewModel.SimHandler.Simulations;
+            if (models != null)
             {
-                _viewModel.SelectedNode = null;
-                foreach (var modelNode in _viewModel.GridNodes)
-                {
-                    modelNode.ResourceModel.ShowResults = false;
-                }
-                foreach (var product in _viewModel.ProductList)
-                {
-                    product.ShowResults = false;
-                }
-                _viewModel.ShowResults = false;
+                var modelresultset =
+                    new HashSet<Pair<IEnumerable<ProductResult>, IEnumerable<MachineState>>>(
+                        models.Select(
+                            t =>
+                                new Pair<IEnumerable<ProductResult>, IEnumerable<MachineState>>(
+                                    t.ProductResultTables, t.MachineStates)));
+                IResults.UpdateSourceData(modelresultset);
             }
             else
             {
-                var models = _viewModel.SimHandler.Simulations;
-                if (models != null)
-                {
-                    var modelresultset =
-                        new HashSet<Pair<IEnumerable<ProductResult>, IEnumerable<MachineState>>>(
-                            models.Select(
-                                t =>
-                                    new Pair<IEnumerable<ProductResult>, IEnumerable<MachineState>>(
-                                        t.ProductResultTables, t.MachineStates)));
-                    IResults.UpdateSourceData(modelresultset);
-                }
-                else
-                {
-                    return;
-                }
-                foreach (var modelNode in _viewModel.GridNodes)
-                {
-                    modelNode.UpdateResultsBase();
-                }
-                foreach (var modelNode in _viewModel.GridNodes)
-                {
-                    modelNode.UpdateIndex();
-                    modelNode.ResourceModel.ShowResults = true;
-                }
-                foreach (var product in _viewModel.ProductList)
-                {
-                    product.Result.UpdateConsumptions();
-                    product.ShowResults = true;
-                }
-                foreach (var product in _viewModel.ProductList)
-                {
-                    product.ShowResults = true;
-                }
-                _viewModel.Update();
-                _viewModel.SelectedResultConsumable = "Processed";
-                _viewModel.ShowResults = true;
+                return;
             }
+            foreach (var modelNode in _viewModel.GridNodes)
+            {
+                modelNode.UpdateResultsBase();
+            }
+            foreach (var modelNode in _viewModel.GridNodes)
+            {
+                modelNode.UpdateIndex();
+                modelNode.ResourceModel.ShowResults = true;
+            }
+            foreach (var product in _viewModel.ProductList)
+            {
+                product.Result.UpdateConsumptions();
+                product.ShowResults = true;
+            }
+            foreach (var product in _viewModel.ProductList)
+            {
+                product.ShowResults = true;
+            }
+            _viewModel.Update();
+            _viewModel.SelectedResultConsumable = "Processed";
+            _viewModel.CurrentMode = MainViewModel.Modes.ResultMode;
         }
 
         #region Implementation of IComponentConnector
@@ -230,10 +218,20 @@ namespace EcoProIT.UI
         }
 
 
-
-
-
-
+        private void ToDesigner(object sender, RoutedEventArgs e)
+        {
+            _viewModel.SelectedNode = null;
+            foreach (var modelNode in _viewModel.GridNodes)
+            {
+                modelNode.ResourceModel.ShowResults = false;
+            }
+            foreach (var product in _viewModel.ProductList)
+            {
+                product.ShowResults = false;
+            }
+            _viewModel.CurrentMode = MainViewModel.Modes.DesignMode;
+            
+        }
 
     }
 }

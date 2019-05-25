@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Windows;
-#if !WINRT
 using System.Windows.Data;
+#if !WINRT
+
 #else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Data;
 #endif
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Converters
 {
     /// <summary>
     /// BorderThickness to YAXis Top and Bottom Converter

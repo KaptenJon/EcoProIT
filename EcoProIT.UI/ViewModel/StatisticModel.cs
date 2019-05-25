@@ -7,6 +7,7 @@ using EcoProIT.UserControles;
 using EcoProIT.UserControles.Models;
 using EcoProIT.UserControles.ViewModel;
 using GalaSoft.MvvmLight;
+using HelpClasses;
 
 namespace EcoProIT.UI.ViewModel
 {
@@ -57,16 +58,18 @@ namespace EcoProIT.UI.ViewModel
         {
             get
             {
-                KeyValuePair<Consumable, decimal> o = Results.Result.Consumables.FirstOrDefault(t => t.Key.Name == SelectedIndex);
+                
                 AxisUnit = Results.Result.Consumables.Any(t => t.Key.Name == SelectedIndex) ?  Results.Result.Consumables.FirstOrDefault(t => t.Key.Name == SelectedIndex).Key.PerUnit.ToString():"";
                 switch (SelectedType)
                 {
                     case "Compare nodes":
                         
                         return Modelnodes.ToDictionary(p =>  p.ResourceModel.ProcessName,
-                                                i => IndexCalculator.Calculate(i.ResourceModel.Result.Consumables,SelectedIndex));
+                                                i => IndexCalculator.Calculate(i.ResourceModel.Result.MeanConsumables,SelectedIndex));
+                    //NO STD!!!!
                     case "History":
-                        return Results.Result.PerTime((ulong)(IResults.TotalTime/50),SelectedIndex);
+                        return Results.Result.PerTime((ulong) (IResults.TotalTime/50), SelectedIndex);//.ToDictionary(t=>t.Key, t =>new Statistic(t.Value,0));
+                    ///NO STD!!!
                     case "Compare products":
                         return Results.Result.PerProduct(Modelnode.RelatedProducts, SelectedIndex);
                 }

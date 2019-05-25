@@ -19,7 +19,7 @@ namespace EcoProIT.UserControles
         
         public Machine():base()
         {
-            NodeImage.Source = HelpClasses.InteropHelp.LoadBitmap(Properties.Resources.Machine);
+            //NodeImage.Source = HelpClasses.InteropHelp.LoadBitmap(Properties.Resources.Machine);
             DeclaredJobs.Clear();
             DeclaredJobs.Add(new Job()
             {

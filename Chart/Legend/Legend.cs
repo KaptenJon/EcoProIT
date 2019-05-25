@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Windows;
-#if !WINRT
 using System.Windows.Controls;
-using System.Windows.Media;
-
+#if !WINRT
 #else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 #endif
+using EcoProIT.Chart.Chart;
+using EcoProIT.Chart.Utility;
 
-namespace Sparrow.Chart
+
+namespace EcoProIT.Chart.Legend
 {
 
     /// <summary>
@@ -34,7 +35,7 @@ namespace Sparrow.Chart
                 Source = new Uri(@"/Sparrow.Chart.DirectX2D_x64;component/Themes/Styles.xaml", UriKind.Relative)
 #elif WPF
 #if NET45
-                Source = new Uri(@"/Sparrow.Chart.Wpf.45;component/Themes/Styles.xaml", UriKind.Relative)
+                Source = new Uri(@"/EcoProIT.Chart;component/Themes/Styles.xaml", UriKind.Relative)
 #elif NET40
                 Source = new Uri(@"/Sparrow.Chart.Wpf.40;component/Themes/Styles.xaml", UriKind.Relative)
 #else

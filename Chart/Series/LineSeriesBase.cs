@@ -4,15 +4,15 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Windows;
 #if !WINRT
-using System.Windows.Threading;
-
 #else
 using Windows.UI.Xaml;
 using Windows.Foundation;
 #endif
+using System.Windows.Threading;
+using EcoProIT.Chart.Points;
 
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Series
 {
     /// <summary>
     /// LineSeries Based Series

@@ -7,12 +7,12 @@ using System.Windows;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("EcoProIT.UI")]
+[assembly: AssemblyTitle("EcoProIT Tool")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Chalmers")]
-[assembly: AssemblyProduct("EcoProIT.UI")]
-[assembly: AssemblyCopyright("Copyright © Chalmers 2014")]
+[assembly: AssemblyCompany("Jon Andersson")]
+[assembly: AssemblyProduct("EcoProIT Tool")]
+[assembly: AssemblyCopyright("Copyright © Jon Andersson 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -51,5 +51,6 @@ using System.Windows;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.0.0.1")]
-[assembly: AssemblyFileVersion("0.0.0.1")]
+[assembly: AssemblyVersion("2.0.0.*")]
+[assembly: AssemblyFileVersion("2.0.0.0")]
+[assembly: GuidAttribute("5FD272C9-C906-42AA-A819-D64525A044CB")]

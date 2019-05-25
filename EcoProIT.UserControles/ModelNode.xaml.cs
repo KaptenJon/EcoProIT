@@ -8,7 +8,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
-
+using System.Windows.Interactivity;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
@@ -17,7 +17,6 @@ using EcoProIT.UserControles.View;
 using EcoProIT.UserControles.ViewModel;
 using GalaSoft.MvvmLight.Threading;
 using HelpClasses;
-
 using BooleanToVisibilityConverter = System.Windows.Controls.BooleanToVisibilityConverter;
 using WindowStartupLocation = System.Windows.WindowStartupLocation;
 
@@ -39,7 +38,7 @@ namespace EcoProIT.UserControles
         private static Resource_Definition _nodeDefView = new Resource_Definition() ;
         private bool _specialNode;
         
-        private BitmapImage _image = new BitmapImage();
+  
 
         
         

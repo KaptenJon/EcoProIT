@@ -1,4 +1,6 @@
-﻿namespace Sparrow.Chart
+﻿using EcoProIT.Chart.Utility;
+
+namespace EcoProIT.Chart.Axis
 {
     /// <summary>
     /// Linear YAxis

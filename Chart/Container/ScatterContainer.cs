@@ -1,15 +1,19 @@
 ﻿using System.Collections.Generic;
-#if !WINRT
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
+#if !WINRT
 #else
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Shapes;
 #endif
+using EcoProIT.Chart.Collections;
+using EcoProIT.Chart.Extensions;
+using EcoProIT.Chart.Series;
+using EcoProIT.Chart.Utility;
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Container
 {
     /// <summary>
     /// Scatter Series Container

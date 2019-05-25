@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Security.Cryptography;
 using EcoProIT.DataLayer;
 using EcoProIT.UserControles.ViewModel;
 using HelpClasses;
@@ -21,8 +22,8 @@ namespace EcoProIT.UserControles.Models
                 if (_states == value)
                     return;
                 _states = value;
-                OnPropertyChanged("States");
-                }
+                OnPropertyChanged();
+            }
         }
 
 
@@ -36,24 +37,46 @@ namespace EcoProIT.UserControles.Models
             oldConsumptionsPerProduct.Clear();
             oldPerProductResult.Clear();
             oldPerTime.Clear();
+            
+            var dic = new Dictionary<Consumable, List<decimal>>();
+            
+            
+            foreach (var pair in SourceSimulationModelSet)
+            {
+                var runresult = GetConsumablesForOneRun(pair.Key, pair.Value);
+                
+                foreach (var runresultcons in runresult)
+                {
+                    if (dic.ContainsKey(runresultcons.Key))
+                        dic[runresultcons.Key].Add(runresultcons.Value); //(IResults.TotalTime/3600);
+                    else
+                        dic.Add(runresultcons.Key, new List<decimal>(new [] {runresultcons.Value}));
+                }
+            }
+            var res = dic.ToDictionary(t=> t.Key, i=>new Statistic(i.Value.Mean(), i.Value.StandardDeviation()));
+            RunResultsTotal = dic;
+            Consumables = res;
+            MeanConsumables = res.ToDictionary(t => t.Key, t => t.Value.Mean);
+            UpdateBaseIndicator();
+        }
 
-            //Testing
-            TotalProducedStats = TotalProduced(0, UInt64.MaxValue, "jon"); 
+        private Dictionary<Consumable, decimal> GetConsumablesForOneRun(ParallelQuery<ProductResult> productresults, ParallelQuery<MachineState> machineStates)
+        {
+            var tableOrdered = (from i in productresults where i.ModelNode == ResultId select i).ToList();
+            var dic = new Dictionary<Consumable, decimal>();
+            if (!tableOrdered.Any())
+                return dic;
 
-            var tableOrdered = (from i in SourceTableOrdered where i.ModelNode == ResultId select i).ToList();
-            if(!tableOrdered.Any())
-                return;
-          
             var f = ProductResults(tableOrdered);
             decimal count = f.Count();
-            ulong sumUsed = f.Sum(t=>t.Total,null);
+            ulong sumUsed = f.Sum(t => t.Total, null);
 
 
             ulong downtime =
-                (from i in SourceMachineStates where i.Machine == ResultId && i.State == "Down" select i.Total).Sum(new object());
+                (from i in machineStates where i.Machine == ResultId && i.State == "Down" select i.Total).Sum(new object());
             ulong idletime =
-                (from i in SourceMachineStates where i.Machine == ResultId && i.State == "Idle" select i.Total).Sum(new object());
-            var dic = new Dictionary<Consumable, decimal>();
+                (from i in machineStates where i.Machine == ResultId && i.State == "Idle" select i.Total).Sum(new object());
+            
 
             foreach (State state in States)
             {
@@ -68,7 +91,7 @@ namespace EcoProIT.UserControles.Models
                         else if (state.Name == "Down")
                             res += res*downtime;
                         else if (state.Name == "Idle")
-                            res += res * idletime;
+                            res += res*idletime;
                     }
                     else
                         res = res*count;
@@ -82,11 +105,11 @@ namespace EcoProIT.UserControles.Models
                 }
             }
             if (IResults.TotalTime != 0)
-                dic.Add(new Consumable() { Name = "Processed per hour" }, count / (IResults.TotalTime / 3600000));
-            dic.Add(new Consumable() { Name = "Processed" }, count);
-            Consumables = dic;
-            UpdateBaseIndicator();
+                dic.Add(new Consumable() {Name = "Processed per hour"}, count/(IResults.TotalTime/3600000));
+            dic.Add(new Consumable() {Name = "Processed"}, count);
+            return dic;
         }
+
         private Dictionary<string, Dictionary<Consumable, decimal>> oldConsumptionsPerProduct = new Dictionary<string, Dictionary<Consumable, decimal>>();
         public Dictionary<Consumable, decimal> ConsumptionsPerProduct(string product)
         {
@@ -211,6 +234,8 @@ namespace EcoProIT.UserControles.Models
 
 
         Dictionary<string, Dictionary<string, decimal>> oldPerProductResult = new Dictionary<string, Dictionary<string, decimal>>();
+
+
         public override Dictionary<string, decimal> PerProduct(IEnumerable<Product> products, string index)
         {
             if (oldPerProductResult.ContainsKey(index))
@@ -370,9 +395,8 @@ namespace EcoProIT.UserControles.Models
         public override void UpdateBaseIndicator()
         {
             _nodeIndicatorBase.Remove(ResultId);
-            _nodeIndicatorBase.Add(ResultId, Consumables.Any(t=>t.Key.Name == IResults.SelectedIndex) ? Consumables.First(t=>t.Key.Name == IResults.SelectedIndex).Value : IndexCalculator.Indexes.Any(t=>t.IndexName == SelectedIndex)?IndexCalculator.Indexes.First(t=>t.IndexName == SelectedIndex).Calculation(Consumables):0);
-        }     
-        
+            _nodeIndicatorBase.Add(ResultId, MeanConsumables.Any(t => t.Key.Name == IResults.SelectedIndex) ? MeanConsumables.First(t => t.Key.Name == IResults.SelectedIndex).Value : IndexCalculator.Indexes.Any(t => t.IndexName == SelectedIndex) ? IndexCalculator.Indexes.First(t => t.IndexName == SelectedIndex).Calculation(MeanConsumables) : 0);
+        }
         #endregion
     }
 }

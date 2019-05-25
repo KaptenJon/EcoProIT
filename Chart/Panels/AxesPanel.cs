@@ -1,14 +1,15 @@
 ﻿#if WPF
 #endif
 using System.Windows;
-#if !WINRT
 using System.Windows.Controls;
+#if !WINRT
 #else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 #endif
+using EcoProIT.Chart.Collections;
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Panels
 {
     /// <summary>
     /// Axes Panel

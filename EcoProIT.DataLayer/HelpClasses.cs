@@ -10,7 +10,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
-using EcoProIT.DataLayer.Properties;
+using HelpClasses;
 using HelpClasses.Annotations;
 
 namespace EcoProIT.DataLayer
@@ -26,26 +26,22 @@ namespace EcoProIT.DataLayer
             {
                 if (current != null)
                     return current;
-                string connectString = "";
+                string connectString = "Data Source = ";
                 try
                 {
-                    connectString = ApplicationDeployment.CurrentDeployment.DataDirectory +
-                                    "\\Resources\\modeloutput.sdf";
+                    connectString += ApplicationDeployment.CurrentDeployment.DataDirectory +
+                                    "\\Resources\\modeloutput.sdf;";
                     //"\\Resources\\modeloutput.sdf";
                 }
                 catch
                 {
-                    connectString =  Environment.CurrentDirectory +
-                                        "\\Resources\\modeloutput.sdf";
-                    //"\\Resources\\modeloutput.sdf";
+                    connectString += Environment.CurrentDirectory +
+                                        "\\Resources\\modeloutput.sdf;";
+                                    //"\\Resources\\modeloutput.sdf";
                 }
                 if (connectString == "")
                     return null;
-                string connectce = "Data Source = " + connectString+";";
-                SqlCeConnection con = new SqlCeConnection(connectce);
-            
-
-                current = new modeloutputContext(Settings.Default.modeldataConnectionString);
+                current = new modeloutputContext(connectString);
             }
             return current;
         }
@@ -146,17 +142,24 @@ namespace EcoProIT.DataLayer
 
                 //if (!KeepStandardValue)
                 //    var i = parameters.ToList();
-                        
-                    
+                var temp = new List<double>();
+                foreach (var parameter in parameters)
+                {
+                        temp.Add(ToRealValue(parameter));
+                }        
+                   
                 _unitType = value;
-               OnCollectionChanged(0,1);
+                for (int index = 0; index < temp.Count; index++)
+                {
+                        parameters[index] = ToStandard(temp[index]);
+                }
+
+                OnCollectionChanged(0,1);
                 OnPropertyChanged();
                 OnPropertyChanged("Display");
                 OnPropertyChanged("AutomodCode");
             }
         }
-
-        public bool KeepStandardValue { get; set; }
 
         private List<double> parameters = new List<double>();
         private UnitTypes _unitType;
@@ -226,21 +229,6 @@ namespace EcoProIT.DataLayer
             }
         }
 
-        public string Display
-        {
-            get
-            {
-                switch (UnitType)
-                {
-                    case UnitTypes.MilliSeconds:
-                    case UnitTypes.Seconds:
-                    case UnitTypes.Minutes:
-                    case UnitTypes.Hour:
-                        return UnitTypes.Seconds.ToString();
-                }
-                return "";
-            }
-        }
 
         public double GetStandard(int index)
         {
@@ -268,7 +256,7 @@ namespace EcoProIT.DataLayer
 
         public override string ToString()
         {
-            return Display;
+            return _unitType.ToString();
         }
 
         public IEnumerator<double> GetEnumerator()
@@ -507,6 +495,14 @@ namespace EcoProIT.DataLayer
         {
             var consumption = selectMany.Select(keyValuePair => new Consumption() {Consumable = keyValuePair.Key, Amount = keyValuePair.Value}).ToList();
             return Calculation(consumption);
+        }
+
+
+        public Statistic StatisticCalculation(Dictionary<Consumable, Statistic> consumables)
+        {
+            var mean = consumables.Select(keyValuePair => new Consumption() { Consumable = keyValuePair.Key, Amount = keyValuePair.Value.Mean }).ToList();
+            var std = consumables.Select(keyValuePair => new Consumption() { Consumable = keyValuePair.Key, Amount = keyValuePair.Value.Std }).ToList();
+            return new Statistic(Calculation(mean), Calculation(std));
         }
     }
 }

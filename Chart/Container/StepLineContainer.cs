@@ -1,14 +1,18 @@
-﻿#if WINRT
+﻿using EcoProIT.Chart.Extensions;
+using EcoProIT.Chart.Series;
+using EcoProIT.Chart.SeriesParts;
+#if WINRT
 using Windows.UI.Xaml.Media;
 #else
 using System.Windows.Media;
+
 #endif
 #if DIRECTX2D
 using Sparrow.Directx2D;
 using Microsoft.WindowsAPICodePack.DirectX.Direct2D1;
 using Microsoft.WindowsAPICodePack.DirectX.DirectWrite;
 #endif
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Container
 {
     /// <summary>
     /// StepLineSeries Container
@@ -61,7 +65,7 @@ namespace Sparrow.Chart
                 StepLineSeries stepLineSeries = series as StepLineSeries;
                 var points = stepLineSeries.LinePoints;
                 var pointCount = stepLineSeries.LinePoints.Count;
-                if (RenderingMode == RenderingMode.Default)
+                if (RenderingMode == Utility.RenderingMode.Default)
                 {
                     PartsCanvas.Children.Clear();
                     for (int i = 0; i < stepLineSeries.Parts.Count; i++)
@@ -77,12 +81,12 @@ namespace Sparrow.Chart
                     {
                         switch (RenderingMode)
                         {
-                            case RenderingMode.GDIRendering:
+                            case Utility.RenderingMode.GDIRendering:
                                 GDIGraphics.DrawLine(pen, points[i].AsDrawingPointF(), points[i + 1].AsDrawingPointF());
                                 break;
-                            case RenderingMode.Default:
+                            case Utility.RenderingMode.Default:
                                 break;
-                            case RenderingMode.WritableBitmap:
+                            case Utility.RenderingMode.WritableBitmap:
                                 WritableBitmapGraphics.DrawLine(pen, points[i].AsDrawingPointF(), points[i + 1].AsDrawingPointF());
                                 break;
                             default:

@@ -1,10 +1,14 @@
 ﻿using System.Windows;
+using System.Windows.Media;
 #if WINRT
 using Windows.UI.Xaml.Media;
 #else
-using System.Windows.Media;
 #endif
-namespace Sparrow.Chart
+using EcoProIT.Chart.Extensions;
+using EcoProIT.Chart.Series;
+using EcoProIT.Chart.SeriesParts;
+
+namespace EcoProIT.Chart.Container
 {
     /// <summary>
     /// Area Container for AreaSeries
@@ -33,12 +37,12 @@ namespace Sparrow.Chart
 
                 switch (RenderingMode)
                 {
-                    case RenderingMode.GDIRendering:
+                    case EcoProIT.Chart.Utility.RenderingMode.GDIRendering:
                         GDIGraphics.FillPath(brush, path);
                         break;
-                    case RenderingMode.Default:
+                    case Utility.RenderingMode.Default:
                         break;
-                    case RenderingMode.WritableBitmap:
+                    case Utility.RenderingMode.WritableBitmap:
                         WritableBitmapGraphics.FillPath(brush, path);
                         break;
                     default:
@@ -55,7 +59,7 @@ namespace Sparrow.Chart
                 var brush = (this.Series as AreaSeries).Fill.AsDrawingBrush();
                 var points = areaSeries.AreaPoints;
                 var pointCount = areaSeries.AreaPoints.Count;
-                if (RenderingMode == RenderingMode.Default)
+                if (RenderingMode == EcoProIT.Chart.Utility.RenderingMode.Default)
                 {
                     PartsCanvas.Children.Clear();
                     for (int i = 0; i < areaSeries.Parts.Count; i++)
@@ -71,12 +75,12 @@ namespace Sparrow.Chart
                     {
                         switch (RenderingMode)
                         {
-                            case RenderingMode.GDIRendering:
+                            case Utility.RenderingMode.GDIRendering:
                                 GDIGraphics.DrawLine(pen, points[i].AsDrawingPointF(), points[i + 1].AsDrawingPointF());
                                 break;
-                            case RenderingMode.Default:
+                            case Utility.RenderingMode.Default:
                                 break;
-                            case RenderingMode.WritableBitmap:
+                            case Utility.RenderingMode.WritableBitmap:
                                 this.WritableBitmap.Lock();
                                 WritableBitmapGraphics.DrawLine(pen, points[i].AsDrawingPointF(), points[i + 1].AsDrawingPointF());
                                 this.WritableBitmap.AddDirtyRect(new Int32Rect(0, 0, WritableBitmap.PixelWidth, WritableBitmap.PixelHeight));

@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows;
-
-using System.Windows.Media;
 using System.Windows.Data;
+using System.Windows.Media;
+using EcoProIT.Chart.Chart;
+using EcoProIT.Chart.Collections;
+using EcoProIT.Chart.Container;
+using EcoProIT.Chart.Points;
+using EcoProIT.Chart.SeriesParts;
+using EcoProIT.Chart.Utility;
 
-
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Series
 {
     public class BarErrorSeries : StockChartBase
     {
@@ -66,7 +70,7 @@ namespace Sparrow.Chart
             HighPoints.Clear();
             OpenPoints.Clear();
             ClosePoints.Clear();
-            if (!IsPointsGenerated)
+            //if (!IsPointsGenerated)
                 Parts.Clear();
             if (this.Points != null && this.SeriesContainer != null)
             {
@@ -99,10 +103,12 @@ namespace Sparrow.Chart
                 }
                 if (this.RenderingMode == RenderingMode.Default)
                 {
-                    if (!IsPointsGenerated)
+                    //if (!IsPointsGenerated)
                     {
+                        StrokeThickness = HighPoints.Count > 3 ? NormalizePoint(new Point(1,0)).X/(HighPoints.Count) : 30 ;
                         for (int i = 0; i < this.HighPoints.Count; i++)
                         {
+                            
                             BarErrorPart barErrorPart = new BarErrorPart(this.HighPoints[i], this.LowPoints[i], this.ClosePoints[i], this.CloseOffPoints[i], this.OpenPoints[i], this.OpenOffPoints[i], HighValues[i], ErrorValues[i], Chart.ActualCategoryValues[i]);
                             if (this.openPoints[i].YValue <= this.closePoints[i].YValue)
                                 barErrorPart.IsBearfill = true;
@@ -114,21 +120,26 @@ namespace Sparrow.Chart
                         }
                         IsPointsGenerated = true;
                     }
-                    else
-                    {
-                        int i = 0;
-                        foreach (BarErrorPart part in this.Parts)
-                        {
-                            part.Point1 = this.HighPoints[i];
-                            part.Point2 = this.LowPoints[i];
-                            part.Point3 = this.ClosePoints[i];
-                            part.Point4 = this.CloseOffPoints[i];
-                            part.Point5 = this.OpenPoints[i];
-                            part.Point6 = this.OpenOffPoints[i];
-                            part.Refresh();
-                            i++;
-                        }
-                    }
+                    //else
+                    //{
+
+                        //int i = 0;
+                        //foreach (BarErrorPart part in this.Parts)
+                        //{
+                        //    part.Point1 = this.HighPoints[i];
+                        //    part.Point2 = this.LowPoints[i];
+                        //    part.Point3 = this.ClosePoints[i];
+                        //    part.Point4 = this.CloseOffPoints[i];
+                        //    part.Point5 = this.OpenPoints[i];
+                        //    part.Point6 = this.OpenOffPoints[i];
+                        //    part.Mean =  HighValues[i];
+                        //    part.Error = ErrorValues[i];
+                        //    part.XName = Chart.ActualCategoryValues[i];
+                        //    part.Refresh();
+
+                        //    i++;
+                      //  }
+                    //}
 
                 }
             }
@@ -139,10 +150,11 @@ namespace Sparrow.Chart
             if (this.SeriesContainer != null)
                 this.SeriesContainer.Invalidate();
             IsRefreshed = false;
+            //Refresh();
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Sparrow.Chart.BarErrorSeries"/> class.
+        /// Initializes a new instance of the <see cref="BarErrorSeries"/> class.
         /// </summary>
         public BarErrorSeries()
         {

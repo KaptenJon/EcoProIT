@@ -1,15 +1,16 @@
 ﻿using System.Windows;
-#if !WINRT
 using System.Windows.Data;
 using System.Windows.Media;
+#if !WINRT
 #else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Media;
 #endif
+using EcoProIT.Chart.SeriesParts;
 
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Series
 {
     /// <summary>
     /// Fill Based Series Such as Area,Scatter and Column Series

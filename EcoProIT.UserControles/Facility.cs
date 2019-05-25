@@ -16,7 +16,7 @@ namespace EcoProIT.UserControles
         public Facility():base()
         {
 
-            NodeImage.Source = HelpClasses.InteropHelp.LoadBitmap(Properties.Resources.Facility);
+            //NodeImage.Source = HelpClasses.InteropHelp.LoadBitmap(Properties.Resources.Facility);
             
 
             ResourceModel.ProcessName = "ProductionFacility" + i++;

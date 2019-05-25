@@ -1,4 +1,4 @@
-﻿namespace Sparrow.Chart
+﻿namespace EcoProIT.Chart.Utility
 {
     #region Enums
 

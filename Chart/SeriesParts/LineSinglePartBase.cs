@@ -5,7 +5,7 @@ using System.Windows.Media;
 using Windows.UI.Xaml.Media;
 #endif
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.SeriesParts
 {
     public class LineSinglePartBase : SeriesPartBase
     {

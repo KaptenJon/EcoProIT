@@ -15,7 +15,7 @@ using EcoProIT.UserControles.Annotations;
 using EcoProIT.UserControles.Models;
 using EcoProIT.UserControles.View;
 using FeserWard.Controls;
-using GalaSoft.MvvmLight.CommandWpf;
+using GalaSoft.MvvmLight.Command;
 using HelpClasses;
 
 namespace EcoProIT.UserControles.ViewModel
@@ -128,6 +128,8 @@ namespace EcoProIT.UserControles.ViewModel
             }
         }
 
+
+
         private RelayCommand _removeJobClickAction;
 
         public RelayCommand RemoveJobClickAction
@@ -211,22 +213,13 @@ namespace EcoProIT.UserControles.ViewModel
             {
                 if (ShowResults)
                 {
-                    if (Result.NodeIndicator < (decimal) 0.5)
-                        return new LinearGradientBrush(Red, Green,
-                                                       new Point((double)Result.NodeIndicator, 0.5),
-                                                       new Point((double) Result.NodeIndicator + 0.1, 0.5))
-                            {
-                                Opacity = 30
-                            };
-                    else
+                    return new LinearGradientBrush(Red, Green,
+                                                       new Point((double)Result.NodeIndicator-0.05, 0.5),
+                                                       new Point((double)Result.NodeIndicator+0.05, 0.5))
                     {
-                        return new LinearGradientBrush(Red, Green,
-                                                       new Point((double)Result.NodeIndicator - 0.1, 0.5),
-                                                       new Point((double)Result.NodeIndicator , 0.5))
-                            {
-                                Opacity = 30
-                            };
-                    }
+                        Opacity = 30
+                    };
+                    
                 }
                 return new LinearGradientBrush(BaseColor, BaseColor2, new Point(1, 0.5), new Point(0, 0.5))
                     {
@@ -234,6 +227,8 @@ namespace EcoProIT.UserControles.ViewModel
                     };
             }
         }
+
+
 
         protected Color Green
         {

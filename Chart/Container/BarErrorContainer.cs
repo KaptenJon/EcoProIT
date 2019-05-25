@@ -1,10 +1,14 @@
 ﻿using System.Windows.Media;
+using EcoProIT.Chart.Collections;
+using EcoProIT.Chart.Extensions;
+using EcoProIT.Chart.Series;
+using EcoProIT.Chart.Utility;
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Container
 {
     public class BarErrorContainer : SeriesContainer
     {
-        override protected void DrawPath(SeriesBase series, System.Drawing.Pen pen)
+         protected override void DrawPath(SeriesBase series, System.Drawing.Pen pen)
         {
             if (series is BarErrorSeries)
             {

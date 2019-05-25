@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows;
-#if !WINRT
 using System.Windows.Controls;
 using System.Windows.Data;
-using Line = System.Windows.Shapes.Line;
+#if !WINRT
 #else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -12,9 +11,12 @@ using Windows.UI.Xaml.Data;
 using Windows.Foundation;
 using Windows.UI.Xaml.Shapes;
 #endif
+using System.Windows.Shapes;
+using EcoProIT.Chart.Axis;
+using BooleanToVisibilityConverter = EcoProIT.Chart.Converters.BooleanToVisibilityConverter;
 
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Container
 {
 
     /// <summary>

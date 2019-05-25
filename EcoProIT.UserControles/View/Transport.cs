@@ -14,7 +14,7 @@ namespace EcoProIT.UserControles
         
         public Transport():base()
         {
-            NodeImage.Source = HelpClasses.InteropHelp.LoadBitmap(Properties.Resources.Transport);
+            //NodeImage.Source = HelpClasses.InteropHelp.LoadBitmap(Properties.Resources.Transport);
             ResourceModel.Capacity = 100;
             ResourceModel.ProcessName = "Transport" + i++;
             ResourceModel.HasBreakdown = true;

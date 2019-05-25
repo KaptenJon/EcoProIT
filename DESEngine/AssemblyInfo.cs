@@ -32,4 +32,5 @@ using System.Runtime.ConstrainedExecution;
 [assembly: AssemblyTitle("React.NET Simulation Library")]
 [assembly: AssemblyDescription("A framework for constructing discrete-event simulations.")]
 [assembly: ReliabilityContract(Consistency.MayCorruptProcess, Cer.None)]
-
+[assembly: AssemblyVersion("1.0.0.*")]
+[assembly: AssemblyFileVersion("1.0.0.0")]

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Points
 {
     /// <summary>
     /// ChartPoint

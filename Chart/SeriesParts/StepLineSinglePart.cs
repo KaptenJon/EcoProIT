@@ -1,5 +1,5 @@
 ﻿
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.SeriesParts
 {
     public class StepLineSinglePart : LineSinglePartBase
     {

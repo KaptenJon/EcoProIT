@@ -1,6 +1,11 @@
-﻿#if !WINRT
+﻿using EcoProIT.Chart.Collections;
+using EcoProIT.Chart.Extensions;
+using EcoProIT.Chart.Series;
+using EcoProIT.Chart.Utility;
+#if !WINRT
 using System.Windows;
 using System.Windows.Media;
+
 #else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
@@ -15,7 +20,7 @@ using Sparrow.Directx2D;
 using Microsoft.WindowsAPICodePack.DirectX.Direct2D1;
 using Microsoft.WindowsAPICodePack.DirectX.DirectWrite;
 #endif
-namespace Sparrow.Chart
+namespace EcoProIT.Chart.Container
 {
     /// <summary>
     /// LineSeries Container
