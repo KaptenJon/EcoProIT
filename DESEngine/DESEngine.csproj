@@ -10,6 +10,10 @@
     <Configurations>CD_ROM;Debug;DVD-5;Release;SingleImage</Configurations>
     <StartupObject />
     <AssemblyOriginatorKeyFile />
+    <AssemblyTitle>React.NET Simulation Library</AssemblyTitle>
+    <Description>A framework for constructing discrete-event simulations.</Description>
+    <AssemblyVersion>1.0.0.%2a</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="CommonServiceLocator" Version="2.0.4" />
