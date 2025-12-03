@@ -4,9 +4,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
-using System.Data.SqlServerCe;
-// TODO Although ClickOnce is supported on .NET 5+, apps do not have access to the System.Deployment.Application namespace. For more details see https://github.com/dotnet/deployment-tools/issues/27 and https://github.com/dotnet/deployment-tools/issues/53.
-using System.Deployment.Application;
 using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -30,15 +27,13 @@ namespace EcoProIT.DataLayer
                 string connectString = "Data Source = ";
                 try
                 {
-                    connectString += ApplicationDeployment.CurrentDeployment.DataDirectory +
+                    connectString += Environment.CurrentDirectory +
                                     "\\Resources\\modeloutput.sdf;";
-                    //"\\Resources\\modeloutput.sdf";
                 }
                 catch
                 {
                     connectString += Environment.CurrentDirectory +
                                         "\\Resources\\modeloutput.sdf;";
-                                    //"\\Resources\\modeloutput.sdf";
                 }
                 if (connectString == "")
                     return null;

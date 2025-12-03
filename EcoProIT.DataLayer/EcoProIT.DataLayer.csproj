@@ -20,7 +20,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <UseWindowsForms>true</UseWindowsForms>
@@ -28,12 +28,10 @@
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
     <Configurations>CD_ROM;Debug;DVD-5;Release;SingleImage</Configurations>
     <AssemblyOriginatorKeyFile />
-    <PostBuildEvent>
-    if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
-    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
-    if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
-    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"</PostBuildEvent>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+  </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -54,30 +52,11 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.4.0">
-      <Visible>False</Visible>
-      <ProductName>SQL Server Compact 4.0 SP1</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\modeloutput.sdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SQLCE\AMD64\sqlceca40.dll" />
-    <Content Include="SQLCE\AMD64\sqlcecompact40.dll" />
-    <Content Include="SQLCE\AMD64\sqlceer40EN.dll" />
-    <Content Include="SQLCE\AMD64\sqlceme40.dll" />
-    <Content Include="SQLCE\AMD64\sqlceqp40.dll" />
-    <Content Include="SQLCE\AMD64\sqlcese40.dll" />
-    <Content Include="SQLCE\System.Data.SqlServerCe.dll" />
-    <Content Include="SQLCE\System.Data.SqlServerCe.Entity.dll" />
-    <Content Include="SQLCE\x86\sqlceca40.dll" />
-    <Content Include="SQLCE\x86\sqlcecompact40.dll" />
-    <Content Include="SQLCE\x86\sqlceer40EN.dll" />
-    <Content Include="SQLCE\x86\sqlceme40.dll" />
-    <Content Include="SQLCE\x86\sqlceqp40.dll" />
-    <Content Include="SQLCE\x86\sqlcese40.dll" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DESEngine\DESEngine.csproj" />
@@ -85,5 +64,10 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Data.Linq">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Data.Linq.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>
