@@ -11,8 +11,4 @@
     <Configurations>CD_ROM;Debug;DVD-5;Release;SingleImage</Configurations>
     <AssemblyOriginatorKeyFile />
   </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-  </ItemGroup>
 </Project>
