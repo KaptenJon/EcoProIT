@@ -15,31 +15,23 @@ namespace EcoProIT.DataLayer
 {
     public class DatabaseConnection
     {
-        private static modeloutputContext current;
+        private static EcoProITDbContext current;
         private static object blocked = new object();
 
-        public static modeloutputContext GetModelContext()
+        public static EcoProITDbContext GetModelContext()
         {
             lock (blocked)
             {
                 if (current != null)
                     return current;
-                string connectString = "Data Source = ";
-                try
-                {
-                    connectString += Environment.CurrentDirectory +
-                                    "\\Resources\\modeloutput.sdf;";
-                }
-                catch
-                {
-                    connectString += Environment.CurrentDirectory +
-                                        "\\Resources\\modeloutput.sdf;";
-                }
-                if (connectString == "")
-                    return null;
-                current = new modeloutputContext(connectString);
+
+                current = new EcoProITDbContext();
+                
+                // Ensure database is created
+                current.Database.EnsureCreated();
+                
+                return current;
             }
-            return current;
         }
     }
 
