@@ -49,7 +49,7 @@
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
     </Reference>
     <PackageReference Include="CommonServiceLocator" Version="2.0.4" />
-    <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.2" />
   </ItemGroup>
   <ItemGroup>
     <AppDesigner Include="Properties\" />
