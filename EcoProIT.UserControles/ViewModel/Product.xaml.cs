@@ -12,7 +12,7 @@ using System.Windows.Shapes;
 using EcoProIT.DataLayer;
 using EcoProIT.UserControles.Models;
 using EcoProIT.UserControles.View;
-using GalaSoft.MvvmLight.Command;
+using CommunityToolkit.Mvvm.Input;
 using HelpClasses;
 
 namespace EcoProIT.UserControles.ViewModel
