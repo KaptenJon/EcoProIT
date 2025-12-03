@@ -29,6 +29,10 @@
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
     <Configurations>CD_ROM;Debug;DVD-5;Release;SingleImage</Configurations>
     <AssemblyOriginatorKeyFile />
+    <Product>IntelliBox</Product>
+    <Copyright>Copyright © 2010 Stephen P Ward and Joseph E Feser</Copyright>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>..\Debug\</OutputPath>
