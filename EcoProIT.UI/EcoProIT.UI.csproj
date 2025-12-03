@@ -56,16 +56,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Data.Linq" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <PackageReference Include="CommonServiceLocator" Version="2.0.4" />
-    <PackageReference Include="Extended.Wpf.Toolkit" Version="3.5.0" />
-    <PackageReference Include="Microsoft.SqlServer.Compact" Version="4.0.8876.1" />
-    <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="5.0.0" />
     <PackageReference Include="WPFToolkit" Version="3.5.50211.1" />
     <PackageReference Include="WPFToolkit.DataVisualization" Version="3.5.50211.1" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.2" />
   </ItemGroup>
   <ItemGroup>
     <AppDesigner Include="Properties\" />
