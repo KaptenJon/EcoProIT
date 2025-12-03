@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:chartingToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
     xmlns:viewModel="clr-namespace:EcoProIT.UI.ViewModel"
     x:Class="EcoProIT.UI.Views.Statistics" 
              mc:Ignorable="d" MinHeight="453.225" MinWidth="616">
@@ -16,44 +15,19 @@
         <StackPanel Margin="0,0,0,0" >
             <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" ItemsSource="{Binding Typeof}" SelectedValue="{Binding SelectedType}"/>
             <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" ItemsSource="{Binding Indexes}" SelectedValue="{Binding SelectedIndex}"/>
-            <chartingToolkit:Chart  Title="{Binding NameOfDiagram}" x:Name="chart" Margin="0,0,0,0"  Height="400">
-                <chartingToolkit:Chart.LegendStyle>
-                    <Style TargetType="{x:Type Control}">
-                        <Setter Property="Width" Value="0" />
-                        <Setter Property="Height" Value="0" />
-                    </Style>
-                </chartingToolkit:Chart.LegendStyle>
-                
-                <chartingToolkit:ColumnSeries ItemsSource="{Binding SelectedDataSet}" 
-        			    DependentValuePath="Value"
-        			    IndependentValuePath="Key">
-                    
-                    <chartingToolkit:ColumnSeries.DependentRangeAxis>
-                        <chartingToolkit:LinearAxis Title="{Binding AxisUnit}" Orientation="Y" Minimum="0" > 
-                        </chartingToolkit:LinearAxis>
-                    </chartingToolkit:ColumnSeries.DependentRangeAxis>
-                    <chartingToolkit:ColumnSeries.DataPointStyle>           
-                    <Style TargetType="chartingToolkit:ColumnDataPoint">
-                            <Setter Property="Background" Value="#FF009E32"/>                         
-                            <Setter Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate TargetType="chartingToolkit:ColumnDataPoint">
-                                        <Grid>
-                                            <Rectangle
-                                            Fill="{TemplateBinding Background}"
-                                            Stroke="Black"/>
-                                            <Grid.ToolTip>
-                                                <ToolTip Content="{TemplateBinding FormattedDependentValue}"></ToolTip>
-                                            </Grid.ToolTip>
-                                        </Grid>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                        </Style>
-                    </chartingToolkit:ColumnSeries.DataPointStyle>
-                </chartingToolkit:ColumnSeries>
-            </chartingToolkit:Chart>
-
+            
+            <!-- WPFToolkit Chart has been removed during .NET 10 upgrade -->
+            <!-- TODO: Implement with LiveCharts or other modern charting library -->
+            <Border Height="400" BorderBrush="Gray" BorderThickness="1" Margin="0,0,0,0">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="{Binding NameOfDiagram}" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <TextBlock Text="Chart placeholder - needs reimplementation with LiveCharts" 
+                               Foreground="Gray"
+                               TextWrapping="Wrap"
+                               TextAlignment="Center"/>
+                    <TextBlock Text="{Binding AxisUnit}" FontSize="12" Foreground="DarkGray" Margin="0,10,0,0"/>
+                </StackPanel>
+            </Border>
         </StackPanel>
     </Grid>
 </UserControl>
