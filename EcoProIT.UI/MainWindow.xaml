@@ -3,14 +3,11 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
 	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-	xmlns:chartingToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
 	xmlns:HelpClasses="clr-namespace:HelpClasses;assembly=HelpClasses"
 	xmlns:my="clr-namespace:EcoProIT.UserControles;assembly=EcoProIT.UserControles"
 	xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
-	xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+	xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
 	xmlns:Controls="clr-namespace:FeserWard.Controls;assembly=Intellibox"
-    xmlns:adobeImport="clr-namespace:EcoProIT.UserControles.AdobeImport;assembly=EcoProIT.UserControles"
-    xmlns:chart="clr-namespace:EcoProIT.Chart;assembly=EcoProIT.Chart"
     xmlns:chart1="clr-namespace:EcoProIT.Chart.Chart;assembly=EcoProIT.Chart"
     xmlns:axis="clr-namespace:EcoProIT.Chart.Axis;assembly=EcoProIT.Chart"
     xmlns:series="clr-namespace:EcoProIT.Chart.Series;assembly=EcoProIT.Chart"
@@ -60,30 +57,29 @@
 					<xctk:IntegerUpDown MinHeight="30" Value="{Binding SimHandler.NrOfIterations}" />
 				</StackPanel>
                 <Button Width="100" Height="100" Margin="1" Click="Click_Load" Style="{DynamicResource ButtonBase}" >
-					<adobeImport:OpenFileImage Margin="10,10,33,-10"></adobeImport:OpenFileImage>
+					<Image Source="Resources/open.jpg" Margin="10" />
 				</Button>
                 <Button Margin="1" Width="100" Height="100" Click="Click_Save"  Style="{DynamicResource ButtonBase}">
-                    <adobeImport:Saveimage></adobeImport:Saveimage>
+                    <Image Source="Resources/save.jpg" Margin="10" />
 				</Button>
                 <Button  Margin="1" Width="100" Height="100" Style="{DynamicResource ButtonBase}" Click="_newProduct_Click_1">
-					<adobeImport:NewProductImage></adobeImport:NewProductImage>
+					<Image Source="Resources/newproduct.png" Margin="10" />
 				</Button>
                 <Button  Margin="1" Width="100" Height="100"  Style="{DynamicResource ButtonBase}"  Command="{Binding RunSimulations}" >
-				   <StackPanel>
-                    <adobeImport:RunSimulationImage Margin="43,10,38,-10" RenderTransformOrigin="0.649,0.486" Visibility="{Binding SimHandler.IsRunning, Converter={StaticResource BooleanInvertToVisibilityConverter}}"/>
-                        <adobeImport:StopSimulationImage Margin="43,10,38,-10" Visibility="{Binding SimHandler.IsRunning, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                    </StackPanel>
+				   <Grid>
+                    <Image Source="Resources/runsimulation.png" Margin="10" Visibility="{Binding SimHandler.IsRunning, Converter={StaticResource BooleanInvertToVisibilityConverter}}"/>
+                    <TextBlock Text="Stop" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding SimHandler.IsRunning, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                    </Grid>
                 </Button>
                 <Button Margin="1" Width="100" Height="100" Style="{DynamicResource ButtonBase}" Visibility="{Binding ShowToResults, Converter={StaticResource BooleanToVisibilityConverter}, Mode=OneWay}" x:Name="ShowHideResults" Click="Retrive_Results" >
-					<adobeImport:ResultImage Margin="10,10,-10,-10"  />
-					
+					<TextBlock Text="Results" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
 				</Button>
                 <Button Margin="1" Width="100" Height="100" Style="{DynamicResource ButtonBase}"  Visibility="{Binding ShowToDesigner, Converter={StaticResource BooleanToVisibilityConverter}, Mode=OneWay}" Click="ToDesigner" >
-					<adobeImport:DesignModeImage></adobeImport:DesignModeImage>
+					<TextBlock Text="Design" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
 				</Button>
 				<!--<Image Margin="1" RenderOptions.BitmapScalingMode="Fant" Height="100" Width="105" AllowDrop="True" Source="Resources/trash.png" Drop="Image_Drop_1"/>-->
 				
-				<adobeImport:DeleteImage  Height="100" Width="105" AllowDrop="True" Drop="Image_Drop_1"/>
+				<Image Source="Resources/trash.png" Height="100" Width="105" AllowDrop="True" Drop="Image_Drop_1" Margin="1"/>
 
 				<Grid Margin="5,1,1,1" Width="400" Visibility="{Binding SimHandler.IsRunning, Converter={StaticResource BooleanToVisibilityConverter}}">
 					<Label HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10"  Content="{Binding Path=SimHandler.TimeStatusString}"/>
@@ -227,7 +223,6 @@
 			<my:ModelNode Height="63" HorizontalAlignment="Left" Margin="900,81,0,0" x:Name="
 		4"
 				VerticalAlignment="Top" Width="107" Text="Recycle"  MouseLeftButtonUp="NewNodeOnMouseLeftButtonUp"/>-->
-
 
 
 	</DockPanel>

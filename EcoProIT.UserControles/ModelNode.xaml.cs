@@ -8,14 +8,14 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
-using System.Windows.Interactivity;
+using Microsoft.Xaml.Behaviors;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using EcoProIT.DataLayer;
 using EcoProIT.UserControles.View;
 using EcoProIT.UserControles.ViewModel;
-using GalaSoft.MvvmLight.Threading;
+using System.Windows.Threading;
 using HelpClasses;
 using BooleanToVisibilityConverter = System.Windows.Controls.BooleanToVisibilityConverter;
 using WindowStartupLocation = System.Windows.WindowStartupLocation;
@@ -275,7 +275,7 @@ namespace EcoProIT.UserControles
             get
             {
                 double x = 0;
-                DispatcherHelper.CheckBeginInvokeOnUI(() => { x = Margin.Top + RenderTransform.Value.OffsetY; });
+                Application.Current.Dispatcher.Invoke(() => { x = Margin.Top + RenderTransform.Value.OffsetY; });
                 return x;
             }
             set
@@ -290,7 +290,7 @@ namespace EcoProIT.UserControles
             get
             {
                 double y = 0;
-                DispatcherHelper.CheckBeginInvokeOnUI(() =>
+                Application.Current.Dispatcher.Invoke(() =>
                     {
                         y = Margin.Left + RenderTransform.Value.OffsetX;
                     });

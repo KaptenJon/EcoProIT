@@ -1,13 +1,11 @@
 ﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-
 			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
 			 xmlns:ViewModel="clr-namespace:EcoProIT.UserControles.ViewModel" 
 			 xmlns:HelpClasses="clr-namespace:HelpClasses;assembly=HelpClasses" 
-			 xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+			 xmlns:i="http://schemas.microsoft.com/xaml/behaviors" 
 			 xmlns:userControles="clr-namespace:EcoProIT.UserControles"
-			 xmlns:AdobeImport="clr-namespace:EcoProIT.UserControles.AdobeImport"
 			 x:Name="userControl" 
 			 x:Class="EcoProIT.UserControles.ModelNode"         
 			 BorderBrush="Black" MaxHeight="100" MaxWidth="160" mc:Ignorable="d" 
@@ -27,27 +25,24 @@
 	<i:Interaction.Behaviors>
 		<userControles:DragBehavior x:Name="MovedPosition" DragBegun="MouseDragElementBehavior_DragBegun"  DragFinished="MouseDragElementBehavior_DragFinished"/>
 	</i:Interaction.Behaviors>
-	<Viewbox  >
-		<DockPanel LastChildFill="True" Loaded="NodeLoaded" >
-			<AdobeImport:GeneralNode x:Name="border" DockPanel.Dock="Top" Height="106" 
-									 Opacity="{Binding IsMouseOver, Converter={StaticResource BooleanToOpacity}, Mode=OneWay, RelativeSource={RelativeSource Self}}"  ><!--Style="{DynamicResource GeneralNodeStyle}"--> 
-				
-                <StackPanel>
-					<Border  DockPanel.Dock="Top" Height="106" Background="{Binding Gradient}" Opacity="{Binding ShowResults, Converter={StaticResource BooleanToOpacity1}}" />
-
+	<Viewbox>
+		<DockPanel LastChildFill="True" Loaded="NodeLoaded">
+			<Border x:Name="border" DockPanel.Dock="Top" Height="106" 
+									 Opacity="{Binding IsMouseOver, Converter={StaticResource BooleanToOpacity}, Mode=OneWay, RelativeSource={RelativeSource Self}}">
+				<StackPanel>
+					<Border DockPanel.Dock="Top" Height="106" Background="{Binding Gradient}" Opacity="{Binding ShowResults, Converter={StaticResource BooleanToOpacity1}}" />
 					<Grid>
-						<Label  FontSize="60"  Content="{Binding ProcessName}"  FontStyle="Normal" HorizontalContentAlignment="Center" HorizontalAlignment="Center"   VerticalAlignment="Center" FontWeight="Bold"    />
-						<Viewbox  Height="50" VerticalAlignment="Top" Width="50" Margin="0,0,149,0">
-
+						<Label FontSize="60" Content="{Binding ProcessName}" FontStyle="Normal" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" />
+						<Viewbox Height="50" VerticalAlignment="Top" Width="50" Margin="0,0,149,0">
 						</Viewbox>
 					</Grid>
 				</StackPanel>
-			</AdobeImport:GeneralNode>
-			<Expander VerticalAlignment="Bottom"  DockPanel.Dock="Bottom"  HorizontalAlignment="Center"  Expanded="Expander_Expanded" Collapsed="Expander_Collapsed" ExpandDirection="Down" IsExpanded="true"  />
-			<ItemsControl Height="30"  DockPanel.Dock="Bottom" ItemsSource="{Binding Parent.Parent.Parent.ProductLabels, RelativeSource={RelativeSource Self}}">
+			</Border>
+			<Expander VerticalAlignment="Bottom" DockPanel.Dock="Bottom" HorizontalAlignment="Center" Expanded="Expander_Expanded" Collapsed="Expander_Collapsed" ExpandDirection="Down" IsExpanded="true" />
+			<ItemsControl Height="30" DockPanel.Dock="Bottom" ItemsSource="{Binding Parent.Parent.Parent.ProductLabels, RelativeSource={RelativeSource Self}}">
 				<ItemsControl.ItemsPanel>
 					<ItemsPanelTemplate>
-						<StackPanel   Orientation="Horizontal" VerticalAlignment="Bottom"    />
+						<StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" />
 					</ItemsPanelTemplate>
 				</ItemsControl.ItemsPanel>
 			</ItemsControl>
