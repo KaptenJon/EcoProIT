@@ -12,7 +12,7 @@
     <AssemblyOriginatorKeyFile />
     <AssemblyTitle>React.NET Simulation Library</AssemblyTitle>
     <Description>A framework for constructing discrete-event simulations.</Description>
-    <AssemblyVersion>1.0.0.%2a</AssemblyVersion>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
   </PropertyGroup>
   <ItemGroup>
