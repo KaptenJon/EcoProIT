@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Deployment.Application;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,19 +17,18 @@ namespace EcoProIT.UserControles.Models
         {
             updater = new Task(() =>
             {
-
                 var db = DatabaseConnection.GetModelContext();
-                    var list = db.ConsumableBase.ToList();
-                    var query = from i in list
-                                select
-                                    new Consumable()
-                                        {
-                                            LciSet = new LciSet() {Emissions = i.ConsumablesEmission.Select(t=>new Emission(){EmissionName = t.Emissions.Name +" "+t.Emissions.Unit, Value = new decimal(t.Value??0)}).ToList()},
-                                            Name = i.Name,
-                                            PerUnit = SIUnits.Kg
-                                        };
-                    _db = query.ToDictionary(t => t.Name, t=>t);
-                });
+                var list = db.ConsumableBase.ToList();
+                var query = from i in list
+                            select
+                                new Consumable()
+                                    {
+                                        LciSet = new LciSet() {Emissions = i.ConsumablesEmission.Select(t=>new Emission(){EmissionName = t.Emissions.Name +" "+t.Emissions.Unit, Value = new decimal(t.Value??0)}).ToList()},
+                                        Name = i.Name,
+                                        PerUnit = SIUnits.Kg
+                                    };
+                _db = query.ToDictionary(t => t.Name, t=>t);
+            });
             updater.Start();
 
         }

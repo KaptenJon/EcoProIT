@@ -15,8 +15,6 @@ using EcoProIT.DataLayer;
 using EcoProIT.UI.ViewModel;
 using EcoProIT.UserControles;
 using EcoProIT.UserControles.ViewModel;
-using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Threading;
 using HelpClasses;
 using HelpClasses.Annotations;
 
@@ -114,8 +112,8 @@ namespace EcoProIT.UI.SimulationModel
             if(_nextUpdate > DateTime.Now)
                 return;
             _nextUpdate = DateTime.Now + TimeSpan.FromSeconds(1);
-            DispatcherHelper.CheckBeginInvokeOnUI(new Action(() => Status = (int)(sims.Average(t => t.RunStatus) * 100.0 )));
-            DispatcherHelper.CheckBeginInvokeOnUI(new Action(() =>
+            System.Windows.Application.Current.Dispatcher.BeginInvoke(new Action(() => Status = (int)(sims.Average(t => t.RunStatus) * 100.0 )));
+            System.Windows.Application.Current.Dispatcher.BeginInvoke(new Action(() =>
             {
                 var av = sims.Average(t => t.RunStatus);
                 TimeStatus = TimeSpan.FromTicks((long) ((DateTime.Now - _startedTime).Ticks*(1.0 - av)/av));
@@ -128,7 +126,7 @@ namespace EcoProIT.UI.SimulationModel
 
         public TimeSpan TimeStatus
         {
-            get { if(ViewModelBase.IsInDesignModeStatic)
+            get { if(System.ComponentModel.DesignerProperties.GetIsInDesignMode(new System.Windows.DependencyObject()))
                     return new TimeSpan(1,2,3);
                 return _timeStatus; }
             set
@@ -179,7 +177,7 @@ namespace EcoProIT.UI.SimulationModel
 
         public bool IsRunning
         {
-            get { return _isRunning || ViewModelBase.IsInDesignModeStatic; }
+            get { return _isRunning || System.ComponentModel.DesignerProperties.GetIsInDesignMode(new System.Windows.DependencyObject()); }
             set
             {
                 if (value.Equals(_isRunning)) return;

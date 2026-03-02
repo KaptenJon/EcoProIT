@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Deployment.Application;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using EcoProIT.DataLayer;
@@ -114,7 +113,7 @@ namespace EcoProIT.UserControles.Models
 
         public abstract void UpdateBaseIndicator();
         public abstract void UpdateConsumptions();
-
+	
 
 
         public abstract Dictionary<string, decimal> PerTime(ulong timespan, string index);

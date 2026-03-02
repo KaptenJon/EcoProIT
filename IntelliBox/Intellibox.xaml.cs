@@ -831,7 +831,7 @@ namespace FeserWard.Controls {
 
         private static void OnDataProviderChanged(DependencyObject receiver, DependencyPropertyChangedEventArgs args) {
             var ib = receiver as Intellibox;
-            if (ib != null && args != null && args.NewValue is IIntelliboxResultsProvider) {
+            if (ib != null && args.NewValue is IIntelliboxResultsProvider) {
                 var provider = args.NewValue as IIntelliboxResultsProvider;
                 //Create the wrapper used to make the calls async. This hides the details from the user.
                 ib.SearchProvider = new IntelliboxAsyncProvider(provider.DoSearch);

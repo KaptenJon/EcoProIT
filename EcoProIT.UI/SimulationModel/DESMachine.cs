@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Deployment.Application;
+// System.Deployment.Application is not available in .NET 10
 using System.Diagnostics;
 using System.IO;
 using System.Linq;

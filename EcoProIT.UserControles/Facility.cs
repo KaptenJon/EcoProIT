@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 using EcoProIT.DataLayer;
 
 namespace EcoProIT.UserControles
@@ -16,8 +17,8 @@ namespace EcoProIT.UserControles
         public Facility():base()
         {
 
-            //NodeImage.Source = HelpClasses.InteropHelp.LoadBitmap(Properties.Resources.Facility);
-            
+            NodeImage.Source = new BitmapImage(new Uri("pack://application:,,,/EcoProIT.UserControles;component/Resources/Facility.png"));
+
 
             ResourceModel.ProcessName = "ProductionFacility" + i++;
         }

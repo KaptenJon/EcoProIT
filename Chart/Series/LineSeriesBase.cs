@@ -106,6 +106,11 @@ namespace EcoProIT.Chart.Series
                 (args.NewValue as INotifyCollectionChanged).CollectionChanged += PointsSource_CollectionChanged;
             }
             GeneratePointsFromSource();
+            if (IsRefresh && SeriesContainer != null)
+            {
+                IsPointsGenerated = false;
+                Refresh();
+            }
         }
 
         /// <summary>

@@ -4,10 +4,10 @@ using System.Collections.ObjectModel;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media;
+using System.Xml.Serialization;
 using EcoProIT.DataLayer;
 using EcoProIT.UserControles;
 using EcoProIT.UserControles.ViewModel;
@@ -50,8 +50,8 @@ namespace EcoProIT.UI
                                     }
                             };
                         var stream = File.Open(save.FileName, FileMode.Create);
-                        var bformatter = new BinaryFormatter();
-                        bformatter.Serialize(stream, defs);
+                        var serializer = new XmlSerializer(typeof(CMSDDocument));
+                        serializer.Serialize(stream, defs);
                         stream.Close();
                         return true;
                     }
@@ -278,8 +278,8 @@ namespace EcoProIT.UI
         public static bool LoadModel(Stream load, List<ModelNode> nodes, List<Product> products)
         {
              
-            var bformatter = new BinaryFormatter();
-            var defs = bformatter.Deserialize(load) as CMSDDocument;
+            var serializer = new XmlSerializer(typeof(CMSDDocument));
+            var defs = serializer.Deserialize(load) as CMSDDocument;
             load.Close();
 
             if (defs != null)

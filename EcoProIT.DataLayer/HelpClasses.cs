@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
-using System.Data.SqlServerCe;
-using System.Deployment.Application;
 using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -17,33 +15,23 @@ namespace EcoProIT.DataLayer
 {
     public class DatabaseConnection
     {
-        private static modeloutputContext current;
+        private static EcoProITDbContext current;
         private static object blocked = new object();
 
-        public static modeloutputContext GetModelContext()
+        public static EcoProITDbContext GetModelContext()
         {
             lock (blocked)
             {
                 if (current != null)
                     return current;
-                string connectString = "Data Source = ";
-                try
-                {
-                    connectString += ApplicationDeployment.CurrentDeployment.DataDirectory +
-                                    "\\Resources\\modeloutput.sdf;";
-                    //"\\Resources\\modeloutput.sdf";
-                }
-                catch
-                {
-                    connectString += Environment.CurrentDirectory +
-                                        "\\Resources\\modeloutput.sdf;";
-                                    //"\\Resources\\modeloutput.sdf";
-                }
-                if (connectString == "")
-                    return null;
-                current = new modeloutputContext(connectString);
+
+                current = new EcoProITDbContext();
+                
+                // Ensure database is created
+                current.Database.EnsureCreated();
+                
+                return current;
             }
-            return current;
         }
     }
 

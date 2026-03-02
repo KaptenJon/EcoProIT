@@ -12,7 +12,6 @@ using EcoProIT.UI.ViewModel;
 using EcoProIT.UserControles;
 using EcoProIT.UserControles.Models;
 using EcoProIT.UserControles.ViewModel;
-using GalaSoft.MvvmLight.Threading;
 using HelpClasses;
 using Microsoft.Win32;
 
@@ -31,31 +30,10 @@ namespace EcoProIT.UI
 
 
             InitializeComponent();
-            DispatcherHelper.Initialize();
 
             _viewModel = (MainViewModel) DataContext;
             ModelNode._grid = _viewModel.GridUIElement;
             Product.Grid = _viewModel.GridUIElement;
-            if (AppDomain.CurrentDomain.SetupInformation.ActivationArguments != null &&
-                AppDomain.CurrentDomain.SetupInformation.ActivationArguments.ActivationData != null &&
-                AppDomain.CurrentDomain.SetupInformation.ActivationArguments.ActivationData.Any())
-            {
-                try
-                {
-                    Uri u = new Uri(AppDomain.CurrentDomain.SetupInformation.ActivationArguments.ActivationData[0]);
-                    if (u.IsFile)
-                    {
-
-                        Stream s = File.Open(u.LocalPath, FileMode.Open);
-
-                        _viewModel.ClearNodes();
-                        OpenNodes(s);
-                    }
-                }
-                catch
-                {
-                }
-            }
 
         }
 

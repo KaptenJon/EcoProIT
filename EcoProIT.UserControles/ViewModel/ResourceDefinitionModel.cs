@@ -15,7 +15,7 @@ using EcoProIT.UserControles.Annotations;
 using EcoProIT.UserControles.Models;
 using EcoProIT.UserControles.View;
 using FeserWard.Controls;
-using GalaSoft.MvvmLight.Command;
+using CommunityToolkit.Mvvm.Input;
 using HelpClasses;
 
 namespace EcoProIT.UserControles.ViewModel

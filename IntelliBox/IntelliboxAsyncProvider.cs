@@ -14,8 +14,8 @@ namespace FeserWard.Controls {
 
         private Func<string, int, object, IEnumerable<object>> callback;
 
-        private Dictionary<searchdata, BackgroundWorker> activesearches
-            = new Dictionary<searchdata, BackgroundWorker>();
+        private Dictionary<SearchData, BackgroundWorker> activesearches
+            = new Dictionary<SearchData, BackgroundWorker>();
         
         private object LockObject = new object();
 
@@ -29,7 +29,7 @@ namespace FeserWard.Controls {
         public void BeginSearchAsync(string searchTerm, DateTime startTimeUtc, int maxResults, object extraInfo,
             Action<DateTime, IEnumerable<object>> whenDone) {
 
-            var data = new searchdata() {
+            var data = new SearchData() {
                 extra = extraInfo,
                 max = maxResults,
                 searchTerm = searchTerm,
@@ -46,7 +46,7 @@ namespace FeserWard.Controls {
         }
 
         void wrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e) {
-            var data = e.Result as searchdata;
+            var data = e.Result as SearchData;
             
             lock (LockObject) {
                 activesearches.Remove(data);
@@ -58,7 +58,7 @@ namespace FeserWard.Controls {
         }
 
         void wrk_DoWork(object sender, DoWorkEventArgs e) {
-            var data = e.Argument as searchdata;
+            var data = e.Argument as SearchData;
             data.results = callback(data.searchTerm, data.max, data.extra);
             e.Result = data;
         }
@@ -70,7 +70,7 @@ namespace FeserWard.Controls {
             }
         }
 
-        private class searchdata {
+        private class SearchData {
             public string searchTerm;
             public DateTime startTimeUtc;
             public int max;

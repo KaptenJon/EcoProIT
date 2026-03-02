@@ -4,41 +4,38 @@
       <vm:MvvmViewModelLocator xmlns:vm="clr-namespace:EcoProIT.UI.ViewModel"
                                    x:Key="Locator" />
   </Application.Resources>
-  
+
   In the View:
   DataContext="{Binding Source={StaticResource Locator}, Path=ViewModelName}"
 */
 
-using CommonServiceLocator;
+using System.ComponentModel;
+using System.Windows;
 using EcoProIT.UI.Model;
-using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Ioc;
 
 namespace EcoProIT.UI.ViewModel
 {
     /// <summary>
     /// This class contains static references to all the view models in the
     /// application and provides an entry point for the bindings.
-    /// <para>
-    /// See http://www.galasoft.ch/mvvm
-    /// </para>
     /// </summary>
     public class ViewModelLocator
     {
+        private static readonly MainViewModel _main;
+
         static ViewModelLocator()
         {
-            ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
-
-            if (ViewModelBase.IsInDesignModeStatic)
+            IDataService dataService;
+            if (DesignerProperties.GetIsInDesignMode(new DependencyObject()))
             {
-                SimpleIoc.Default.Register<IDataService, Design.DesignDataService>();
+                dataService = new Design.DesignDataService();
             }
             else
             {
-                SimpleIoc.Default.Register<IDataService, DataService>();
+                dataService = new DataService();
             }
 
-            SimpleIoc.Default.Register<MainViewModel>();
+            _main = new MainViewModel(dataService);
         }
 
         /// <summary>
@@ -51,7 +48,7 @@ namespace EcoProIT.UI.ViewModel
         {
             get
             {
-                return ServiceLocator.Current.GetInstance<EcoProIT.UI.ViewModel.MainViewModel>();
+                return _main;
             }
         }
     }
