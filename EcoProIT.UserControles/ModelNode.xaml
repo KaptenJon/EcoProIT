@@ -27,16 +27,15 @@
 	</i:Interaction.Behaviors>
 	<Viewbox>
 		<DockPanel LastChildFill="True" Loaded="NodeLoaded">
-			<Border x:Name="border" DockPanel.Dock="Top" Height="106" 
+			<Border x:Name="border" DockPanel.Dock="Top" Height="106" Width="160" Background="Transparent"
 									 Opacity="{Binding IsMouseOver, Converter={StaticResource BooleanToOpacity}, Mode=OneWay, RelativeSource={RelativeSource Self}}">
-				<StackPanel>
-					<Border DockPanel.Dock="Top" Height="106" Background="{Binding Gradient}" Opacity="{Binding ShowResults, Converter={StaticResource BooleanToOpacity1}}" />
-					<Grid>
-						<Label FontSize="60" Content="{Binding ProcessName}" FontStyle="Normal" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" />
-						<Viewbox Height="50" VerticalAlignment="Top" Width="50" Margin="0,0,149,0">
-						</Viewbox>
-					</Grid>
-				</StackPanel>
+				<Grid>
+					<Border Background="{Binding Gradient}" Opacity="{Binding ShowResults, Converter={StaticResource BooleanToOpacity1}}" />
+					<DockPanel>
+						<Label DockPanel.Dock="Top" FontSize="18" Content="{Binding ProcessName}" FontWeight="Bold" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Top" Padding="2" />
+						<Image x:Name="NodeImage" DockPanel.Dock="Bottom" MaxHeight="60" MaxWidth="60" Margin="4" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center" />
+					</DockPanel>
+				</Grid>
 			</Border>
 			<Expander VerticalAlignment="Bottom" DockPanel.Dock="Bottom" HorizontalAlignment="Center" Expanded="Expander_Expanded" Collapsed="Expander_Collapsed" ExpandDirection="Down" IsExpanded="true" />
 			<ItemsControl Height="30" DockPanel.Dock="Bottom" ItemsSource="{Binding Parent.Parent.Parent.ProductLabels, RelativeSource={RelativeSource Self}}">

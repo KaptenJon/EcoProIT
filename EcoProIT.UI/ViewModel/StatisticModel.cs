@@ -6,12 +6,12 @@ using EcoProIT.DataLayer;
 using EcoProIT.UserControles;
 using EcoProIT.UserControles.Models;
 using EcoProIT.UserControles.ViewModel;
-using GalaSoft.MvvmLight;
+using CommunityToolkit.Mvvm.ComponentModel;
 using HelpClasses;
 
 namespace EcoProIT.UI.ViewModel
 {
-    public  class StatisticModel:ViewModelBase
+    public  class StatisticModel:ObservableObject
     {
         private IHasResults _results;
         private IEnumerable<string> _indexes;
@@ -25,9 +25,9 @@ namespace EcoProIT.UI.ViewModel
             get { return _results; }
             set { 
                 _results = value; 
-                RaisePropertyChanged("Result");
+                OnPropertyChanged("Result");
                 Indexes = Results.Result.Consumables.Select(t => t.Key.Name).Union(IndexCalculator.Indexes.Select(t=>t.IndexName));
-                RaisePropertyChanged("Modelnode");
+                OnPropertyChanged("Modelnode");
             }
         }
         public ResourceDefinitionModel Modelnode
@@ -45,9 +45,9 @@ namespace EcoProIT.UI.ViewModel
         public string SelectedType
         {
             set { _selectedType = value;
-            RaisePropertyChanged("SelectedType");
-            RaisePropertyChanged("SelectedDataSet");
-            RaisePropertyChanged("NameOfDiagram");
+            OnPropertyChanged("SelectedType");
+            OnPropertyChanged("SelectedDataSet");
+            OnPropertyChanged("NameOfDiagram");
             }
             get { return _selectedType;
             
@@ -58,12 +58,14 @@ namespace EcoProIT.UI.ViewModel
         {
             get
             {
-                
+                if (Results?.Result == null || SelectedIndex == null || SelectedType == null)
+                    return null;
+
                 AxisUnit = Results.Result.Consumables.Any(t => t.Key.Name == SelectedIndex) ?  Results.Result.Consumables.FirstOrDefault(t => t.Key.Name == SelectedIndex).Key.PerUnit.ToString():"";
                 switch (SelectedType)
                 {
                     case "Compare nodes":
-                        
+                        if (Modelnodes == null) return null;
                         return Modelnodes.ToDictionary(p =>  p.ResourceModel.ProcessName,
                                                 i => IndexCalculator.Calculate(i.ResourceModel.Result.MeanConsumables,SelectedIndex));
                     //NO STD!!!!
@@ -71,6 +73,7 @@ namespace EcoProIT.UI.ViewModel
                         return Results.Result.PerTime((ulong) (IResults.TotalTime/50), SelectedIndex);//.ToDictionary(t=>t.Key, t =>new Statistic(t.Value,0));
                     ///NO STD!!!
                     case "Compare products":
+                        if (Modelnode == null) return null;
                         return Results.Result.PerProduct(Modelnode.RelatedProducts, SelectedIndex);
                 }
                 return null;
@@ -80,7 +83,7 @@ namespace EcoProIT.UI.ViewModel
         {
             get { return _indexes; }
             set { _indexes = value;
-            RaisePropertyChanged("Indexes");
+            OnPropertyChanged("Indexes");
             }
         }
 
@@ -88,7 +91,7 @@ namespace EcoProIT.UI.ViewModel
         {
             get { return _axisUnit; }
             set { _axisUnit = value;
-            RaisePropertyChanged("AxisUnit");
+            OnPropertyChanged("AxisUnit");
             }
         }
 
@@ -96,9 +99,9 @@ namespace EcoProIT.UI.ViewModel
         {
             get { return _selectedIndex; }
             set { _selectedIndex = value;
-            RaisePropertyChanged("NameOfDiagram");
-            RaisePropertyChanged("SelectedDataSet");
-            RaisePropertyChanged("SelectedIndex");
+            OnPropertyChanged("NameOfDiagram");
+            OnPropertyChanged("SelectedDataSet");
+            OnPropertyChanged("SelectedIndex");
             }
         }
 
@@ -108,6 +111,9 @@ namespace EcoProIT.UI.ViewModel
         {
             get
             {
+                if (Results?.Result == null || SelectedIndex == null || SelectedType == null)
+                    return null;
+
                 var duringtime = "";
                 if (SelectedIndex == "Processed")
                     duringtime = " during " + (IResults.TotalTime / 3600000).ToString(CultureInfo.InvariantCulture) + " hours";
@@ -116,7 +122,7 @@ namespace EcoProIT.UI.ViewModel
                 if (SelectedType == "Compare nodes")
                     return "Comparison of " + SelectedIndex  + duringtime;
                 if (SelectedType == "Compare products")
-                    return "Comparison of " + SelectedIndex + " for products in " + Modelnode.ProcessName +  duringtime; ;
+                    return "Comparison of " + SelectedIndex + " for products in " + Modelnode?.ProcessName +  duringtime;
                 return SelectedIndex;
             }
 

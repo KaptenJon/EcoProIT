@@ -4,6 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:viewModel="clr-namespace:EcoProIT.UI.ViewModel"
+    xmlns:chart1="clr-namespace:EcoProIT.Chart.Chart;assembly=EcoProIT.Chart"
+    xmlns:axis="clr-namespace:EcoProIT.Chart.Axis;assembly=EcoProIT.Chart"
+    xmlns:series="clr-namespace:EcoProIT.Chart.Series;assembly=EcoProIT.Chart"
     x:Class="EcoProIT.UI.Views.Statistics" 
              mc:Ignorable="d" MinHeight="453.225" MinWidth="616">
 
@@ -15,19 +18,20 @@
         <StackPanel Margin="0,0,0,0" >
             <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" ItemsSource="{Binding Typeof}" SelectedValue="{Binding SelectedType}"/>
             <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" ItemsSource="{Binding Indexes}" SelectedValue="{Binding SelectedIndex}"/>
-            
-            <!-- WPFToolkit Chart has been removed during .NET 10 upgrade -->
-            <!-- TODO: Implement with LiveCharts or other modern charting library -->
-            <Border Height="400" BorderBrush="Gray" BorderThickness="1" Margin="0,0,0,0">
-                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <TextBlock Text="{Binding NameOfDiagram}" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
-                    <TextBlock Text="Chart placeholder - needs reimplementation with LiveCharts" 
-                               Foreground="Gray"
-                               TextWrapping="Wrap"
-                               TextAlignment="Center"/>
-                    <TextBlock Text="{Binding AxisUnit}" FontSize="12" Foreground="DarkGray" Margin="0,10,0,0"/>
-                </StackPanel>
-            </Border>
+            <TextBlock Text="{Binding NameOfDiagram}" FontSize="16" FontWeight="Bold" Margin="4,8,4,0"/>
+            <chart1:SparrowChart Height="400" Margin="0,0,0,0">
+                <chart1:SparrowChart.XAxis>
+                    <axis:CategoryXAxis Visibility="Visible" />
+                </chart1:SparrowChart.XAxis>
+                <chart1:SparrowChart.YAxis>
+                    <axis:LinearYAxis Visibility="Visible" StringFormat="{Binding AxisUnit}" />
+                </chart1:SparrowChart.YAxis>
+                <series:ColumnSeries PointsSource="{Binding SelectedDataSet}"
+                                     XPath="Key"
+                                     YPath="Value"
+                                     Fill="#FF009E32"
+                                     Stroke="Black" />
+            </chart1:SparrowChart>
         </StackPanel>
     </Grid>
 </UserControl>

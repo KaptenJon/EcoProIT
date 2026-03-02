@@ -18,7 +18,7 @@ namespace EcoProIT.UserControles
         public Buffer():base()
         {
 
-            //NodeImage.Source = HelpClasses.InteropHelp.LoadBitmap(Properties.Resources.Buffer);
+            NodeImage.Source = new BitmapImage(new Uri("pack://application:,,,/EcoProIT.UserControles;component/Resources/Buffer.png"));
               ResourceModel.Capacity = 10;
             ResourceModel.ProcessName = "Buffer" + i++;
         }

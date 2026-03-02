@@ -33,16 +33,17 @@ namespace EcoProIT.UserControles
 
         protected override void OnAttached()
         {
-            
-            Window parent = Application.Current.MainWindow;
             node = (AssociatedObject as Control);
             if (node == null)
                 return;
             node.RenderTransform = transform;
-            
+
             node.MouseLeftButtonDown += (sender, e) =>
             {
                 if (SpecialNode)
+                    return;
+                var parent = Window.GetWindow(node);
+                if (parent == null)
                     return;
                 elementStartPosition = node.TranslatePoint(new Point(), parent);
                 mouseStartPosition = e.GetPosition(parent);
@@ -54,6 +55,9 @@ namespace EcoProIT.UserControles
             node.MouseLeftButtonUp += (sender, e) =>
             {
                 if (SpecialNode)
+                    return;
+                var parent = Window.GetWindow(node);
+                if (parent == null)
                     return;
                 node.ReleaseMouseCapture();
                 Vector diff = e.GetPosition(parent) - mouseStartPosition;
@@ -67,6 +71,9 @@ namespace EcoProIT.UserControles
             node.MouseMove += (sender, e) =>
             {
                 if (SpecialNode)
+                    return;
+                var parent = Window.GetWindow(node);
+                if (parent == null)
                     return;
                 Vector diff = e.GetPosition(parent) - mouseStartPosition;
                 if (node.IsMouseCaptured)

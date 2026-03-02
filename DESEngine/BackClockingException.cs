@@ -22,7 +22,6 @@
 using System;
 using System.Globalization;
 using System.Runtime.Serialization;
-using System.Security.Permissions;
 
 namespace React
 {
@@ -90,6 +89,7 @@ namespace React
         /// The <see cref="StreamingContext"/> that contains contextual
         /// information about the source or destination.
         /// </param>
+        [Obsolete("Formatter-based serialization is obsolete.", DiagnosticId = "SYSLIB0051")]
         private BackClockingException(SerializationInfo info,
             StreamingContext context)
             : base(info, context)
@@ -217,10 +217,7 @@ namespace React
         /// The destination (see <see cref="StreamingContext"/>) for this
         /// serialization.
         /// </param>
-        [
-            SecurityPermissionAttribute(SecurityAction.Demand,
-                SerializationFormatter = true)
-        ]
+        [Obsolete("Formatter-based serialization is obsolete.", DiagnosticId = "SYSLIB0051")]
         public override void GetObjectData(SerializationInfo info,
             StreamingContext context)
         {

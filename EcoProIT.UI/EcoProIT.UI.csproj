@@ -2,6 +2,7 @@
   <PropertyGroup>
     <TargetFramework>net10.0-windows</TargetFramework>
     <OutputType>WinExe</OutputType>
+    <NoWarn>$(NoWarn);NU1701</NoWarn>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
@@ -42,25 +43,24 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
     <ManifestCertificateThumbprint>50BB5F3D44E458EC795EBB599E3AC282E16DC46E</ManifestCertificateThumbprint>
     <ManifestKeyFile />
-    <GenerateManifests>true</GenerateManifests>
-    <SignManifests>true</SignManifests>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>false</SignManifests>
     <AssemblyOriginatorKeyFile />
     <DelaySign>false</DelaySign>
     <ManifestTimestampUrl />
     <StartupObject>EcoProIT.UI.App</StartupObject>
-    <TargetZone>Internet</TargetZone>
-    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="CommonServiceLocator" Version="2.0.4" />
     <PackageReference Include="Extended.Wpf.Toolkit" Version="5.0.0" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.2" />
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.122" />
     <!-- Modern replacements for WPFToolkit charting -->
-    <PackageReference Include="LiveChartsCore.SkiaSharpView.WPF" Version="2.0.0-rc4.3" />
+    <PackageReference Include="LiveChartsCore.SkiaSharpView.WPF" Version="2.0.0-rc4.5">
+      <NoWarn>NU1701</NoWarn>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <AppDesigner Include="Properties\" />
@@ -85,9 +85,6 @@
   </ItemGroup>
   <ItemGroup>
     <SplashScreen Include="Resources\LOGOTYPE.png" />
-    <Content Include="Resources\modeloutput.sdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\transport.png" />

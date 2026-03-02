@@ -21,5 +21,3 @@
 
 using System.Reflection;
 using System.Runtime.CompilerServices;
-using System.Runtime.ConstrainedExecution;
-[assembly: ReliabilityContract(Consistency.MayCorruptProcess, Cer.None)]

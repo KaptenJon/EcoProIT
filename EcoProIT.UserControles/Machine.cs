@@ -16,10 +16,10 @@ namespace EcoProIT.UserControles
     public class Machine:ModelNode
     {
         private static int i = 0;
-        
+
         public Machine():base()
         {
-            //NodeImage.Source = HelpClasses.InteropHelp.LoadBitmap(Properties.Resources.Machine);
+            NodeImage.Source = new BitmapImage(new Uri("pack://application:,,,/EcoProIT.UserControles;component/Resources/Machine.png"));
             DeclaredJobs.Clear();
             DeclaredJobs.Add(new Job()
             {

@@ -5,10 +5,5 @@
              x:Class="EcoProIT.UserControles.View.GrafsForNode" 
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <!-- WPFToolkit charting controls have been removed during .NET 10 upgrade -->
-    <!-- This control needs to be reimplemented with LiveCharts or other modern charting library -->
-    <TextBlock Text="Chart placeholder - needs reimplementation with LiveCharts" 
-               HorizontalAlignment="Center" 
-               VerticalAlignment="Center"
-               Foreground="Gray"/>
+
 </UserControl>

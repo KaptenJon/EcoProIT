@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using EcoProIT.UserControles;
 using EcoProIT.UserControles.ViewModel;
-using GalaSoft.MvvmLight;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace EcoProIT.UI.ViewModel
 {
-    public class StatisticProductModel:ViewModelBase
+    public class StatisticProductModel:ObservableObject
     {
   
         private Product _results;
@@ -19,7 +19,7 @@ namespace EcoProIT.UI.ViewModel
             get { return _results; }
             set { 
                 _results = value; 
-                RaisePropertyChanged("Result");
+                OnPropertyChanged("Result");
                 var set = Results.Result.Consumables.Select(t => t.Key.Name).ToList();
                 set.Add("Processed per hour");
                 set.Add("Processed");
@@ -35,9 +35,9 @@ namespace EcoProIT.UI.ViewModel
         public string SelectedType
         {
             set { _selectedType = value;
-            RaisePropertyChanged("SelectedType");
-            RaisePropertyChanged("SelectedDataSet");
-            RaisePropertyChanged("NameOfDiagram");
+            OnPropertyChanged("SelectedType");
+            OnPropertyChanged("SelectedDataSet");
+            OnPropertyChanged("NameOfDiagram");
             }
             get { return _selectedType;
             
@@ -48,6 +48,9 @@ namespace EcoProIT.UI.ViewModel
         {
             get
             {
+                if (Results?.Result == null || SelectedIndex == null || SelectedType == null || Modelnodes == null)
+                    return null;
+
                 switch (SelectedType)
                 {
                     case "Compare Sources":
@@ -80,7 +83,7 @@ namespace EcoProIT.UI.ViewModel
         {
             get { return _indexes; }
             set { _indexes = value;
-            RaisePropertyChanged("Indexes");
+            OnPropertyChanged("Indexes");
             }
         }
 
@@ -88,15 +91,18 @@ namespace EcoProIT.UI.ViewModel
         {
             get { return _selectedIndex; }
             set { _selectedIndex = value;
-            RaisePropertyChanged("NameOfDiagram");
-            RaisePropertyChanged("SelectedDataSet");
-            RaisePropertyChanged("SelectedIndex");
+            OnPropertyChanged("NameOfDiagram");
+            OnPropertyChanged("SelectedDataSet");
+            OnPropertyChanged("SelectedIndex");
             }
         }
 
         public string NameOfDiagram
         {
             get {
+                if (Results?.Result == null || SelectedType == null)
+                    return SelectedIndex;
+
                 if (SelectedType == "History")
                     return SelectedType + " of " + SelectedIndex + " for " + Results.Result.ResultId;
                 if (SelectedType == "Compare sources")

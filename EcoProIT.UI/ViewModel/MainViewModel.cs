@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-// TODO Although ClickOnce is supported on .NET 5+, apps do not have access to the System.Deployment.Application namespace. For more details see https://github.com/dotnet/deployment-tools/issues/27 and https://github.com/dotnet/deployment-tools/issues/53.
-using System.Deployment.Application;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -10,15 +9,14 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Threading;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using EcoProIT.DataLayer;
+using EcoProIT.UI.Model;
 using EcoProIT.UI.SimulationModel;
 using EcoProIT.UserControles;
 using EcoProIT.UserControles.Models;
 using EcoProIT.UserControles.ViewModel;
-using GalaSoft.MvvmLight;
-using EcoProIT.UI.Model;
-using GalaSoft.MvvmLight.Command;
-using GalaSoft.MvvmLight.Ioc;
 using HelpClasses;
 using Microsoft.Win32;
 using Buffer = EcoProIT.UserControles.Buffer;
@@ -32,13 +30,13 @@ namespace EcoProIT.UI.ViewModel
     /// See http://www.galasoft.ch/mvvm
     /// </para>
     /// </summary>
-    public class MainViewModel : ViewModelBase
+    public class MainViewModel : ObservableObject
     {
         private readonly IDataService _dataService;
         private ObservableCollection<Product> _products = new ObservableCollection<Product>();
         private Product _selectedProduct;
         private ModelNode _selectedNode;
-        private static modeloutputContext db;
+        private static EcoProITDbContext db;
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public MainViewModel()
@@ -63,7 +61,7 @@ namespace EcoProIT.UI.ViewModel
             ProductList.CollectionChanged += ProductList_CollectionChanged;
             PropertyChanged += MainViewModel_PropertyChanged;
             simHandler.PropertyChanged += simHandler_PropertyChanged;
-            if (IsInDesignMode)
+            if (DesignerProperties.GetIsInDesignMode(new DependencyObject()))
                 return;
             
             db = DatabaseConnection.GetModelContext();
@@ -76,16 +74,16 @@ namespace EcoProIT.UI.ViewModel
             if (e.PropertyName == "IsRunning")
             {
 
-                RaisePropertyChanged("ShowToResults");
-                RaisePropertyChanged("ShowToDesigner");
-                RaisePropertyChanged("RunSimulations");
+                OnPropertyChanged("ShowToResults");
+                OnPropertyChanged("ShowToDesigner");
+                OnPropertyChanged("RunSimulations");
                 
             }
             if (e.PropertyName == "HasResults")
             {
-                RaisePropertyChanged("ShowToResults");
-                RaisePropertyChanged("ShowToDesigner");
-                RaisePropertyChanged("HasResults");
+                OnPropertyChanged("ShowToResults");
+                OnPropertyChanged("ShowToDesigner");
+                OnPropertyChanged("HasResults");
             }
             
         }
@@ -99,7 +97,7 @@ namespace EcoProIT.UI.ViewModel
 
         private void MainViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            if (e.PropertyName == "GridNodes")
+            if (e.PropertyName == nameof(GridNodes))
                 ResourceDefinitionModel.Nodes = GridNodes;
         }
 
@@ -272,18 +270,8 @@ namespace EcoProIT.UI.ViewModel
                 string s = "[oledb]" + Environment.NewLine + "; Everything after this line is an OLE DB initstring" +
                            Environment.NewLine +
                            "Provider=Microsoft.SQLSERVER.CE.OLEDB.4.0;Data Source=";
-                try
-                {
-
-
-                    s += ApplicationDeployment.CurrentDeployment.DataDirectory +
-                         "\\Resources\\modeloutput.sdf;" + Environment.NewLine;
-                }
-                catch
-                {
-                    s += Environment.CurrentDirectory +
-                         "\\Resources\\modeloutput.sdf;" + Environment.NewLine;
-                }
+                s += Environment.CurrentDirectory +
+                     "\\Resources\\modeloutput.sdf;" + Environment.NewLine;
                 var fileinfo = new FileInfo(save.FileName);
                 string folder = fileinfo.Directory + "\\connectdb.udl";
                 var bytes5 = new List<byte>(StrToByteArray(s));
@@ -339,7 +327,7 @@ namespace EcoProIT.UI.ViewModel
             set
             {
                 _selectedProduct = value;
-                RaisePropertyChanged("SelectedProduct");
+                OnPropertyChanged("SelectedProduct");
                 SelectedResult = value;
             }
         }
@@ -356,7 +344,7 @@ namespace EcoProIT.UI.ViewModel
                 _selectedNode = value;
                 if (value != null)
                 {
-                    RaisePropertyChanged("SelectedNode");
+                    OnPropertyChanged("SelectedNode");
                     SelectedResult = value.ResourceModel;
                 }
             }
@@ -454,13 +442,13 @@ namespace EcoProIT.UI.ViewModel
         public void RemoveNode(ModelNode node)
         {
             _gridUIElement.Remove(node);
-            RaisePropertyChanged("GridNodes");
+            OnPropertyChanged("GridNodes");
         }
 
         public void ClearNodes()
         {
             _gridUIElement.Clear();
-            RaisePropertyChanged("GridNodes");
+            OnPropertyChanged("GridNodes");
         }
 
         public void AddNode(ModelNode newNode)
@@ -476,7 +464,7 @@ namespace EcoProIT.UI.ViewModel
             newNode.MouseLeftButtonUp += NewNodeOnMouseLeftButtonUp;
             newNode.MouseDoubleClick += newNode_MouseDoubleClick;
             _gridUIElement.Add(newNode);
-            RaisePropertyChanged("GridNodes");
+            OnPropertyChanged("GridNodes");
             //newNode.MouseLeftButtonUp += NewNodeOnMouseLeftButtonUp;
         }
 
@@ -521,7 +509,7 @@ namespace EcoProIT.UI.ViewModel
             set
             {
                 _newNode = value;
-                RaisePropertyChanged("NewNode");
+                OnPropertyChanged("NewNode");
 
             }
         }
@@ -534,7 +522,7 @@ namespace EcoProIT.UI.ViewModel
                 _selectedNewNode = value;
                 if (_newNodes.ContainsKey(_selectedNewNode))
                     NewNode = _newNodes[_selectedNewNode];
-                RaisePropertyChanged("SelectedNewNode");
+                OnPropertyChanged("SelectedNewNode");
             }
         }
 
@@ -549,9 +537,9 @@ namespace EcoProIT.UI.ViewModel
             set
             {
                 _selectedResult = null;
-                RaisePropertyChanged("SelectedResult");
+                OnPropertyChanged("SelectedResult");
                 _selectedResult = value;
-                RaisePropertyChanged("SelectedResult");
+                OnPropertyChanged("SelectedResult");
             }
         }
 
@@ -580,7 +568,7 @@ namespace EcoProIT.UI.ViewModel
             set
             {
                 _simulationTime = value;
-                RaisePropertyChanged("SimulationTime");
+                OnPropertyChanged("SimulationTime");
             }
         }
 
@@ -599,8 +587,8 @@ namespace EcoProIT.UI.ViewModel
                 {
                     modelNode.ResourceModel.Result.NotifyIndicatiorBase();
                 }
-                RaisePropertyChanged("SelectedResultConsumable");
-                RaisePropertyChanged("SelectedResultNodeConsumables");
+                OnPropertyChanged("SelectedResultConsumable");
+                OnPropertyChanged("SelectedResultNodeConsumables");
             }
 
         }
@@ -644,9 +632,9 @@ namespace EcoProIT.UI.ViewModel
             set
             {
                 _currentMode = value;
-                RaisePropertyChanged();
-                RaisePropertyChanged("ShowToResults");
-                RaisePropertyChanged("ShowToDesigner");
+                OnPropertyChanged();
+                OnPropertyChanged("ShowToResults");
+                OnPropertyChanged("ShowToDesigner");
             }
         }
 
@@ -664,7 +652,7 @@ namespace EcoProIT.UI.ViewModel
 
         public void Update()
         {
-            RaisePropertyChanged("TotalNodeConsumebles");
+            OnPropertyChanged("TotalNodeConsumebles");
         }
 
 
@@ -689,7 +677,6 @@ namespace EcoProIT.UI.ViewModel
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
-        [PreferredConstructor]
         public MainViewModel(IDataService dataService):this()
         {
             _dataService = dataService;
